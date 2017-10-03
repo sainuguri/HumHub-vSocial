@@ -1,0 +1,9 @@
+{
+    "id": "reward",
+    "name": "Reward",
+    "description": "Reward Core",
+    "keywords": [
+        "core"
+    ],
+    "version": "1.0"
+}

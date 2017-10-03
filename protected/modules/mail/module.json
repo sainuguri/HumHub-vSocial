@@ -1,0 +1,11 @@
+{
+    "id": "mail",
+    "name": "Mail",
+    "description": "Private messaging system to communicate with one or more users.",
+    "keywords": ["mail", "messaging", "communication"],
+    "version": "0.9.6",
+    "humhub": {
+        "minVersion": "1.0"
+    },
+    "screenshots": ["assets/screen1.jpg"]
+}

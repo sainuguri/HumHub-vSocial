@@ -1,0 +1,337 @@
+HumHub Change Log
+=================
+
+
+1.2.2  (August 2, 2017)
+--------------------------------
+- Enh: Allow returning class names beside BasePermission instances in `Module::getPermissions()`
+- Enh: Increase profile image size to 800px.
+- Fix #2644 overlapping popup preview image after increasing preview image size (hagalaz)
+- Fix: Button widget child class static instantiation not working 
+- Fix: ModalButton instantiation and added ModalButton::close()
+- Fix: Respect `max_file_uploads` setting in UploadInput widget
+- Enh: Include `kartik-v/yii2-widgets`
+- Enh: Added `getAccessRules()` to `humhub/components/Controller`
+- Fix: AccessControl action restriction bug
+- Fix: `ModuleAutoLoader` exceptions not logged
+- Fix: `I18N` formatter user timezone not set
+- Enh: Automatically set space default visibility in `Content::setContainer()`
+- Fix: Fixed ContentContainerSettingManager caching issue if space/user id are equal
+- Enh: Use of select2 dropdown for time zone selections
+- Fix: Bypass AccessControl behavior in installer
+- Fix: Use of JS-Widget internal event object instead of node
+- Enh: Added `Formatter::getDateTimePattern()` and `Formatter::isShowMeridiem()`
+- Fix: Set formatter locale in I18N when changing locale
+- Enh: Added `$hideInStream` flag for upload component/action for changing `show_in_stream` file flag
+- Enh: Added `$showInStream` flag for `FilePreview` widget to only include files with certain `show_in_stream` flag
+- Enh: Added `FileManager::findStreamFiles()` for querying files with either given `show_in_stream = 1` or `show_in_stream = 0` flag.
+- Enh: Added `humhub\widgets\Tabs` and `humhub\widgets\SettingsTabs` with view type tab support
+- Enh: Added new `MarkdownField` input widget which as replacement of deprecated `MarkdownEditor`
+- Fix: Fixed markdown file upload pjax issue
+- Fix: Removed `display: table-cell` from markdown image css to enable inline images
+- Enh: Added `humhub/widgts/Button::userPickerSelfSelect()` for creating self select button for userpickers.
+- Enh: Added `humhub/widgts/Link::withAction()` for creating action based links
+- Enh: Added `SelectTimeZoneDropdown` widget
+- Enh: Added `Modal::closable` in order to respect `backdrop` and `keyboard` data setting of `Modal` and `ModalDialog` widget
+- Enh: Avoid cutting oembed entry in stream if it's the first part of a richtext 
+- Enh: Added `humhub/widgets/TimePicker` widget
+- Enh: Added `DbDateValidator::timeZone` for setting input time zone
+- Enh: Additional WallEntry settings: `$jsWidget`, `$addonOptions`, `$controlsOptions`, `$renderControls`, `$renderAddons`
+- Enh: Added possibility to overwrite WallEntry settings in `humhub/stream/actions/Stream::renderEntry()`
+- Enh: Added `ShowFiles::preview` and `ShowFiles::active` flag
+- Enh: Allow `$adminOnly` for User base ContentContainerController Controller
+- Enh: Added `ContentContainerActiveRecord::getDefaultContentVisibility()` and `User::getDefaultContentVisibility()`
+- Enh: Added automatic Notification Class loading by convention. No need to overwrite `Module::getNotifications()`
+- Enh: Added `ContentActiveRecord::getIcon()` for adding an badge icon to WallEntry content type badge
+- Enh: Added `ContentActiveRecord::getLabels()` for managing WallEntry labels (badges)
+- Enh: Added `Label` widget for creating sortable labels
+- Fix: Reset modal dialog size + add `size` option
+- Enh: Added `size` option `ui.modal.Modal.set()`
+- Enh: Use `ContentActiveRecord::getUrl()` for content perma links (if given)
+- Enh: Added `ContentTag` concept for creating content categories/filter on module level
+- Fix: Mentioning keeps running even if previous input result was empty
+- Enh: Darkened comment links for better readability
+- Fix #2582 Userfollow activity click action not working
+- Enh: Make space membership activities clickable
+- Chg: Removed `yii2-codeception` dependency
+- Chg: Added `phpoffice/phpexcel` dependency
+- Enh: Added `JsWidget::fadeIn` for smooth widget initialization
+- Enh: Enhanced `AccessControl` filter with `ControllerAccess` layer for better testability and flexibility
+- Enh: Added `Pending Registrations` admin view with `csv`, `xlsx` support.
+
+1.2.1 (June 17, 2017)
+--------------------------------
+- Fix: Invite error in french language
+- Fix #2518: ActivityStreamWidget::EVENT_INIT is missed (githubjeka)
+- Enh: Fixed accessibility issues in Dashboard/Login/Profile
+- Fix: module beforeInit and afterInit event
+- Enh: Added Registraion::EVENT_AFTER_REGISTRATION UserEvent
+- Enh: Added grunt `migrate-up` and `migrate-create` task
+- Enh: Added profile field type `CheckboxList`
+- Fix: Fixed `ui.addition` `MutationObserver`, only apply additions to inserted nodes.
+- Enh: Changed invite mail subject text
+- Fix #2571: last_login not set after registration direct login 
+- Enh: Always trigger dom widget events for widget `fire` until `triggerDom` is set to false
+- Enh: Added `richtextPaste` event
+- Enh: On search index rebuilding - use batch queries 
+- Fix: `ActiveQueryContent:readable()` for guNest users missing join
+- Enh: Added `ContentActiveRecord:managePermission` for changing the default write permission of ContentActiveRecord classes
+- Enh: Moved all default `WallEntryControls` to `WallEntry:getContextMenu()` widget.
+- Fix: Connect google OAuth under `Profile Settings  -> Connected Accounts` throws invalid redirect uri.
+- Fix: Invite Users does not respect ManageUsers/ManageGroups permission
+- Fix: Mail summaries sent in incorrect language
+- Fix: Send button text on request space membership dialog
+- Fix #2555: Friendship notification category visible even if friendship system deactivated
+- Enh: Don't auto focus space chooser search on small devices
+- Fix #2612: Single list item hides markers
+- Fix #2558: No notification for user profile posts send
+- Fixed #2560: Markdown profile field editable flag not working
+- Fix: Hide also header (space, profile) counts when following system is disabled
+- Fix: Perma link to space contents broken when space homepage was changed
+- Fix: Properly sort language and country select by users locale
+- Enh: Allow search in country profile field dropdown
+- Fix: js action api empty data attribute
+- Enh: Added button helper widgets `<?= Button::primary('myButton')->action('myJsAction')?>`
+- Enh: Enhanced ContentActiveRecord instantiation `$model = new MyContent($space, Content::VISIBILITY_PRIVATE)`
+- Fix #2625 Pjax problem with local links to files within stream
+- Enh: Use of `target="_blank"` for stream links
+- Fix #2594 Bug: Url with unicode in stream markdown
+- Fix: Notification grouping not working
+- Fix: Show more suppression entries with sort order update + equal update_at not working.
+- Fix #2627: Incorrect language used in group admin user approval e-mail
+- Fix #2631: Module configuration link shown for disabled modules
+
+1.2.0 (April 16, 2017)
+--------------------------------
+- Fix: SVG file uploads broken (mime type: image/svg+xml)
+- Fix: Public badge missing after create post
+- Fix: Mentioning notificaiton in user not working
+- Fix: Catch yii\db\Expression error for updated_at in wallentry
+- Enh: Added 'client.back' js action
+- Fix #2219: Overlapping summary mail content
+- Fix: Wall entry layout link/text overflow
+- Fix: Stream - Do not surpress if only particual contents are displayed
+- Fix: GlobalModal extends base Modal widget and GlobalModal::$backdrop is false by default (githubjeka)
+- Fix: Search StreamEntry options delete/editModal
+- Fix: Tour popover close behaviour
+- Fix: Incorrect permissions in space with guest mode
+
+1.2.0-beta.4 (March 28, 2017)
+--------------------------------
+- Fix: Notification count '0' visible after click on notification link
+- Fix: Default space permissions not adopted
+- Fix: Use of $permission->getId() instead of $permission->id in PermissionManager (allow dynamic permission ids)
+- Fix #2393: Markdown h4,h5,h6 broken
+- Fix #2389: calculate max upload file size on PHP 7.1 (githubjeka)
+- Fix: LDAP - Lost authclient ldap class configuration on user update
+- Fix #2400: Space ownership transfer form shows wrong users
+- Fix: Enable user approval without available registration groups or default group
+- Fix: Activate 'User' navigation in Admin Menu "Administration -> User -> Settings"
+- Enh: Improved administration user deletion view
+- Enh: Added 'containerLink' HTML Helper method
+- Enh: WallEntry layout layout improvements
+- Fix: Default user & space module configuration lost after foreign key migration
+- Fix: Respect pinned post when inserting a a new stream entry
+- Fix: Show comments in modal not working
+- Fix: #2374 Comment input not focused on comment link click 
+- Enh: Toggle comment box
+- Enh: Added global copyToClipboard
+- Enh: Added "weekly" mail summary interval
+- Fix: Invalid temp.css file
+- Fix: Default stream sort setting not applied
+- Enh: Show different login message, when registration is disabled
+- Fix: Norwegian translation code for Yii messages
+- Fix: Also allow comment editing by admins if content 'adminCanEditAllContent' is enabled
+- Enh: Added Make Private/ Make Public link to wall entry controls
+- Enh #2392: Added Latvian language
+- Fix: Hide image file info setting
+- Fix #2297: Failed to open stream: No such file or directory when attaching files in UploadAction
+
+1.2.0-beta.3 (March 20, 2017)
+--------------------------------
+- Enh: Added Grunt tasks `build-assets`, `build-theme`, `build-search`
+- Fix: Error when saving account setting permission.
+- Fix: #2296 stream scroll issue for mobile webkit browsers (martinbeek)
+- Fix: Added unknown upload error if server cancels upload (e.g in case of a post_max_size violation issue)
+- Enh: Added warning if php max upload/post is less than the humhub setting.
+- Enh: Added mp4/ogg blueimp support in post gallery
+- Enh: Added global (default) notification space settings
+- Enh: #2359 Use Jplayer playlist feature for post mp3
+- Enh: added js module 'ui.view' for view state and utils - Changed 'ui.state.getState' to 'ui.view.getState'
+- Enh: added view helper as getHeight/Width and isSmall/Medium/Normal (width) to 'ui.view' js module
+- Fix: removed popover image preview from mobile
+- Fix: removed target-densitydpi not supported warning
+- Enh: Added Stream::renderEntry for rendering Streamentries from ContentActiveRecord
+- Fix: Wallentry menu not working in search view
+- Fix: Double notifications when mentioning in comments
+- Enh: Raised collapse value for posts to full embeded youtube video height
+- Fix: Fixed oembed post edit
+- Enh: Included select2-humhub theme into the new theming
+- Enh: Added select2 dropdown for language selection in account and admin settings
+- Enh: Added data-ui-select2 addition for simple select2 dropdowns
+- Fix: Don't apply js additions if there was no matching element
+- Fix: #2336 use of invalid message key in comment notification (dutch)
+- Enh: Disable user and space follow by means of module settings
+- Fix: Setting of submitName and upload input name in file upload JsWidget
+- Fix: Rendering of UploadButton without given id
+- Enh: Added preventPopover and popoverPosition options to file preview
+- Enh: Added uploadSingle option for uploads with only one file
+- Fix: Missing margin of wall-entry-controls in comments
+- Enh: Added alignHeight setting to js loader module
+- Enh: Allow Response as arguments for modal.setDialog
+- Enh: Enable modal loading events with dataType json
+- Enh: Allow direct class export instead of module export in JS Modules e.g. module.export = MyClass
+- Enh: Added xhr to client response instances
+- Enh: Added response.header for receiving response header from xhr
+- Enh: Added post action to client module for data-action-click="client.post"
+- Fix: Try using options url as fallback in client calls if the action instance does not provide an url. e.g. client.post(evt, {url:...}
+- Enh: Enable setting ajax dataType from trigger e.g. data-action-click="modal.load" data-action-data-type="json"
+- Enh: Added action event.data for receiving action specific data options
+- Enh: Added default run for JsWidget
+- Enh: Added File::findByRecord for searching all attached files of a given ActiveRecord
+- Fix: Only set js view state for non full page load and pjax
+- Fix: Small gap on TopNav mouse hover (acs-ferreira)
+- Enh: Humand readable file sizes. (acs-ferreira)
+- Enh: Changed default $minInput of SpacePickerField to 2. (githubjeka)
+- Fix: Error when saving "Administration -> Settings -> General" without default space. (githubjeka)
+- Fix: #826: Notification status not updated right after like.
+- Fix: #2316: Reinvitation by email not working
+- Fix: #2314: Html helper namespace issue in Markdown.php class
+- Fix: #2302: Hide file info for images on wall settings not applied.
+- Fix: German translation error in Admin -> Users -> Groups -> Members -> Add Member UserPicker.
+- Fix: German translation "Notify Users" placeholder too long.
+- Fix: Admin group add members placeholder.
+- Fix: Stream entry root not removed for content delte (poll,etc)
+- Enh: Easier save feedback by using 'module.log.success('saved')'
+- Fix: Admin group add members placeholder.
+- Enh: Easier save feedback by using module.log.success('saved');
+- Fix: Set jsWidget id when autogenerated
+- Fix: Use of Html::activeLabel instead of $form->label in RichtextField
+- Enh: Added pjax redirect capability to js client
+- Fix: Show default error in status bar if invalid message object was provided
+- Fix #2304: Users not loaded in user selection fields.
+- Enh: Added User module 'displayNameCallback' attribute for custom display name formats
+- Enh: Added Clipboard.js and Permalink "Copy to clipboard" link
+- Enh: Validate minimum PHP version in Console Application
+- Enh: Added optional ActiveRecordContent::canEdit() method for custom ACLs
+- Fix: Better error handling/logging on corrupt GD Image files
+- Fix #2288: Pjax breaks OAuth2 ReturnUrl
+- Fix: Incorrect First name & Last name message key (githubjeka)
+- Fix: Do not store complete comments with search index (helnokaly)
+- Fix #2319: Run console application before installation
+- Fix: Directory Knob statistics on included modules (e.g. Enterprise Edition)
+- Enh: Added widget to display user profile image
+- Enh: Directory view templates cleanups
+- Fix: All LDAP Users have been disabled and not reenabled by hourly cronjob if ldap server not reachable.
+- Enh: Cleanup authentication layout file 
+- Fix: Console image converter memory limit allocation
+- Enh: Added new controller init event
+- Enh: Made admin base controller method "getAccessRules()" non static
+- Enh: Created new ImageController for user image and banner handling
+- Enh: Decreased OEmbed url max length 180chars (acs-ferreira)
+- Enh: Added APCu Support
+- Enh: Added ContentContainer integrity check (Daha62)
+- Fix #2331: Bug image load on PHP 7.1 with dynamic memory alloc (githubjeka)
+- Fix #2367: `ImageConverter::allocateMemory` uses common units(MegaBates) of memory (githubjeka)
+- Fix: #2369: typo issue (Felli)
+- Fix: Better notification compatiblity - mail views and enabled WebNotificationTarget
+- Fix #2312: Pinned post appears twice on stream 
+- Enh: Added option to show/hide deactivated user content in stream
+- Enh: Allow any url route as homepage by homeUrl array application parameter
+- Fix #2255: Added missing Social Account Settings menu
+- Fix: Added missing file download http caching
+- Enh: Added console email test command
+- Enh: Added stream module defaultStreamSuppressQueryIgnore to ease overwrites
+- Enh: Added 'archived' badge to archived spaces in directory
+
+1.2.0-beta.2 (February 24, 2017)
+--------------------------------
+- Fix: TimeAgo locale not loaded in production mode, added AppDynamicAsset (luke-)
+- Enh: Translation message rebuild and auto translated duplicates (luke-)
+- Enh: Combined all directory translations into base message category (luke-)
+- Enh: Added logging table cleanup job (luke-)
+- Enh: Added new version check as ActiveJob (luke-)
+- Enh: Moved user configuration params 'minUsernameLength' + 'adminCanChangeProfileImages' to user module class (luke-)
+- Enh: Added .editorconfig code style configuration file (luke-)
+- Enh: Added 'show_in_stream' column in file table to hide output in wall entries (luke-)
+- Enh: Added 'renderGalleryLink' link method to PreviewImage converter (luke-)
+- Fix: Search view links not working (buddh4)
+- Fix: Markdown in comment layout issue (buddh4)
+- Enh: humhub.ui.showMore module for cutting post text and comments (buddh4)
+- Fix: Javascript issues with guest users, removed initialitation of some modules for guest user (buddh4)
+- Fix: Mutliple use of same emoji in richtext.
+- Enh: Use of Yiis new afterRun for humhub Widgets.
+- Fix: Word break issue in markdown posts.
+- Fix: Richtext with emoji only on post edit where ignored.
+- Enh: Added data-action-confirm for confirming actions.
+- Fix: File StorageManager setContent method broken
+- Enh: Added FileHelper methods createLink & getContentContainer
+- Enh: Javascript HumHub Client - better handle ajax redirects
+- Enh: TopMenu / TopMenuRightStack hide content when user is not logged in without guest mode
+- Enh: Added showUserName option in AccountTopMenu widget
+- Enh: Added isGuestAccessEnabled method in User component
+- Enh: Added flash variable (executeJavascript)to execute js on the next page load
+- Enh: Added possibility to create own file handlers (edit, create, import, export)
+- Enh: Added data-action-process to handle modal processes
+- Enh: Added upload file event (humhub:file:created)
+- Enh: Added custom file handler positions
+- Enh: Moved UploadAction::getFileResponse method to FileHelper::getFileInfos
+- Enh: Added JS context menu to ui.additions module
+- Enh: Enhanced ContentContainer Module enable/disable
+- Enh: Added client.reload for pjax and non pjax page reloads
+- Enh: Added ContentContainerAsset to AppAsset
+- Enh: Added editModal for editing wallentries within a modal instead of inline
+- Fix: Oembed not rendered in richtext.
+- Enh: Smarter show more logic - Only cut text if it overlaps the max height by a specific span.
+- Enh: Added getContextMenu for defining wallentry context options. 
+- Enh: Added editMode to WallEntry for allowing modal based edits.
+- Fix: file-preview text overflow in HumHub theme.
+- Fix #2280: Meta data (rotation) not respected for camera images (ImageMagick)
+- Fix: Activity stream rendering issue on page unload.
+- Enh: Optimized stream entry fade animation.
+- Enh: Added $maxAttachedFiles to content module to restrict the uploaded file count of comments and posts
+- Fix: Hide notification count badge if notification count is 0
+- Fix: Only flush js config if not empty
+- Enh: Use of theme variables in mail all views
+- Fix: Submit comment with only files leads to Internal Server Error
+- Fix: Prevent spacechooser message count update on own content creation
+- Fix: Abort overlapping space chooser search requests
+- Fix: Problem in notification group_count with only one involved user
+- Fix #2257: Set module as default in space/user broken
+
+1.2.0-beta.1 (February 08, 2017)
+--------------------------------
+- Enh: Moved HumHub browser icons to HumHub theme (luke-)
+- Enh: Moved support css/js for older IE version into own AssetBundles (luke-)
+- Enh: Moved CSRF Tag output to View renderHeader (luke-)
+- Enh: Moved LayoutAddons widget from main layout to View endBody() method (luke-)
+- Enh: Added PJax page loading (luke-)
+- Enh: Refactored File module (luke-)
+- Enh: Added yii2-imagine Extension (luke-)
+- Enh: Use of blueimp image gallery (buddha)
+- Enh: JS module system with build in logging/text/config features (buddha)
+- Enh: JS core api under humhub namespace (buddha)
+- Enh: Use of compressed assets (js,css) in production mode (buddha)
+- Enh: Enhanced testability (buddha)
+- Enh: Added administrative backend group permissions (buddha)
+- Enh: Enhanced AccessControl filter with permission rules. (buddha)
+- Enh: Splitted less files to facilitate theming. (buddha)
+- Enh: Added user status bar for user feedback (buddha)
+- Enh: Better UserFeedack (buttons/messages) / Replacement of old DataSaved widget (buddha)
+- Enh: Overwrite default permission settings (buddha)
+- Enh: SpaceChooser rewrite with following spaces and remote search (buddha)
+- Enh: Modal widget rewrite.
+- Enh: Enhanced Archived Space handling (buddha)
+- Enh: Upload widget rewrite. (buddha)
+- Enh: Picker widgets rewrite (UserPicker/SpacePicker/MultiselectDropdown). (buddha)
+- Enh: Richtext widget rewrite. (buddha)
+- Enh: Removed almost all inline JS blocks. (buddha)
+- Enh: StreamAction now uses flexible StreamQuery Model. (buddha)
+- Enh: Post markdown support. (buddha)
+- Enh: Added 'live' module for push/pull messages to the frontend (luke-)
+- Enh: Added asynchronous job queues (luke-)
+- Enh: Changed minimum PHP version to 5.6
+- Enh: Added possibility of global content (content w/o contentcontainer) (luke)
+- Enh: Added new profile field type: checkbox (luke-)
+- Enh: Refactored mail summaries activity module (luke-)
+- Enh: Moved all static files (js, fonts, css) into own static folder @web-static (luke-)

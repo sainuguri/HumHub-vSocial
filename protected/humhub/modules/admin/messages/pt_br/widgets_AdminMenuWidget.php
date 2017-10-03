@@ -1,0 +1,20 @@
+<?php
+return array (
+  '<strong>Administration</strong> menu' => 'Menu de <strong>administração</strong>',
+  'Advanced' => 'Avançado',
+  'Appearance' => 'Aparência',
+  'Caching' => 'Fazer cache',
+  'E-Mail summaries' => '',
+  'Files' => 'Arquivos',
+  'General' => 'Geral',
+  'Information' => 'Informação',
+  'Logs' => '',
+  'Modules' => 'Módulos',
+  'Notifications' => 'Notificações',
+  'OEmbed' => 'OEmbed',
+  'Proxy' => 'Proxy',
+  'Settings' => 'Configurações',
+  'Spaces' => 'Espaços',
+  'Statistics' => 'Estatísticas',
+  'Users' => 'Usuários',
+);

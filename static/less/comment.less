@@ -1,0 +1,65 @@
+//
+// Comments
+// --------------------------------------------------
+.comment-container {
+    margin-top: 10px;
+    .wall-entry-controls {
+        margin-left: 50px;
+    }
+}
+
+
+.comment {
+    .media {
+        position: relative !important;
+        margin-top: 0;
+
+        .nav-pills.preferences {
+            display: none;
+            right: -3px;
+            top: -3px;
+        }
+    }
+
+    /*-- Since v1.2 overflow: visible */
+    .media-body {
+        overflow:visible;
+    }
+
+    .jp-progress {
+        background-color: #dbdcdd !important;
+    }
+    .jp-play-bar {
+        background: #cacaca;
+    }
+
+    .content {
+        a {
+            color: darken(@info, 20%);
+        }
+    }
+}
+
+.comment.guest-mode {
+    .media:last-child {
+        .wall-entry-controls {
+            margin-bottom: 0;
+            margin-left: 50px;
+        }
+        hr {
+            display: none;
+        }
+    }
+}
+
+.comment-container .content_edit {
+    margin-left: 50px;
+}
+
+.comment_edit_content {
+    margin-left: 50px;
+}
+
+.comment-message {
+    overflow:hidden;
+}

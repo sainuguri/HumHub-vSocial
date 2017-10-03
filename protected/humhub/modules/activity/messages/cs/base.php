@@ -1,0 +1,23 @@
+<?php
+return array (
+  '<strong>E-Mail</strong> Summaries' => 'Souhrnné emaily',
+  'Activities' => 'Události',
+  'Daily' => 'Denně',
+  'E-Mail Summaries' => 'Souhrnné emaily',
+  'E-Mail summaries are sent to inform you about recent activities in the network.' => 'Souhrnné emaily jsou zasílány tak, aby Vás informovali o nejnovějších aktivitách na síti.',
+  'E-Mail summaries are sent to users to inform them about recent activities in your network.' => 'Souhrnné emaily jsou odesílány uživatelům, aby je informovali o nejnovějších činnostech v síti.',
+  'Exclude spaces below from the mail summary' => 'Vyloučit prodlevy ze souhrnu emailů',
+  'Hourly' => 'Každou hodinu',
+  'Interval' => 'Interval',
+  'Latest news' => 'Poslední události',
+  'Never' => 'Nikdy',
+  'On this page you can configure the contents and the interval of these e-mail updates.' => 'Na této stránce můžete nakonfigurovat obsah a interval aktualizací e-mailu.',
+  'On this page you can define the default behavior for your users. These settings can be overwritten by users in their account settings page.' => 'Na této stránce můžete definovat výchozí nastavení pro vaše uživatele. Tato nastavení mohou přepsat nastavení v uživatelském účtu.',
+  'Only include spaces below to the mail summary' => 'Zahrnout pouze prodlevy v souhrnech emailů',
+  'Reset to defaults' => 'Výchozí nastavení',
+  'Spaces' => 'prostor(y)',
+  'Weekly' => 'Týdně',
+  'You will only receive an e-mail if there is something new.' => 'Obdržíte e-mail pouze v případě, že je něco nového.',
+  'Your daily summary' => 'Vaše denní shrnutí',
+  'Your weekly summary' => 'Vaše týdenní shrnutí',
+);

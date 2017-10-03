@@ -1,0 +1,1 @@
+a:2:{i:0;a:6:{s:22:"auth.ldap.refreshUsers";s:1:"1";s:17:"auth.needApproval";s:1:"1";s:26:"auth.anonymousRegistration";s:1:"1";s:27:"auth.internalUsersCanInvite";s:1:"0";s:21:"auth.allowGuestAccess";s:1:"0";s:18:"group.adminGroupId";s:1:"1";}i:1;N;}

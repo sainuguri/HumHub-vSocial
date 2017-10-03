@@ -1,0 +1,22 @@
+<?php
+return array (
+  'Auth Mode' => '',
+  'Created at' => '',
+  'Created by' => '',
+  'Default Space' => '',
+  'Description' => 'Apraksts',
+  'Email' => '',
+  'Language' => 'Valoda',
+  'Last Login' => '',
+  'Manager' => '',
+  'Name' => '',
+  'Show At Directory' => '',
+  'Show At Registration' => '',
+  'Space ID' => '',
+  'Status' => '',
+  'Tags' => '',
+  'Updated at' => '',
+  'Updated by' => '',
+  'Username' => 'Lietotāja vārds',
+  'Visibility' => '',
+);

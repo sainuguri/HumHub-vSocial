@@ -1,0 +1,23 @@
+<?php
+return array (
+  '<strong>E-Mail</strong> Summaries' => '<strong>Resum</strong> de correu electrònic',
+  'Activities' => 'Activitats',
+  'Daily' => 'Diariament',
+  'E-Mail Summaries' => 'Resum de correu electrònic',
+  'E-Mail summaries are sent to inform you about recent activities in the network.' => 'Els resums de correu electrònic s\'envien per a informar sobre les activitats recents a la xarxa.',
+  'E-Mail summaries are sent to users to inform them about recent activities in your network.' => 'Els resums de correu electrònic s\'envien als usuaris per informar-los sobre les activitats recents de la xarxa.',
+  'Exclude spaces below from the mail summary' => 'Excloure els següents espais del resum de correu',
+  'Hourly' => 'Cada hora',
+  'Interval' => 'Interval',
+  'Latest news' => 'Últimes notícies',
+  'Never' => 'Mai',
+  'On this page you can configure the contents and the interval of these e-mail updates.' => 'En aquesta pàgina podeu configurar els continguts i l\'interval d\'aquestes actualitzacions al correu electrònic.',
+  'On this page you can define the default behavior for your users. These settings can be overwritten by users in their account settings page.' => 'En aquesta pàgina es pot definir el comportament per defecte per als seus usuaris. Aquesta configuració pot ser sobreescrita pels usuaris en la seua pàgina de configuració del compte.',
+  'Only include spaces below to the mail summary' => 'Inclou només els espais següents al resum del correu',
+  'Reset to defaults' => 'Reestablir els valors predeterminats',
+  'Spaces' => 'Espais',
+  'Weekly' => 'Setmanalment',
+  'You will only receive an e-mail if there is something new.' => 'Sols rebràs un correu quan passe alguna cosa.',
+  'Your daily summary' => 'El teu resum diari',
+  'Your weekly summary' => 'El teu resum setmanal',
+);

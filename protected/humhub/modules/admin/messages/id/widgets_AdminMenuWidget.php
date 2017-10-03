@@ -1,0 +1,20 @@
+<?php
+return array (
+  '<strong>Administration</strong> menu' => '',
+  'Advanced' => '',
+  'Appearance' => '',
+  'Caching' => 'Caching',
+  'E-Mail summaries' => '',
+  'Files' => 'Files',
+  'General' => '',
+  'Information' => '',
+  'Logs' => '',
+  'Modules' => 'Modul',
+  'Notifications' => 'Pemberitahuan',
+  'OEmbed' => '',
+  'Proxy' => 'Proxy',
+  'Settings' => '',
+  'Spaces' => 'Ruang',
+  'Statistics' => 'Statistik',
+  'Users' => 'Pengguna',
+);

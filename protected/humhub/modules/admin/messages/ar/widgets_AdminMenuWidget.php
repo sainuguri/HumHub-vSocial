@@ -1,0 +1,20 @@
+<?php
+return array (
+  '<strong>Administration</strong> menu' => '',
+  'Advanced' => '',
+  'Appearance' => '',
+  'Caching' => '',
+  'E-Mail summaries' => '',
+  'Files' => '',
+  'General' => 'العام',
+  'Information' => '',
+  'Logs' => '',
+  'Modules' => 'الموديل',
+  'Notifications' => 'التنبيهات',
+  'OEmbed' => '',
+  'Proxy' => '',
+  'Settings' => 'الإعدادات',
+  'Spaces' => 'الباحات',
+  'Statistics' => '',
+  'Users' => '',
+);

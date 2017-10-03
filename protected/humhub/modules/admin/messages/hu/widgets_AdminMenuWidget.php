@@ -1,0 +1,20 @@
+<?php
+return array (
+  '<strong>Administration</strong> menu' => '',
+  'Advanced' => '',
+  'Appearance' => '',
+  'Caching' => '',
+  'E-Mail summaries' => '',
+  'Files' => '',
+  'General' => '',
+  'Information' => '',
+  'Logs' => '',
+  'Modules' => '',
+  'Notifications' => 'Értesítések',
+  'OEmbed' => '',
+  'Proxy' => '',
+  'Settings' => 'Beállítások',
+  'Spaces' => '',
+  'Statistics' => '',
+  'Users' => '',
+);

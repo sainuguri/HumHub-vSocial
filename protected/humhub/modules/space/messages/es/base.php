@@ -1,0 +1,20 @@
+<?php
+return array (
+  '<strong>Space</strong> followers' => 'Seguidores del <strong>Espacio</strong>',
+  'Could not delete user who is a space owner! Name of Space: {spaceName}' => '¡No puedo borrar un usuario que es dueño de un espacio! Nombre del espacio: {spaceName}',
+  'Default' => 'Por defecto',
+  'Everyone can enter' => 'Todo el mundo puede entrar',
+  'Invite and request' => 'Invitar y enviar una solicitud',
+  'No spaces found.' => 'No se encontraron Espacios',
+  'Only by invite' => 'Sólo por invitación',
+  'Private' => 'Privado',
+  'Private (Invisible)' => 'Privado (Invisible)',
+  'Public' => 'Público',
+  'Public (Members & Guests)' => 'Público (Miembros y visitantes)',
+  'Public (Members only)' => 'Público (sólo miembros)',
+  'Public (Registered users only)' => 'Público (sólo usuarios registrados)',
+  'Public (Visible)' => 'Público (Visible)',
+  'Settings' => 'Ajustes',
+  'Space' => 'Espacio',
+  'Visible for all (members and guests)' => 'Visible para todos (miembros y visitantes)',
+);

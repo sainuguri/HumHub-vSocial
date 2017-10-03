@@ -1,0 +1,23 @@
+<?php
+return array (
+  '<strong>E-Mail</strong> Summaries' => '<strong>E-posta</strong> Özetleri',
+  'Activities' => 'Aktiviteler',
+  'Daily' => 'Günlük',
+  'E-Mail Summaries' => 'E-posta Özetleri',
+  'E-Mail summaries are sent to inform you about recent activities in the network.' => 'E-posta özetleri sosyal ağınızdaki son aktiviteleri bilgilendirmek amacıyla size gönderilir.',
+  'E-Mail summaries are sent to users to inform them about recent activities in your network.' => 'E-posta özetleri sosyal ağınızdaki son aktiviteleri kullanıcıları bilgilendirmek amacıyla kendilerine gönderilir.',
+  'Exclude spaces below from the mail summary' => 'E-posta özetinden aşağıdaki sayfaları çıkar',
+  'Hourly' => 'Saat başı',
+  'Interval' => 'Süre',
+  'Latest news' => 'Güncel haberler',
+  'Never' => 'Asla',
+  'On this page you can configure the contents and the interval of these e-mail updates.' => 'Bu sayfada, alacağınız e-posta güncellemeleri ile ilgili süreyi ayarlayabilirsiniz.',
+  'On this page you can define the default behavior for your users. These settings can be overwritten by users in their account settings page.' => 'Bu sayfada kullanıcılarınızın varsayılan ayarlarını belirleyebilirsiniz. Bu ayarlar, kullanıcılarınızın hesap ayarları bölümünde bundan sonra geçerli olacaktır.',
+  'Only include spaces below to the mail summary' => 'E-posta özeti yalnızca aşağıdaki sayfaları içersin',
+  'Reset to defaults' => 'Varsayılan ayarlara geri dön',
+  'Spaces' => 'Sayfalar',
+  'Weekly' => 'Haftalık',
+  'You will only receive an e-mail if there is something new.' => 'Yalnızca yeni bir işlem olduğunda e-posta ile bilgilendirileceksiniz.',
+  'Your daily summary' => 'Günlük özetiniz',
+  'Your weekly summary' => 'Haftalık özet',
+);

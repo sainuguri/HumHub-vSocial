@@ -1,0 +1,20 @@
+a:2:{i:0;s:910:"
+    <li class="activity-entry" data-stream-entry data-action-component="activity.ActivityStreamEntry" data-content-key="19">
+        <div class="media">
+                            <!-- Show user image -->
+                <img class="media-object img-rounded pull-left" data-src="holder.js/32x32" alt="32x32"
+                     style="width: 32px; height: 32px;"
+                     src="/humhub/uploads/profile_image/61c9b999-aee4-45bb-8f48-a103944fc9fd.jpg?m=1504802169">
+            
+            <!-- Show space image, if you are outside from a space -->
+            
+            <div class="media-body text-break">
+
+                <!-- Show content -->
+                <strong>admin sj9t5</strong> created this space.<br/>
+
+                <!-- show time -->
+                <span class="time" title="2017-10-03T14:05:13-05:00">Oct 3, 2017 - 12:05 PM</span>            </div>
+        </div>
+    </li>
+";i:1;N;}

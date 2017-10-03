@@ -1,0 +1,20 @@
+<?php
+return array (
+  '<strong>Administration</strong> menu' => '<strong>Menu</strong> administrace',
+  'Advanced' => 'Rozšířené',
+  'Appearance' => 'Vzhled',
+  'Caching' => 'Cache',
+  'E-Mail summaries' => 'Souhrnné emaily',
+  'Files' => 'Soubory',
+  'General' => 'Obecné',
+  'Information' => 'Informace',
+  'Logs' => 'Logy',
+  'Modules' => 'Moduly',
+  'Notifications' => 'Upozornění',
+  'OEmbed' => 'OEmbed',
+  'Proxy' => 'Proxy',
+  'Settings' => 'Nastavení',
+  'Spaces' => 'Prostory',
+  'Statistics' => 'Statistiky',
+  'Users' => 'Uživatelé',
+);
