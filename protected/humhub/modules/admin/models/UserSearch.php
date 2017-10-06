@@ -8,6 +8,7 @@
 
 namespace humhub\modules\admin\models;
 
+use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use humhub\modules\user\models\User;
@@ -32,7 +33,7 @@ class UserSearch extends User
     {
         return [
             [['id'], 'integer'],
-            [['username', 'email', 'created_at', 'profile.firstname', 'profile.lastname', 'last_login'], 'safe'],
+            [['username', 'email', 'created_at', 'profile.firstname', 'profile.lastname', 'last_login', 'profle.role_name'], 'safe'],
         ];
     }
 
@@ -54,8 +55,8 @@ class UserSearch extends User
      */
     public function search($params)
     {
+        // if (Yii::$app->user->isAdmin()){}
         $query = ($this->query == null) ? User::find()->joinWith('profile') : $this->query;
-
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
             'pagination' => ['pageSize' => 50],
@@ -66,9 +67,10 @@ class UserSearch extends User
                 'id',
                 'username',
                 'email',
-            'last_login',
+                'last_login',
                 'profile.firstname',
                 'profile.lastname',
+                'profile.role_name',
                 'created_at',
             ]
         ]);
@@ -79,13 +81,13 @@ class UserSearch extends User
             $query->where('0=1');
             return $dataProvider;
         }
-
         $query->andFilterWhere(['id' => $this->id]);
         $query->andFilterWhere(['like', 'user.id', $this->id]);
         $query->andFilterWhere(['like', 'user.username', $this->username]);
         $query->andFilterWhere(['like', 'user.email', $this->email]);
         $query->andFilterWhere(['like', 'profile.firstname', $this->getAttribute('profile.firstname')]);
         $query->andFilterWhere(['like', 'profile.lastname', $this->getAttribute('profile.lastname')]);
+        $query->andFilterWhere(['like', 'profile.role_name', $this->getAttribute('profile.role_name')]);
 
         if ($this->getAttribute('last_login') != "") {
             try {
@@ -100,7 +102,6 @@ class UserSearch extends User
                 // do not change the query if the date is wrong formatted
             }
         }
-
         return $dataProvider;
     }
 

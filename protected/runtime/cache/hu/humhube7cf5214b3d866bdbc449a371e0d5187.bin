@@ -1,6 +1,6 @@
-a:2:{i:0;s:1399:"
-<a href="/humhub/index.php?r=activity%2Flink&id=15">
-    <li class="activity-entry" data-stream-entry data-action-component="activity.ActivityStreamEntry" data-content-key="18">
+a:2:{i:0;s:1400:"
+<a href="/humhub/index.php?r=activity%2Flink&id=20">
+    <li class="activity-entry" data-stream-entry data-action-component="activity.ActivityStreamEntry" data-content-key="23">
         <div class="media">
                             <!-- Show user image -->
                 <img class="media-object img-rounded pull-left" data-src="holder.js/32x32" alt="32x32"
@@ -13,10 +13,10 @@ a:2:{i:0;s:1399:"
             <div class="media-body text-break">
 
                 <!-- Show content -->
-                <strong>tony stark</strong> joined the space <strong>Welcome Space</strong><br/>
+                <strong>abhinay js</strong> joined the space <strong>Welcome Space</strong><br/>
 
                 <!-- show time -->
-                <span class="time"><span title="Oct 2, 2017 - 9:29 AM">Oct 2, 2017</span></span>            </div>
+                <span class="time" title="2017-10-05T14:29:12-05:00">Oct 5, 2017 - 2:29 PM</span>            </div>
         </div>
     </li>
 </a>

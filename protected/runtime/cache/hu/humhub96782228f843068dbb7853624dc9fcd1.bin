@@ -1,4 +1,4 @@
-a:2:{i:0;s:968:"
+a:2:{i:0;s:1458:"
 <a href="/humhub/index.php?r=activity%2Flink&id=17">
     <li class="activity-entry" data-stream-entry data-action-component="activity.ActivityStreamEntry" data-content-key="20">
         <div class="media">
@@ -8,14 +8,15 @@ a:2:{i:0;s:968:"
                      src="/humhub/uploads/profile_image/a1b6994d-f598-4245-901f-32073e361733.jpg?m=1504802170">
             
             <!-- Show space image, if you are outside from a space -->
+                                                <div class="img-space pull-left space-profile-acronym-2 space-acronym" style=" background-color: #d1d1d1; width: 20px; height: 20px; font-size: 8.8px; padding: 3.6px 0; border-radius: 2px;">SC</div><img class="img-space pull-left space-profile-image-2 img-rounded profile-user-photo hidden" src="/humhub/static/img/default_space.jpg" alt="Sample Class" style=" width: 20px; height: 20px">                
             
             <div class="media-body text-break">
 
                 <!-- Show content -->
-                <strong>David Roberts</strong> joined this space.<br/>
+                <strong>David Roberts</strong> joined the space <strong>Sample Class</strong><br/>
 
                 <!-- show time -->
-                <span class="time" title="2017-10-03T14:16:58-05:00">Oct 3, 2017 - 2:16 PM</span>            </div>
+                <span class="time"><span title="Oct 3, 2017 - 2:16 PM">Oct 3, 2017 - 2:16 PM</span></span>            </div>
         </div>
     </li>
 </a>

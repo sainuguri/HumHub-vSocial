@@ -33,6 +33,7 @@ use humhub\widgets\GridView;
                 'email',
                 'profile.firstname',
                 'profile.lastname',
+                'profile.role_name',
                 [
                     'attribute' => 'last_login',
                     'label' => Yii::t('AdminModule.views_user_index', 'Last login'),
