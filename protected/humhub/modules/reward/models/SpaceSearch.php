@@ -3,6 +3,7 @@
 
 namespace humhub\modules\reward\models;
 
+use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use humhub\modules\space\models\Space;
@@ -58,11 +59,17 @@ class SpaceSearch extends Space
             $query->where('0=1');
             return $dataProvider;
         }
-
-        $query->andFilterWhere(['id' => $this->id]);
-        $query->andFilterWhere(['join_policy' => $this->join_policy]);
-        $query->andFilterWhere(['visibility' => $this->visibility]);
-        $query->andFilterWhere(['like', 'name', $this->name]);
+        if (Yii::$app->user->isAdmin()){
+            $query->andFilterWhere(['id' => $this->id]);
+            $query->andFilterWhere(['join_policy' => $this->join_policy]);
+            $query->andFilterWhere(['visibility' => $this->visibility]);
+            $query->andFilterWhere(['like', 'name', $this->name]);
+        }else if (Yii::$app->user->isManager()){
+            $query->andFilterWhere(['id' => $this->id]);
+            $query->andFilterWhere(['join_policy' => $this->join_policy]);
+            $query->andFilterWhere(['visibility' => $this->visibility]);
+            $query->andFilterWhere(['like', 'name', $this->name]);
+        }
 
         return $dataProvider;
     }

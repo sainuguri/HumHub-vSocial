@@ -8661,3 +8661,942 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1507241254.735
     'REQUEST_TIME' => 1507241254
 ]
+2017-10-09 13:52:33 [127.0.0.1][1][pa3eeob9i24acb2bgcvr1j20j3][error][ParseError] ParseError: syntax error, unexpected 'Administrator' (T_STRING), expecting ')' in /var/www/html/humhub/protected/humhub/modules/admin/models/UserSearch.php:59
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('humhub\\modules\\...')
+#1 /var/www/html/humhub/protected/humhub/modules/admin/controllers/UserController.php(69): spl_autoload_call('humhub\\modules\\...')
+#2 [internal function]: humhub\modules\admin\controllers\UserController->actionIndex()
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('admin/user', Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#8 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#9 {main}
+2017-10-09 13:52:33 [127.0.0.1][1][pa3eeob9i24acb2bgcvr1j20j3][info][application] $_GET = [
+    'r' => 'admin/user'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_space-members-panel=expanded; PHPSESSID=pa3eeob9i24acb2bgcvr1j20j3; _csrf=34434cf801730ff03b439929574934ddfb068a1795c50a649970bd3be60c51baa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%A8%DC%E6%0F%1C%A7%22x8%7BW%CE%3E%08%ECH%8CU%01%DBr%AB%14%29%D4%F8%5Cl%5C%90%AC%24%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '42730'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=admin%2Fuser'
+    'REQUEST_URI' => '/humhub/index.php?r=admin%2Fuser'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1507575153.885
+    'REQUEST_TIME' => 1507575153
+]
+2017-10-09 13:57:44 [127.0.0.1][1][pa3eeob9i24acb2bgcvr1j20j3][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: humhub\modules\admin\models\UserSearch::findAllByAttributes() in /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Component.php:290
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/modules/admin/models/UserSearch.php(59): yii\base\Component->__call('findAllByAttrib...', Array)
+#1 /var/www/html/humhub/protected/humhub/modules/admin/controllers/UserController.php(70): humhub\modules\admin\models\UserSearch->search(Array)
+#2 [internal function]: humhub\modules\admin\controllers\UserController->actionIndex()
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('index', Array)
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('admin/user/inde...', Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#8 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#9 {main}
+2017-10-09 13:57:44 [127.0.0.1][1][pa3eeob9i24acb2bgcvr1j20j3][info][application] $_GET = [
+    'r' => 'admin/user/index'
+    '_pjax' => '#layout-content'
+    '_' => '1507575239992'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub/index.php?r=admin%2Fauthentication'
+    'HTTP_X_CSRF_TOKEN' => 'stGNiIF8F6nr-6ldUkWiBjtyx0Xd667kMGrDojGQAtQaDWuHnds10dOA_pNsTU5OtyfGnq9Aus3kkp_ObQCu8A=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#layout-content'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_space-members-panel=expanded; PHPSESSID=pa3eeob9i24acb2bgcvr1j20j3; _csrf=34434cf801730ff03b439929574934ddfb068a1795c50a649970bd3be60c51baa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%A8%DC%E6%0F%1C%A7%22x8%7BW%CE%3E%08%ECH%8CU%01%DBr%AB%14%29%D4%F8%5Cl%5C%90%AC%24%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '42766'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=admin%2Fuser%2Findex&_pjax=%23layout-content&_=1507575239992'
+    'REQUEST_URI' => '/humhub/index.php?r=admin%2Fuser%2Findex&_pjax=%23layout-content&_=1507575239992'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1507575464.02
+    'REQUEST_TIME' => 1507575464
+]
+2017-10-09 13:57:44 [127.0.0.1][1][pa3eeob9i24acb2bgcvr1j20j3][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: humhub\modules\admin\models\UserSearch::findAllByAttributes() in /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Component.php:290
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/modules/admin/models/UserSearch.php(59): yii\base\Component->__call('findAllByAttrib...', Array)
+#1 /var/www/html/humhub/protected/humhub/modules/admin/controllers/UserController.php(70): humhub\modules\admin\models\UserSearch->search(Array)
+#2 [internal function]: humhub\modules\admin\controllers\UserController->actionIndex()
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('index', Array)
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('admin/user/inde...', Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#8 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#9 {main}
+2017-10-09 13:57:44 [127.0.0.1][1][pa3eeob9i24acb2bgcvr1j20j3][info][application] $_GET = [
+    'r' => 'admin/user/index'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub/index.php?r=admin%2Fauthentication'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_space-members-panel=expanded; PHPSESSID=pa3eeob9i24acb2bgcvr1j20j3; _csrf=34434cf801730ff03b439929574934ddfb068a1795c50a649970bd3be60c51baa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%A8%DC%E6%0F%1C%A7%22x8%7BW%CE%3E%08%ECH%8CU%01%DBr%AB%14%29%D4%F8%5Cl%5C%90%AC%24%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '42768'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=admin%2Fuser%2Findex'
+    'REQUEST_URI' => '/humhub/index.php?r=admin%2Fuser%2Findex'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1507575464.137
+    'REQUEST_TIME' => 1507575464
+]
+2017-10-09 13:58:19 [127.0.0.1][1][pa3eeob9i24acb2bgcvr1j20j3][error][Error] Error: Call to a member function joinWith() on array in /var/www/html/humhub/protected/humhub/modules/admin/models/UserSearch.php:59
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/modules/admin/controllers/UserController.php(70): humhub\modules\admin\models\UserSearch->search(Array)
+#1 [internal function]: humhub\modules\admin\controllers\UserController->actionIndex()
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('index', Array)
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('admin/user/inde...', Array)
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#7 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#8 {main}
+2017-10-09 13:58:19 [127.0.0.1][1][pa3eeob9i24acb2bgcvr1j20j3][info][application] $_GET = [
+    'r' => 'admin/user/index'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_space-members-panel=expanded; PHPSESSID=pa3eeob9i24acb2bgcvr1j20j3; _csrf=34434cf801730ff03b439929574934ddfb068a1795c50a649970bd3be60c51baa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%A8%DC%E6%0F%1C%A7%22x8%7BW%CE%3E%08%ECH%8CU%01%DBr%AB%14%29%D4%F8%5Cl%5C%90%AC%24%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '42772'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=admin%2Fuser%2Findex'
+    'REQUEST_URI' => '/humhub/index.php?r=admin%2Fuser%2Findex'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1507575499.512
+    'REQUEST_TIME' => 1507575499
+]
+2017-10-09 13:58:47 [127.0.0.1][1][pa3eeob9i24acb2bgcvr1j20j3][error][Error] Error: Call to a member function joinWith() on array in /var/www/html/humhub/protected/humhub/modules/admin/models/UserSearch.php:59
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/modules/admin/controllers/UserController.php(70): humhub\modules\admin\models\UserSearch->search(Array)
+#1 [internal function]: humhub\modules\admin\controllers\UserController->actionIndex()
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('index', Array)
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('admin/user/inde...', Array)
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#7 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#8 {main}
+2017-10-09 13:58:47 [127.0.0.1][1][pa3eeob9i24acb2bgcvr1j20j3][info][application] $_GET = [
+    'r' => 'admin/user/index'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_space-members-panel=expanded; PHPSESSID=pa3eeob9i24acb2bgcvr1j20j3; _csrf=34434cf801730ff03b439929574934ddfb068a1795c50a649970bd3be60c51baa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%A8%DC%E6%0F%1C%A7%22x8%7BW%CE%3E%08%ECH%8CU%01%DBr%AB%14%29%D4%F8%5Cl%5C%90%AC%24%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '42774'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=admin%2Fuser%2Findex'
+    'REQUEST_URI' => '/humhub/index.php?r=admin%2Fuser%2Findex'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1507575527.047
+    'REQUEST_TIME' => 1507575527
+]
+2017-10-09 13:59:00 [127.0.0.1][1][pa3eeob9i24acb2bgcvr1j20j3][error][Error] Error: Call to a member function andFilterWhere() on array in /var/www/html/humhub/protected/humhub/modules/admin/models/UserSearch.php:84
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/modules/admin/controllers/UserController.php(70): humhub\modules\admin\models\UserSearch->search(Array)
+#1 [internal function]: humhub\modules\admin\controllers\UserController->actionIndex()
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('index', Array)
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('admin/user/inde...', Array)
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#7 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#8 {main}
+2017-10-09 13:59:00 [127.0.0.1][1][pa3eeob9i24acb2bgcvr1j20j3][info][application] $_GET = [
+    'r' => 'admin/user/index'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_space-members-panel=expanded; PHPSESSID=pa3eeob9i24acb2bgcvr1j20j3; _csrf=34434cf801730ff03b439929574934ddfb068a1795c50a649970bd3be60c51baa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%A8%DC%E6%0F%1C%A7%22x8%7BW%CE%3E%08%ECH%8CU%01%DBr%AB%14%29%D4%F8%5Cl%5C%90%AC%24%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '42776'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=admin%2Fuser%2Findex'
+    'REQUEST_URI' => '/humhub/index.php?r=admin%2Fuser%2Findex'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1507575540.41
+    'REQUEST_TIME' => 1507575540
+]
+2017-10-09 14:04:46 [127.0.0.1][1][pa3eeob9i24acb2bgcvr1j20j3][error][ParseError] ParseError: syntax error, unexpected '(', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /var/www/html/humhub/protected/humhub/modules/admin/models/UserSearch.php:90
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('humhub\\modules\\...')
+#1 /var/www/html/humhub/protected/humhub/modules/admin/controllers/UserController.php(69): spl_autoload_call('humhub\\modules\\...')
+#2 [internal function]: humhub\modules\admin\controllers\UserController->actionIndex()
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('index', Array)
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('admin/user/inde...', Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#8 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#9 {main}
+2017-10-09 14:04:46 [127.0.0.1][1][pa3eeob9i24acb2bgcvr1j20j3][info][application] $_GET = [
+    'r' => 'admin/user/index'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_space-members-panel=expanded; PHPSESSID=pa3eeob9i24acb2bgcvr1j20j3; _csrf=34434cf801730ff03b439929574934ddfb068a1795c50a649970bd3be60c51baa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%A8%DC%E6%0F%1C%A7%22x8%7BW%CE%3E%08%ECH%8CU%01%DBr%AB%14%29%D4%F8%5Cl%5C%90%AC%24%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '42814'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=admin%2Fuser%2Findex'
+    'REQUEST_URI' => '/humhub/index.php?r=admin%2Fuser%2Findex'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1507575886.134
+    'REQUEST_TIME' => 1507575886
+]
+2017-10-09 14:05:51 [127.0.0.1][1][pa3eeob9i24acb2bgcvr1j20j3][error][ParseError] ParseError: syntax error, unexpected ''sj9t5'' (T_CONSTANT_ENCAPSED_STRING), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$' in /var/www/html/humhub/protected/humhub/modules/admin/models/UserSearch.php:85
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('humhub\\modules\\...')
+#1 /var/www/html/humhub/protected/humhub/modules/admin/controllers/UserController.php(69): spl_autoload_call('humhub\\modules\\...')
+#2 [internal function]: humhub\modules\admin\controllers\UserController->actionIndex()
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('index', Array)
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('admin/user/inde...', Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#8 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#9 {main}
+2017-10-09 14:05:51 [127.0.0.1][1][pa3eeob9i24acb2bgcvr1j20j3][info][application] $_GET = [
+    'r' => 'admin/user/index'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_space-members-panel=expanded; PHPSESSID=pa3eeob9i24acb2bgcvr1j20j3; _csrf=34434cf801730ff03b439929574934ddfb068a1795c50a649970bd3be60c51baa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%A8%DC%E6%0F%1C%A7%22x8%7BW%CE%3E%08%ECH%8CU%01%DBr%AB%14%29%D4%F8%5Cl%5C%90%AC%24%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '42816'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=admin%2Fuser%2Findex'
+    'REQUEST_URI' => '/humhub/index.php?r=admin%2Fuser%2Findex'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1507575951.832
+    'REQUEST_TIME' => 1507575951
+]
+2017-10-10 11:40:43 [127.0.0.1][6][46ds8rif1o9jn03meou4kh7rf1][error][yii\web\HttpException:403] yii\web\HttpException: You are not permitted to access this section. in /var/www/html/humhub/protected/humhub/components/behaviors/AccessControl.php:159
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/components/behaviors/AccessControl.php(105): humhub\components\behaviors\AccessControl->forbidden()
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/ActionFilter.php(75): humhub\components\behaviors\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /var/www/html/humhub/protected/humhub/components/Controller.php(187): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(154): humhub\components\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('admin', Array)
+#10 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#11 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#12 {main}
+2017-10-10 11:40:43 [127.0.0.1][6][46ds8rif1o9jn03meou4kh7rf1][info][application] $_GET = [
+    'r' => 'admin'
+    '_pjax' => '#layout-content'
+    '_' => '1507653638832'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub/index.php?r=dashboard%2Fdashboard'
+    'HTTP_X_CSRF_TOKEN' => 'tzmzFO91z9XnvQcXptlDz38wtPnw4V_mdtdInFfvADYf5VUb89Ltrd_GUNmY0a-H82W1IoJKS8-iLxTwC3-sEg=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#layout-content'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_space-members-panel=expanded; PHPSESSID=46ds8rif1o9jn03meou4kh7rf1; _csrf=34434cf801730ff03b439929574934ddfb068a1795c50a649970bd3be60c51baa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%A8%DC%E6%0F%1C%A7%22x8%7BW%CE%3E%08%ECH%8CU%01%DBr%AB%14%29%D4%F8%5Cl%5C%90%AC%24%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '48362'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=admin&_pjax=%23layout-content&_=1507653638832'
+    'REQUEST_URI' => '/humhub/index.php?r=admin&_pjax=%23layout-content&_=1507653638832'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1507653643.826
+    'REQUEST_TIME' => 1507653643
+]
+2017-10-10 11:40:43 [127.0.0.1][6][46ds8rif1o9jn03meou4kh7rf1][error][yii\web\HttpException:403] yii\web\HttpException: You are not permitted to access this section. in /var/www/html/humhub/protected/humhub/components/behaviors/AccessControl.php:159
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/components/behaviors/AccessControl.php(105): humhub\components\behaviors\AccessControl->forbidden()
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/ActionFilter.php(75): humhub\components\behaviors\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /var/www/html/humhub/protected/humhub/components/Controller.php(187): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(154): humhub\components\Controller->beforeAction(Object(yii\base\InlineAction))
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('admin', Array)
+#10 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#11 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#12 {main}
+2017-10-10 11:40:43 [127.0.0.1][6][46ds8rif1o9jn03meou4kh7rf1][info][application] $_GET = [
+    'r' => 'admin'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub/index.php?r=dashboard%2Fdashboard'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_space-members-panel=expanded; PHPSESSID=46ds8rif1o9jn03meou4kh7rf1; _csrf=34434cf801730ff03b439929574934ddfb068a1795c50a649970bd3be60c51baa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%A8%DC%E6%0F%1C%A7%22x8%7BW%CE%3E%08%ECH%8CU%01%DBr%AB%14%29%D4%F8%5Cl%5C%90%AC%24%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '48362'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=admin'
+    'REQUEST_URI' => '/humhub/index.php?r=admin'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1507653643.955
+    'REQUEST_TIME' => 1507653643
+]
+2017-10-10 12:07:04 [127.0.0.1][1][2nmdmrv4niqecinlb55jlphni1][error][Error] Error: Class 'humhub\modules\reward\models\Yii' not found in /var/www/html/humhub/protected/humhub/modules/reward/models/SpaceSearch.php:61
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/modules/reward/controllers/RewardController.php(56): humhub\modules\reward\models\SpaceSearch->search(Array)
+#1 [internal function]: humhub\modules\reward\controllers\RewardController->actionIndex()
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('reward/reward', Array)
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#7 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#8 {main}
+2017-10-10 12:07:04 [127.0.0.1][1][2nmdmrv4niqecinlb55jlphni1][info][application] $_GET = [
+    'r' => 'reward/reward'
+    '_pjax' => '#layout-content'
+    '_' => '1507655112199'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub/index.php?SpaceSearch%5Bid%5D=&SpaceSearch%5Bname%5D=wel&SpaceSearch%5Bvisibility%5D=&SpaceSearch%5Bjoin_policy%5D=&r=reward%2Freward&_pjax=%23layout-content&_=1507654892838'
+    'HTTP_X_CSRF_TOKEN' => 'Q-iJGr28mA_aLLp7u8D9YhCZmsTwL8OTMBKk71z2fsPrNG8VoRu6d-JX7bWFyBEqnMybH4KE17rk6viDAGbS5w=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#layout-content'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_space-members-panel=expanded; PHPSESSID=2nmdmrv4niqecinlb55jlphni1; _csrf=34434cf801730ff03b439929574934ddfb068a1795c50a649970bd3be60c51baa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%A8%DC%E6%0F%1C%A7%22x8%7BW%CE%3E%08%ECH%8CU%01%DBr%AB%14%29%D4%F8%5Cl%5C%90%AC%24%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '48612'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=reward%2Freward&_pjax=%23layout-content&_=1507655112199'
+    'REQUEST_URI' => '/humhub/index.php?r=reward%2Freward&_pjax=%23layout-content&_=1507655112199'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1507655224.325
+    'REQUEST_TIME' => 1507655224
+]
+2017-10-10 12:07:04 [127.0.0.1][1][2nmdmrv4niqecinlb55jlphni1][error][Error] Error: Class 'humhub\modules\reward\models\Yii' not found in /var/www/html/humhub/protected/humhub/modules/reward/models/SpaceSearch.php:61
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/modules/reward/controllers/RewardController.php(56): humhub\modules\reward\models\SpaceSearch->search(Array)
+#1 [internal function]: humhub\modules\reward\controllers\RewardController->actionIndex()
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('reward/reward', Array)
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#7 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#8 {main}
+2017-10-10 12:07:04 [127.0.0.1][1][2nmdmrv4niqecinlb55jlphni1][info][application] $_GET = [
+    'r' => 'reward/reward'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub/index.php?SpaceSearch%5Bid%5D=&SpaceSearch%5Bname%5D=wel&SpaceSearch%5Bvisibility%5D=&SpaceSearch%5Bjoin_policy%5D=&r=reward%2Freward&_pjax=%23layout-content&_=1507654892838'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_space-members-panel=expanded; PHPSESSID=2nmdmrv4niqecinlb55jlphni1; _csrf=34434cf801730ff03b439929574934ddfb068a1795c50a649970bd3be60c51baa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%A8%DC%E6%0F%1C%A7%22x8%7BW%CE%3E%08%ECH%8CU%01%DBr%AB%14%29%D4%F8%5Cl%5C%90%AC%24%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '48614'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=reward%2Freward'
+    'REQUEST_URI' => '/humhub/index.php?r=reward%2Freward'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1507655224.379
+    'REQUEST_TIME' => 1507655224
+]
+2017-10-10 12:22:12 [127.0.0.1][1][vnt6ppsj46265le62tju1an032][error][ParseError] ParseError: syntax error, unexpected '<' in /var/www/html/humhub/protected/humhub/modules/reward/views/reward/index.php:16
+Stack trace:
+#0 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\reward\controllers\RewardController))
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('index', Array, Object(humhub\modules\reward\controllers\RewardController))
+#3 /var/www/html/humhub/protected/humhub/modules/reward/controllers/RewardController.php(60): yii\base\Controller->render('index', Array)
+#4 [internal function]: humhub\modules\reward\controllers\RewardController->actionIndex()
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('reward/reward', Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#10 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#11 {main}
+2017-10-10 12:22:12 [127.0.0.1][1][vnt6ppsj46265le62tju1an032][info][application] $_GET = [
+    'r' => 'reward/reward'
+    '_pjax' => '#layout-content'
+    '_' => '1507655277042'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub/index.php?r=dashboard%2Fdashboard'
+    'HTTP_X_CSRF_TOKEN' => 'VTxyVck75BXbOUvk42L9nOTdre_cT7tDp3bljcggiBb94JRa1ZzGbeNCHCrdahHUaIisNK7kr2pzjrnhlLAkMg=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#layout-content'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_space-members-panel=expanded; PHPSESSID=vnt6ppsj46265le62tju1an032; _csrf=34434cf801730ff03b439929574934ddfb068a1795c50a649970bd3be60c51baa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%A8%DC%E6%0F%1C%A7%22x8%7BW%CE%3E%08%ECH%8CU%01%DBr%AB%14%29%D4%F8%5Cl%5C%90%AC%24%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '48700'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=reward%2Freward&_pjax=%23layout-content&_=1507655277042'
+    'REQUEST_URI' => '/humhub/index.php?r=reward%2Freward&_pjax=%23layout-content&_=1507655277042'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1507656132.802
+    'REQUEST_TIME' => 1507656132
+]
+2017-10-10 12:22:12 [127.0.0.1][1][vnt6ppsj46265le62tju1an032][error][ParseError] ParseError: syntax error, unexpected '<' in /var/www/html/humhub/protected/humhub/modules/reward/views/reward/index.php:16
+Stack trace:
+#0 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\reward\controllers\RewardController))
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('index', Array, Object(humhub\modules\reward\controllers\RewardController))
+#3 /var/www/html/humhub/protected/humhub/modules/reward/controllers/RewardController.php(60): yii\base\Controller->render('index', Array)
+#4 [internal function]: humhub\modules\reward\controllers\RewardController->actionIndex()
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('reward/reward', Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#10 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#11 {main}
+2017-10-10 12:22:12 [127.0.0.1][1][vnt6ppsj46265le62tju1an032][info][application] $_GET = [
+    'r' => 'reward/reward'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub/index.php?r=dashboard%2Fdashboard'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_space-members-panel=expanded; PHPSESSID=vnt6ppsj46265le62tju1an032; _csrf=34434cf801730ff03b439929574934ddfb068a1795c50a649970bd3be60c51baa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%A8%DC%E6%0F%1C%A7%22x8%7BW%CE%3E%08%ECH%8CU%01%DBr%AB%14%29%D4%F8%5Cl%5C%90%AC%24%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '48702'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=reward%2Freward'
+    'REQUEST_URI' => '/humhub/index.php?r=reward%2Freward'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1507656132.888
+    'REQUEST_TIME' => 1507656132
+]
+2017-10-10 12:23:55 [127.0.0.1][1][vnt6ppsj46265le62tju1an032][error][ParseError] ParseError: syntax error, unexpected '<' in /var/www/html/humhub/protected/humhub/modules/reward/views/reward/index.php:14
+Stack trace:
+#0 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\reward\controllers\RewardController))
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('index', Array, Object(humhub\modules\reward\controllers\RewardController))
+#3 /var/www/html/humhub/protected/humhub/modules/reward/controllers/RewardController.php(60): yii\base\Controller->render('index', Array)
+#4 [internal function]: humhub\modules\reward\controllers\RewardController->actionIndex()
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('reward/reward', Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#10 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#11 {main}
+2017-10-10 12:23:55 [127.0.0.1][1][vnt6ppsj46265le62tju1an032][info][application] $_GET = [
+    'r' => 'reward/reward'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_space-members-panel=expanded; PHPSESSID=vnt6ppsj46265le62tju1an032; _csrf=34434cf801730ff03b439929574934ddfb068a1795c50a649970bd3be60c51baa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%A8%DC%E6%0F%1C%A7%22x8%7BW%CE%3E%08%ECH%8CU%01%DBr%AB%14%29%D4%F8%5Cl%5C%90%AC%24%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '48704'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=reward%2Freward'
+    'REQUEST_URI' => '/humhub/index.php?r=reward%2Freward'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1507656235.576
+    'REQUEST_TIME' => 1507656235
+]
+2017-10-10 12:31:43 [127.0.0.1][5][38lpq07lqrv6iu3uq0gg6vcmj7][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: user in /var/www/html/humhub/protected/humhub/modules/reward/models/SpaceSearch.php:67
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/modules/reward/models/SpaceSearch.php(67): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/var/www/html/h...', 67, Array)
+#1 /var/www/html/humhub/protected/humhub/modules/reward/controllers/RewardController.php(56): humhub\modules\reward\models\SpaceSearch->search(Array)
+#2 [internal function]: humhub\modules\reward\controllers\RewardController->actionIndex()
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('reward/reward', Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#8 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#9 {main}
+2017-10-10 12:31:43 [127.0.0.1][5][38lpq07lqrv6iu3uq0gg6vcmj7][info][application] $_GET = [
+    'r' => 'reward/reward'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_space-members-panel=expanded; PHPSESSID=38lpq07lqrv6iu3uq0gg6vcmj7; _csrf=34434cf801730ff03b439929574934ddfb068a1795c50a649970bd3be60c51baa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%A8%DC%E6%0F%1C%A7%22x8%7BW%CE%3E%08%ECH%8CU%01%DBr%AB%14%29%D4%F8%5Cl%5C%90%AC%24%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '48752'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=reward%2Freward'
+    'REQUEST_URI' => '/humhub/index.php?r=reward%2Freward'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1507656703.718
+    'REQUEST_TIME' => 1507656703
+]
+2017-10-10 12:32:28 [127.0.0.1][5][38lpq07lqrv6iu3uq0gg6vcmj7][error][yii\base\ErrorException:8] yii\base\ErrorException: Use of undefined constant user - assumed 'user' in /var/www/html/humhub/protected/humhub/modules/reward/models/SpaceSearch.php:67
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/modules/reward/models/SpaceSearch.php(67): yii\base\ErrorHandler->handleError(8, 'Use of undefine...', '/var/www/html/h...', 67, Array)
+#1 /var/www/html/humhub/protected/humhub/modules/reward/controllers/RewardController.php(56): humhub\modules\reward\models\SpaceSearch->search(Array)
+#2 [internal function]: humhub\modules\reward\controllers\RewardController->actionIndex()
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('reward/reward', Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#8 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#9 {main}
+2017-10-10 12:32:28 [127.0.0.1][5][38lpq07lqrv6iu3uq0gg6vcmj7][info][application] $_GET = [
+    'r' => 'reward/reward'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_space-members-panel=expanded; PHPSESSID=38lpq07lqrv6iu3uq0gg6vcmj7; _csrf=34434cf801730ff03b439929574934ddfb068a1795c50a649970bd3be60c51baa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%A8%DC%E6%0F%1C%A7%22x8%7BW%CE%3E%08%ECH%8CU%01%DBr%AB%14%29%D4%F8%5Cl%5C%90%AC%24%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '48756'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=reward%2Freward'
+    'REQUEST_URI' => '/humhub/index.php?r=reward%2Freward'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1507656748.937
+    'REQUEST_TIME' => 1507656748
+]
+2017-10-10 12:32:42 [127.0.0.1][5][38lpq07lqrv6iu3uq0gg6vcmj7][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: humhub\modules\user\components\User::isManager() in /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Component.php:290
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/modules/reward/models/SpaceSearch.php(67): yii\base\Component->__call('isManager', Array)
+#1 /var/www/html/humhub/protected/humhub/modules/reward/controllers/RewardController.php(56): humhub\modules\reward\models\SpaceSearch->search(Array)
+#2 [internal function]: humhub\modules\reward\controllers\RewardController->actionIndex()
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('reward/reward', Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#8 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#9 {main}
+2017-10-10 12:32:42 [127.0.0.1][5][38lpq07lqrv6iu3uq0gg6vcmj7][info][application] $_GET = [
+    'r' => 'reward/reward'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_space-members-panel=expanded; PHPSESSID=38lpq07lqrv6iu3uq0gg6vcmj7; _csrf=34434cf801730ff03b439929574934ddfb068a1795c50a649970bd3be60c51baa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%A8%DC%E6%0F%1C%A7%22x8%7BW%CE%3E%08%ECH%8CU%01%DBr%AB%14%29%D4%F8%5Cl%5C%90%AC%24%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '48760'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=reward%2Freward'
+    'REQUEST_URI' => '/humhub/index.php?r=reward%2Freward'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1507656762.667
+    'REQUEST_TIME' => 1507656762
+]

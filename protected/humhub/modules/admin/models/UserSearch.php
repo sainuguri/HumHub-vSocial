@@ -55,7 +55,6 @@ class UserSearch extends User
      */
     public function search($params)
     {
-        // if (Yii::$app->user->isAdmin()){}
         $query = ($this->query == null) ? User::find()->joinWith('profile') : $this->query;
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -87,7 +86,12 @@ class UserSearch extends User
         $query->andFilterWhere(['like', 'user.email', $this->email]);
         $query->andFilterWhere(['like', 'profile.firstname', $this->getAttribute('profile.firstname')]);
         $query->andFilterWhere(['like', 'profile.lastname', $this->getAttribute('profile.lastname')]);
-        $query->andFilterWhere(['like', 'profile.role_name', $this->getAttribute('profile.role_name')]);
+        if (Yii::$app->user->isAdmin()){
+            $query->andFilterWhere(['like', 'profile.role_name', $this->getAttribute('profile.role_name')]);
+        }else{
+            $query->andFilterWhere(['!=', 'profile.role_name', 'Administrator']);
+        }
+
 
         if ($this->getAttribute('last_login') != "") {
             try {

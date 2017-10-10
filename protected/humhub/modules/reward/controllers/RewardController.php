@@ -50,19 +50,20 @@ class RewardController extends Controller
      */
     public function actionIndex()
     {
-        if (Yii::$app->user->can(new ManageSpaces())) {
-            $searchModel = new \humhub\modules\admin\models\SpaceSearch();
+        // if (Yii::$app->user->can(new ManageSpaces())) {
+            // $searchModel = new \humhub\modules\admin\models\SpaceSearch();
+            $searchModel = new \humhub\modules\reward\models\SpaceSearch();
             $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
             return $this->render('index', [
                 'dataProvider' => $dataProvider,
                 'searchModel' => $searchModel
             ]);
-        } else if (Yii::$app->user->can(new ManageSettings())) {
-            $this->redirect([
-                'settings'
-            ]);
-        }
+        // } else if (Yii::$app->user->can(new ManageSettings())) {
+        //     $this->redirect([
+        //         'settings'
+        //     ]);
+        // }
     }
 
 }
