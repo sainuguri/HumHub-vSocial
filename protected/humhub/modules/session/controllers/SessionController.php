@@ -4,6 +4,7 @@ namespace humhub\modules\session\controllers;
 
 use Yii;
 use humhub\components\Controller;
+use humhub\modules\user\models\forms\Registration;
 use humhub\modules\admin\permissions\ManageSpaces;
 use humhub\modules\admin\permissions\ManageSettings;
 
@@ -60,6 +61,18 @@ class SessionController extends Controller
         //         'settings'
         //     ]);
         // }
+    }
+
+    public function actionAdd()
+    {
+        $registration = new Registration();
+        $registration->enableEmailField = true;
+        $registration->enableUserApproval = false;
+        if ($registration->submitted('save') && $registration->validate() && $registration->register()) {
+            return $this->redirect(['edit', 'id' => $registration->getUser()->id]);
+        }
+
+        return $this->render('add', ['hForm' => $registration]);
     }
 
 }
