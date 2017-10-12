@@ -10,7 +10,7 @@ use humhub\modules\admin\widgets\SpaceGridView;
 
 <div class="container">
         <div class="col-md-12 layout-content-container panel panel-default">
-        <div class="panel-heading"><?= Yii::t('AdminModule.views_space_index', '<strong>Spaces</strong>'); ?></div>
+        <div class="panel-heading"><?= Yii::t('AdminModule.views_space_index', '<strong>Sessions</strong>'); ?></div>
             <div class="table-responsive">
                 <?php
                     $visibilities = [
@@ -66,8 +66,8 @@ use humhub\modules\admin\widgets\SpaceGridView;
                                 'options' => ['width' => '80px'],
                                 'buttons' => [
                                     'view' => function($url, $model) {
-                                        //return Html::a('<i class="fa fa-eye"></i>', $model->getUrl(), ['class' => 'btn btn-primary btn-xs tt']);
-                                        return Html::a(Yii::t('AdminModule.views_user_index', 'View'), ['/user/invite'], ['class' => 'btn btn-primary', 'data-ui-loader'=>'']);
+                                        return Html::a('<i class="fa fa-eye"></i>', $model->getUrl(), ['class' => 'btn btn-primary btn-xs tt']);
+                                        // return Html::a(Yii::t('AdminModule.views_user_index', 'View'), ['/reward/reward/rewardsPage'], ['class' => 'btn btn-primary', 'data-ui-loader'=>'']);
                                     }
                                 ],
                             ],

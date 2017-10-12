@@ -1,0 +1,9 @@
+{
+    "id": "session",
+    "name": "Session",
+    "description": "Session Core",
+    "keywords": [
+        "core"
+    ],
+    "version": "1.0"
+}

@@ -1,10 +1,10 @@
 <?php
 
-namespace humhub\modules\sessionTracking;
+namespace humhub\modules\session;
 
 class Module extends \humhub\components\Module
 {
-    public $controllerNamespace = 'humhub\modules\sessionTracking\controllers';
+    public $controllerNamespace = 'humhub\modules\session\controllers';
 
     public function init()
     {
