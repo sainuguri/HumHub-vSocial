@@ -4,6 +4,7 @@ namespace humhub\modules\session\controllers;
 
 use Yii;
 use humhub\components\Controller;
+use humhub\modules\session\models\Session;
 use humhub\modules\user\models\forms\Registration;
 use humhub\modules\admin\permissions\ManageSpaces;
 use humhub\modules\admin\permissions\ManageSettings;
@@ -65,14 +66,20 @@ class SessionController extends Controller
 
     public function actionAdd()
     {
-        $registration = new Registration();
-        $registration->enableEmailField = true;
-        $registration->enableUserApproval = false;
-        if ($registration->submitted('save') && $registration->validate() && $registration->register()) {
-            return $this->redirect(['edit', 'id' => $registration->getUser()->id]);
-        }
+        $model =  new Session;
+        // if ($model->load (Yii::$app->request->post()) && $model->validate()){
+             return $this->render('add',['model'=>$model]);
+        // }else {
+        //     return $this->render('create', ['model'=>$model]);
+        // }
+        // $registration = new Registration();
+        // $registration->enableEmailField = true;
+        // $registration->enableUserApproval = false;
+        // if ($registration->submitted('save') && $registration->validate() && $registration->register()) {
+        //     return $this->redirect(['edit', 'id' => $registration->getUser()->id]);
+        // }
 
-        return $this->render('add', ['hForm' => $registration]);
+        // return $this->render('add', ['hForm' => $registration]);
     }
 
 }
