@@ -66,9 +66,15 @@ use humhub\modules\admin\widgets\SpaceGridView;
                                 'options' => ['width' => '80px'],
                                 'buttons' => [
                                     'view' => function($url, $model) {
-                                        //return Html::a('<i class="fa fa-eye"></i>', $model->getUrl(), ['class' => 'btn btn-primary btn-xs tt']);
-                                        return Html::a(Yii::t('AdminModule.views_user_index', 'View'), ['/user/invite'], ['class' => 'btn btn-primary', 'data-ui-loader'=>'']);
-                                    }
+                                        return Html::a('<i class="fa fa-eye"></i>', $model->getUrl(), ['class' => 'btn btn-primary btn-xs tt']);
+                                        // return Html::a(Yii::t('AdminModule.views_user_index', 'View'), ['/user/invite'], ['class' => 'btn btn-primary', 'data-ui-loader'=>'']);
+                                    },
+                                    'delete' => function() {
+                                        return;
+                                    },
+                                    'update' => function() {
+                                        return;
+                                    },
                                 ],
                             ],
                         ],

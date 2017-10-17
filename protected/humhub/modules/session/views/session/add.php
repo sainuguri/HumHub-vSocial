@@ -23,7 +23,7 @@ humhub\assets\TabbedFormAsset::register($this);
 
             <div class="row">
               <div class="col-md-6">
-                <?= $form->field($model, 'start_time')->widget(DatePicker::className(), ['dateFormat' => Yii::$app->params['formatter']['defaultDateFormat'], 'clientOptions' => [], 'options' => ['class' => 'form-control']])->label('Start Day') ?>
+                <?= $form->field($model, 'start_day')->widget(DatePicker::className(), ['dateFormat' => Yii::$app->params['formatter']['defaultDateFormat'], 'clientOptions' => [], 'options' => ['class' => 'form-control']])->label('Start Day') ?>
               </div>
               <div class="col-md-6 timeField">
                 <?= $form->field($model, 'start_time')->widget(TimePicker::class)->label('Start Time'); ?>
@@ -32,7 +32,7 @@ humhub\assets\TabbedFormAsset::register($this);
 
             <div class="row">
               <div class="col-md-6">
-                <?= $form->field($model, 'end_time')->widget(DatePicker::className(), ['dateFormat' => Yii::$app->params['formatter']['defaultDateFormat'], 'clientOptions' => [], 'options' => ['class' => 'form-control']])->label('End Day') ?>
+                <?= $form->field($model, 'end_day')->widget(DatePicker::class)->label('End Day') ?>
               </div>
               <div class="col-md-6 timeField">
                 <?= $form->field($model, 'end_time')->widget(TimePicker::class)->label('End Time') ?>
@@ -41,13 +41,13 @@ humhub\assets\TabbedFormAsset::register($this);
 
             <div class="row">
               <div class="col-md-12">
-                <?= $form->field($instructorModel,'instructor_name')->dropdownList(['prompt'=>'Select Instructor'])->label('Instructor');?>
+                <?= $form->field($instructorModel,'instructor_name')->dropdownList($instructorModel->getInstructors(),['prompt'=>'Select Instructor'])->label('Instructor');?>
               </div>
             </div>
               <?= \humhub\modules\user\widgets\UserPickerField::widget([])?>
             </br>
             <div class="form-group">
-              <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>
+              <?= CHtml::submitButton(Yii::t('SessionModule.views_session_add', 'Save'), ['class' => 'btn btn-primary', 'data-ui-loader' => ""]); ?>
             </div>
 
 

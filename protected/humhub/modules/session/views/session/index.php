@@ -28,9 +28,11 @@ use humhub\modules\admin\widgets\SpaceGridView;
                                     return $data->session_id;
                                 },
                             ],
+                            'start_day',
+                            'end_day',
                             'start_time',
                             'end_time',
-                            'instructor',
+                            'instructor_name',
                             // [
                             //     'attribute' => 'visibility',
                             //     'filter' => \yii\helpers\Html::activeDropDownList($searchModel, 'visibility', array_merge(['' => ''], $visibilities)),

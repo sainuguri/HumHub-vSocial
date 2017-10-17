@@ -69,19 +69,14 @@ class SessionController extends Controller
     {
         $model =  new Session;
         $instructorModel = new Instructor;
-        // if ($model->load (Yii::$app->request->post()) && $model->validate()){
-             return $this->render('add', array('model' => $model, 'instructorModel' => $instructorModel));
-        // }else {
-        //     return $this->render('create', ['model'=>$model]);
-        // }
-        // $registration = new Registration();
-        // $registration->enableEmailField = true;
-        // $registration->enableUserApproval = false;
-        // if ($registration->submitted('save') && $registration->validate() && $registration->register()) {
-        //     return $this->redirect(['edit', 'id' => $registration->getUser()->id]);
-        // }
 
-        // return $this->render('add', ['hForm' => $registration]);
+        if ($model->load(Yii::$app->request->post()) && $model->validate() && $model->save())
+        {
+            $this->view->saved();
+            return $this->actionIndex();
+        } else
+        {
+            return $this->render('add', array('model' => $model, 'instructorModel' => $instructorModel));
+        }
     }
-
 }

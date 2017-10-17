@@ -3,6 +3,8 @@
 namespace humhub\modules\user\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
+
 
 /**
  * This is the model class for table "instructor".
@@ -43,5 +45,10 @@ class Instructor extends \yii\db\ActiveRecord
             'user_id' => 'User ID',
             'instructor_name' => 'Instructor Name',
         ];
+    }
+
+    public function getInstructors()
+    {
+        return Instructor::find()->select('instructor_name')->column();
     }
 }
