@@ -33,7 +33,7 @@ class Session extends \yii\db\ActiveRecord
         return [
             [['start_day', 'end_day'], 'safe'],
             [['start_time'], 'string', 'max' => 50],
-            [['end_time', 'instructor_name'], 'string', 'max' => 45],
+            [['end_time', 'instructor_name'], 'string', 'max' => 45]
         ];
     }
 

@@ -46,9 +46,4 @@ class Instructor extends \yii\db\ActiveRecord
             'instructor_name' => 'Instructor Name',
         ];
     }
-
-    public function getInstructors()
-    {
-        return Instructor::find()->select('instructor_name')->column();
-    }
 }

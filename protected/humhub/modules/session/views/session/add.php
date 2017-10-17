@@ -1,10 +1,12 @@
 <?php
 
 use humhub\libs\Html;
+use yii\helpers\ArrayHelper;
 use \humhub\compat\CHtml;
 use yii\jui\DatePicker;
 use yii\widgets\ActiveForm;
 use humhub\widgets\TimePicker;
+use humhub\modules\user\models\Instructor;
 humhub\assets\TabbedFormAsset::register($this);
 ?>
 
@@ -14,16 +16,13 @@ humhub\assets\TabbedFormAsset::register($this);
         	<div class="clearfix">
         		<?= Html::backButton(['index'], ['label' => Yii::t('AdminModule.base', 'Back to overview'), 'class' => 'pull-right']); ?>
         		<h4 class="pull-left"><?= Yii::t('AdminModule.views_user_index', '<strong>Create</strong> New Session'); ?></h4>
-                <div class="pull-right">
-                    <?= Html::a('<i class="fa fa-paper-plane" aria-hidden="true"></i>&nbsp;&nbsp;' . Yii::t('AdminModule.views_user_index', 'Send invite'), ['/user/invite'], ['class' => 'btn btn-success', 'data-target' => '#globalModal']); ?>
-                </div>
     		</div>
     		<br>
         <?php $form = ActiveForm::begin();?>
 
             <div class="row">
               <div class="col-md-6">
-                <?= $form->field($model, 'start_day')->widget(DatePicker::className(), ['dateFormat' => Yii::$app->params['formatter']['defaultDateFormat'], 'clientOptions' => [], 'options' => ['class' => 'form-control']])->label('Start Day') ?>
+                <?= $form->field($model, 'start_day')->widget(DatePicker::className(), ['dateFormat' => 'yyyy-MM-dd', 'clientOptions' => [], 'options' => ['class' => 'form-control']])->label('Start Day') ?>
               </div>
               <div class="col-md-6 timeField">
                 <?= $form->field($model, 'start_time')->widget(TimePicker::class)->label('Start Time'); ?>
@@ -32,7 +31,7 @@ humhub\assets\TabbedFormAsset::register($this);
 
             <div class="row">
               <div class="col-md-6">
-                <?= $form->field($model, 'end_day')->widget(DatePicker::class)->label('End Day') ?>
+                <?= $form->field($model, 'end_day')->widget(DatePicker::className(), ['dateFormat' => 'yyyy-MM-dd', 'clientOptions' => [], 'options' => ['class' => 'form-control']])->label('End Day') ?>
               </div>
               <div class="col-md-6 timeField">
                 <?= $form->field($model, 'end_time')->widget(TimePicker::class)->label('End Time') ?>
@@ -41,7 +40,9 @@ humhub\assets\TabbedFormAsset::register($this);
 
             <div class="row">
               <div class="col-md-12">
-                <?= $form->field($instructorModel,'instructor_name')->dropdownList($instructorModel->getInstructors(),['prompt'=>'Select Instructor'])->label('Instructor');?>
+                <?= $form->field($model,'instructor_name')->dropdownList(
+                  ArrayHelper::map(Instructor::find()->all(),'instructor_name','instructor_name'),
+                ['prompt'=>'Select Instructor'])->label('Instructor');?>
               </div>
             </div>
               <?= \humhub\modules\user\widgets\UserPickerField::widget([])?>
@@ -49,7 +50,6 @@ humhub\assets\TabbedFormAsset::register($this);
             <div class="form-group">
               <?= CHtml::submitButton(Yii::t('SessionModule.views_session_add', 'Save'), ['class' => 'btn btn-primary', 'data-ui-loader' => ""]); ?>
             </div>
-
 
         <?php ActiveForm::end(); ?>    		
         </div>
