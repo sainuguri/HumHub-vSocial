@@ -30,7 +30,7 @@ use humhub\modules\admin\widgets\SpaceGridView;
                             ],
                             'start_time',
                             'end_time',
-                            'instructor_id',
+                            'instructor',
                             // [
                             //     'attribute' => 'visibility',
                             //     'filter' => \yii\helpers\Html::activeDropDownList($searchModel, 'visibility', array_merge(['' => ''], $visibilities)),

@@ -11,7 +11,7 @@ use yii\data\ActiveDataProvider;
  * @property integer $session_id
  * @property string $start_time
  * @property string $end_time
- * @property integer $instructor_id
+ * @property string $instructor
  */
 class Session extends \yii\db\ActiveRecord
 {
@@ -30,7 +30,7 @@ class Session extends \yii\db\ActiveRecord
     {
         return [
             [['start_time', 'end_time'], 'safe'],
-            [['instructor_id'], 'integer'],
+            [['instructor'], 'string'],
         ];
     }
 
@@ -43,7 +43,7 @@ class Session extends \yii\db\ActiveRecord
             'session_id' => 'Session ID',
             'start_time' => 'Start Time',
             'end_time' => 'End Time',
-            'instructor_id' => 'Instructor ID',
+            'instructor' => 'Instructor',
         ];
     }
 
@@ -61,7 +61,7 @@ class Session extends \yii\db\ActiveRecord
                 'session_id',
                 'start_time',
                 'end_time',
-                'instructor_id',
+                'instructor',
             ]
         ]);
 
@@ -74,7 +74,7 @@ class Session extends \yii\db\ActiveRecord
         $query->andFilterWhere(['session_id' => $this->session_id]);
         $query->andFilterWhere(['start_time' => $this->start_time]);
         $query->andFilterWhere(['end_time' => $this->end_time]);
-        $query->andFilterWhere(['like', 'instructor_id', $this->instructor_id]);
+        $query->andFilterWhere(['like', 'instructor', $this->instructor]);
 
         return $dataProvider;
     }

@@ -9600,3 +9600,2063 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1507656762.667
     'REQUEST_TIME' => 1507656762
 ]
+2017-10-16 17:33:52 [127.0.0.1][1][rn9egdp4humprkn76eg84159u4][error][application] Underlying object class humhub\modules\polls\models\Poll not found!
+    in /var/www/html/humhub/protected/humhub/components/behaviors/PolymorphicRelation.php:62
+    in /var/www/html/humhub/protected/humhub/modules/stream/actions/Stream.php:340
+    in /var/www/html/humhub/protected/humhub/modules/stream/actions/Stream.php:233
+2017-10-16 17:33:52 [127.0.0.1][1][rn9egdp4humprkn76eg84159u4][error][yii\base\Exception] yii\base\Exception: Could not get contents underlying object! - contentid: 12 in /var/www/html/humhub/protected/humhub/modules/stream/actions/Stream.php:342
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/modules/stream/actions/Stream.php(233): humhub\modules\stream\actions\Stream::getContentResultEntry(Object(humhub\modules\content\models\Content))
+#1 [internal function]: humhub\modules\stream\actions\Stream->run()
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\Action->runWithParams(Array)
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('stream', Array)
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('dashboard/dashb...', Array)
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#7 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#8 {main}
+2017-10-16 17:33:52 [127.0.0.1][1][rn9egdp4humprkn76eg84159u4][info][application] $_GET = [
+    'r' => 'dashboard/dashboard/stream'
+    'mode' => 'normal'
+    'StreamQuery' => [
+        'sort' => 'c'
+        'from' => '0'
+        'limit' => '8'
+        'suppressionsOnly' => 'false'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub/index.php?r=dashboard%2Fdashboard'
+    'HTTP_X_CSRF_TOKEN' => '73lWrmY4erUMeLIp3wolamtDO_nkDW4lAkCIEKYkeX3ijHWsCLAS79FqkZR3Y_6B-Xr0mNWqEp4QMmhfr_XsOw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_COOKIE' => 'PHPSESSID=rn9egdp4humprkn76eg84159u4; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '36094'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=dashboard%2Fdashboard%2Fstream&mode=normal&StreamQuery%5Bsort%5D=c&StreamQuery%5Bfrom%5D=0&StreamQuery%5Blimit%5D=8&StreamQuery%5BsuppressionsOnly%5D=false'
+    'REQUEST_URI' => '/humhub/index.php?r=dashboard%2Fdashboard%2Fstream&mode=normal&StreamQuery%5Bsort%5D=c&StreamQuery%5Bfrom%5D=0&StreamQuery%5Blimit%5D=8&StreamQuery%5BsuppressionsOnly%5D=false'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508193232.746
+    'REQUEST_TIME' => 1508193232
+]
+2017-10-16 17:33:53 [127.0.0.1][1][rn9egdp4humprkn76eg84159u4][error][application] Source class of content addon not found (humhub\modules\polls\models\Poll) not found!
+    in /var/www/html/humhub/protected/humhub/modules/content/components/ContentAddonActiveRecord.php:99
+    in /var/www/html/humhub/protected/humhub/modules/content/components/ContentAddonActiveRecord.php:67
+    in /var/www/html/humhub/protected/humhub/components/SocialActivity.php:165
+2017-10-16 17:33:53 [127.0.0.1][1][rn9egdp4humprkn76eg84159u4][error][application] Source class of content addon not found (humhub\modules\polls\models\Poll) not found!
+    in /var/www/html/humhub/protected/humhub/modules/content/components/ContentAddonActiveRecord.php:99
+    in /var/www/html/humhub/protected/humhub/modules/content/components/ContentAddonActiveRecord.php:69
+    in /var/www/html/humhub/protected/humhub/components/SocialActivity.php:165
+2017-10-16 17:33:53 [127.0.0.1][1][rn9egdp4humprkn76eg84159u4][error][yii\base\Exception] yii\base\Exception: Could not find content of addon! in /var/www/html/humhub/protected/humhub/modules/content/components/ContentAddonActiveRecord.php:74
+Stack trace:
+#0 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Component.php(132): humhub\modules\content\components\ContentAddonActiveRecord->getContent()
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/db/BaseActiveRecord.php(285): yii\base\Component->__get('content')
+#2 /var/www/html/humhub/protected/humhub/components/SocialActivity.php(165): yii\db\BaseActiveRecord->__get('content')
+#3 /var/www/html/humhub/protected/humhub/components/SocialActivity.php(213): humhub\components\SocialActivity->getContent()
+#4 /var/www/html/humhub/protected/humhub/components/SocialActivity.php(145): humhub\components\SocialActivity->getContentContainer()
+#5 /var/www/html/humhub/protected/humhub/modules/activity/components/BaseActivity.php(59): humhub\components\SocialActivity->getViewParams(Array)
+#6 /var/www/html/humhub/protected/humhub/components/rendering/LayoutRenderer.php(49): humhub\modules\activity\components\BaseActivity->getViewParams(Array)
+#7 /var/www/html/humhub/protected/humhub/modules/activity/components/ActivityWebRenderer.php(51): humhub\components\rendering\LayoutRenderer->render(Object(humhub\modules\comment\activities\NewComment), Array)
+#8 /var/www/html/humhub/protected/humhub/modules/activity/models/Activity.php(109): humhub\modules\activity\components\ActivityWebRenderer->render(Object(humhub\modules\comment\activities\NewComment))
+#9 /var/www/html/humhub/protected/humhub/modules/stream/actions/Stream.php(319): humhub\modules\activity\models\Activity->getWallOut(Array)
+#10 /var/www/html/humhub/protected/humhub/modules/stream/actions/Stream.php(353): humhub\modules\stream\actions\Stream::renderEntry(Object(humhub\modules\activity\models\Activity), Array)
+#11 /var/www/html/humhub/protected/humhub/modules/stream/actions/Stream.php(233): humhub\modules\stream\actions\Stream::getContentResultEntry(Object(humhub\modules\content\models\Content))
+#12 [internal function]: humhub\modules\stream\actions\Stream->run()
+#13 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#14 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\Action->runWithParams(Array)
+#15 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('stream', Array)
+#16 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('dashboard/dashb...', Array)
+#17 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#18 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#19 {main}
+2017-10-16 17:33:52 [127.0.0.1][1][rn9egdp4humprkn76eg84159u4][info][application] $_GET = [
+    'r' => 'dashboard/dashboard/stream'
+    'mode' => 'activity'
+    'StreamQuery' => [
+        'sort' => 'c'
+        'from' => '0'
+        'limit' => '10'
+        'suppressionsOnly' => 'false'
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub/index.php?r=dashboard%2Fdashboard'
+    'HTTP_X_CSRF_TOKEN' => '73lWrmY4erUMeLIp3wolamtDO_nkDW4lAkCIEKYkeX3ijHWsCLAS79FqkZR3Y_6B-Xr0mNWqEp4QMmhfr_XsOw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_COOKIE' => 'PHPSESSID=rn9egdp4humprkn76eg84159u4; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '36092'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=dashboard%2Fdashboard%2Fstream&mode=activity&StreamQuery%5Bsort%5D=c&StreamQuery%5Bfrom%5D=0&StreamQuery%5Blimit%5D=10&StreamQuery%5BsuppressionsOnly%5D=false'
+    'REQUEST_URI' => '/humhub/index.php?r=dashboard%2Fdashboard%2Fstream&mode=activity&StreamQuery%5Bsort%5D=c&StreamQuery%5Bfrom%5D=0&StreamQuery%5Blimit%5D=10&StreamQuery%5BsuppressionsOnly%5D=false'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508193232.793
+    'REQUEST_TIME' => 1508193232
+]
+2017-10-16 17:34:53 [-][-][-][error][application] Underlying object class humhub\modules\polls\models\Poll not found!
+    in /var/www/html/humhub/protected/humhub/components/behaviors/PolymorphicRelation.php:62
+    in /var/www/html/humhub/protected/humhub/modules/activity/models/Activity.php:126
+    in /var/www/html/humhub/protected/humhub/modules/activity/Events.php:83
+2017-10-16 17:34:56 [-][-][-][error][application] Underlying object class humhub\modules\polls\models\Poll not found!
+    in /var/www/html/humhub/protected/humhub/components/behaviors/PolymorphicRelation.php:62
+    in /var/www/html/humhub/protected/humhub/modules/activity/models/Activity.php:126
+    in /var/www/html/humhub/protected/humhub/modules/activity/Events.php:83
+2017-10-16 17:34:58 [-][-][-][error][application] Underlying object class humhub\modules\polls\models\Poll not found!
+    in /var/www/html/humhub/protected/humhub/components/behaviors/PolymorphicRelation.php:62
+    in /var/www/html/humhub/protected/humhub/modules/activity/models/Activity.php:126
+    in /var/www/html/humhub/protected/humhub/modules/activity/Events.php:83
+2017-10-16 17:35:02 [-][-][-][error][application] Source class of content addon not found (humhub\modules\polls\models\Poll) not found!
+    in /var/www/html/humhub/protected/humhub/modules/content/components/ContentAddonActiveRecord.php:99
+    in /var/www/html/humhub/protected/humhub/modules/comment/Events.php:63
+    in /var/www/html/humhub/protected/humhub/commands/IntegrityController.php:39
+2017-10-16 17:35:03 [-][-][-][error][application] Source class of content addon not found (humhub\modules\polls\models\Poll) not found!
+    in /var/www/html/humhub/protected/humhub/modules/content/components/ContentAddonActiveRecord.php:99
+    in /var/www/html/humhub/protected/humhub/modules/content/components/ContentAddonActiveRecord.php:67
+    in /var/www/html/humhub/protected/humhub/modules/comment/models/Comment.php:186
+2017-10-16 17:35:03 [-][-][-][error][application] Source class of content addon not found (humhub\modules\polls\models\Poll) not found!
+    in /var/www/html/humhub/protected/humhub/modules/content/components/ContentAddonActiveRecord.php:99
+    in /var/www/html/humhub/protected/humhub/modules/content/components/ContentAddonActiveRecord.php:69
+    in /var/www/html/humhub/protected/humhub/modules/comment/models/Comment.php:186
+2017-10-16 17:35:03 [-][-][-][error][application] yii\base\Exception: Could not find content of addon! in /var/www/html/humhub/protected/humhub/modules/content/components/ContentAddonActiveRecord.php:74
+Stack trace:
+#0 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Component.php(132): humhub\modules\content\components\ContentAddonActiveRecord->getContent()
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/db/BaseActiveRecord.php(285): yii\base\Component->__get('content')
+#2 /var/www/html/humhub/protected/humhub/modules/comment/models/Comment.php(186): yii\db\BaseActiveRecord->__get('content')
+#3 /var/www/html/humhub/protected/humhub/modules/comment/models/Comment.php(174): humhub\modules\comment\models\Comment->getCommentedRecord()
+#4 /var/www/html/humhub/protected/humhub/modules/comment/models/Comment.php(89): humhub\modules\comment\models\Comment->updateContentSearch()
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/db/ActiveRecord.php(658): humhub\modules\comment\models\Comment->afterDelete()
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/db/ActiveRecord.php(613): yii\db\ActiveRecord->deleteInternal()
+#7 /var/www/html/humhub/protected/humhub/modules/comment/Events.php(65): yii\db\ActiveRecord->delete()
+#8 [internal function]: humhub\modules\comment\Events::onIntegrityCheck(Object(yii\base\Event))
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Event.php(220): call_user_func(Array, Object(yii\base\Event))
+#10 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Component.php(553): yii\base\Event::trigger('humhub\\commands...', 'run', Object(yii\base\Event))
+#11 /var/www/html/humhub/protected/humhub/commands/IntegrityController.php(39): yii\base\Component->trigger('run')
+#12 [internal function]: humhub\commands\IntegrityController->actionRun()
+#13 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#15 /var/www/html/humhub/protected/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('run', Array)
+#16 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('run', Array)
+#17 /var/www/html/humhub/protected/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('integrity/run', Array)
+#18 /var/www/html/humhub/protected/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('integrity/run', Array)
+#19 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /var/www/html/humhub/protected/yii(29): yii\base\Application->run()
+#21 {main}
+    in /var/www/html/humhub/protected/humhub/modules/comment/models/Comment.php:91
+    in /var/www/html/humhub/protected/humhub/modules/comment/Events.php:65
+    in /var/www/html/humhub/protected/humhub/commands/IntegrityController.php:39
+2017-10-16 17:35:03 [-][-][-][error][application] Source class of content addon not found (humhub\modules\polls\models\Poll) not found!
+    in /var/www/html/humhub/protected/humhub/modules/content/components/ContentAddonActiveRecord.php:99
+    in /var/www/html/humhub/protected/humhub/modules/comment/Events.php:63
+    in /var/www/html/humhub/protected/humhub/commands/IntegrityController.php:39
+2017-10-16 17:35:04 [-][-][-][error][application] Source class of content addon not found (humhub\modules\polls\models\Poll) not found!
+    in /var/www/html/humhub/protected/humhub/modules/content/components/ContentAddonActiveRecord.php:99
+    in /var/www/html/humhub/protected/humhub/modules/content/components/ContentAddonActiveRecord.php:67
+    in /var/www/html/humhub/protected/humhub/modules/comment/models/Comment.php:186
+2017-10-16 17:35:04 [-][-][-][error][application] Source class of content addon not found (humhub\modules\polls\models\Poll) not found!
+    in /var/www/html/humhub/protected/humhub/modules/content/components/ContentAddonActiveRecord.php:99
+    in /var/www/html/humhub/protected/humhub/modules/content/components/ContentAddonActiveRecord.php:69
+    in /var/www/html/humhub/protected/humhub/modules/comment/models/Comment.php:186
+2017-10-16 17:35:04 [-][-][-][error][application] yii\base\Exception: Could not find content of addon! in /var/www/html/humhub/protected/humhub/modules/content/components/ContentAddonActiveRecord.php:74
+Stack trace:
+#0 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Component.php(132): humhub\modules\content\components\ContentAddonActiveRecord->getContent()
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/db/BaseActiveRecord.php(285): yii\base\Component->__get('content')
+#2 /var/www/html/humhub/protected/humhub/modules/comment/models/Comment.php(186): yii\db\BaseActiveRecord->__get('content')
+#3 /var/www/html/humhub/protected/humhub/modules/comment/models/Comment.php(174): humhub\modules\comment\models\Comment->getCommentedRecord()
+#4 /var/www/html/humhub/protected/humhub/modules/comment/models/Comment.php(89): humhub\modules\comment\models\Comment->updateContentSearch()
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/db/ActiveRecord.php(658): humhub\modules\comment\models\Comment->afterDelete()
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/db/ActiveRecord.php(613): yii\db\ActiveRecord->deleteInternal()
+#7 /var/www/html/humhub/protected/humhub/modules/comment/Events.php(65): yii\db\ActiveRecord->delete()
+#8 [internal function]: humhub\modules\comment\Events::onIntegrityCheck(Object(yii\base\Event))
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Event.php(220): call_user_func(Array, Object(yii\base\Event))
+#10 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Component.php(553): yii\base\Event::trigger('humhub\\commands...', 'run', Object(yii\base\Event))
+#11 /var/www/html/humhub/protected/humhub/commands/IntegrityController.php(39): yii\base\Component->trigger('run')
+#12 [internal function]: humhub\commands\IntegrityController->actionRun()
+#13 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#15 /var/www/html/humhub/protected/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('run', Array)
+#16 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('run', Array)
+#17 /var/www/html/humhub/protected/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('integrity/run', Array)
+#18 /var/www/html/humhub/protected/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('integrity/run', Array)
+#19 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#20 /var/www/html/humhub/protected/yii(29): yii\base\Application->run()
+#21 {main}
+    in /var/www/html/humhub/protected/humhub/modules/comment/models/Comment.php:91
+    in /var/www/html/humhub/protected/humhub/modules/comment/Events.php:65
+    in /var/www/html/humhub/protected/humhub/commands/IntegrityController.php:39
+2017-10-16 17:35:05 [-][-][-][error][application] Underlying object class humhub\modules\polls\models\Poll not found!
+    in /var/www/html/humhub/protected/humhub/components/behaviors/PolymorphicRelation.php:62
+    in /var/www/html/humhub/protected/humhub/modules/content/Events.php:57
+    in /var/www/html/humhub/protected/humhub/commands/IntegrityController.php:39
+2017-10-16 17:35:08 [-][-][-][error][application] Underlying object class humhub\modules\polls\models\Poll not found!
+    in /var/www/html/humhub/protected/humhub/components/behaviors/PolymorphicRelation.php:62
+    in /var/www/html/humhub/protected/humhub/modules/content/models/Content.php:209
+    in /var/www/html/humhub/protected/humhub/modules/content/Events.php:59
+2017-10-16 17:35:08 [-][-][-][error][Error] Error: Class 'humhub\modules\polls\models\Poll' not found in /var/www/html/humhub/protected/humhub/modules/user/models/Follow.php:138
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/modules/user/Events.php(119): humhub\modules\user\models\Follow->getTarget()
+#1 [internal function]: humhub\modules\user\Events::onIntegrityCheck(Object(yii\base\Event))
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Event.php(220): call_user_func(Array, Object(yii\base\Event))
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Component.php(553): yii\base\Event::trigger('humhub\\commands...', 'run', Object(yii\base\Event))
+#4 /var/www/html/humhub/protected/humhub/commands/IntegrityController.php(39): yii\base\Component->trigger('run')
+#5 [internal function]: humhub\commands\IntegrityController->actionRun()
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/console/Controller.php(128): yii\base\Controller->runAction('run', Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\console\Controller->runAction('run', Array)
+#10 /var/www/html/humhub/protected/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('integrity/run', Array)
+#11 /var/www/html/humhub/protected/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('integrity/run', Array)
+#12 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 /var/www/html/humhub/protected/yii(29): yii\base\Application->run()
+#14 {main}
+2017-10-16 17:34:53 [-][-][-][info][application] $_SERVER = [
+    'XDG_VTNR' => '7'
+    'XDG_SESSION_ID' => 'c2'
+    'CLUTTER_IM_MODULE' => 'xim'
+    'XDG_GREETER_DATA_DIR' => '/var/lib/lightdm-data/abhinay'
+    'SESSION' => 'ubuntu'
+    'GPG_AGENT_INFO' => '/home/abhinay/.gnupg/S.gpg-agent:0:1'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'XDG_MENU_PREFIX' => 'gnome-'
+    'VTE_VERSION' => '4205'
+    'QT_LINUX_ACCESSIBILITY_ALWAYS_ON' => '1'
+    'WINDOWID' => '56627526'
+    'OLDPWD' => '/var/www/html/humhub'
+    'UPSTART_SESSION' => 'unix:abstract=/com/ubuntu/upstart-session/1000/1489'
+    'GNOME_KEYRING_CONTROL' => ''
+    'GTK_MODULES' => 'gail:atk-bridge:unity-gtk-module'
+    'USER' => 'abhinay'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'QT_ACCESSIBILITY' => '1'
+    'XDG_SESSION_PATH' => '/org/freedesktop/DisplayManager/Session0'
+    'XDG_SEAT_PATH' => '/org/freedesktop/DisplayManager/Seat0'
+    'SSH_AUTH_SOCK' => '/run/user/1000/keyring/ssh'
+    'SESSION_MANAGER' => 'local/ubuntu:@/tmp/.ICE-unix/1724,unix/ubuntu:/tmp/.ICE-unix/1724'
+    'DEFAULTS_PATH' => '/usr/share/gconf/ubuntu.default.path'
+    'XDG_CONFIG_DIRS' => '/etc/xdg/xdg-ubuntu:/usr/share/upstart/xdg:/etc/xdg'
+    'PATH' => '/home/abhinay/bin:/home/abhinay/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'DESKTOP_SESSION' => 'ubuntu'
+    'QT_IM_MODULE' => 'ibus'
+    'QT_QPA_PLATFORMTHEME' => 'appmenu-qt5'
+    'XDG_SESSION_TYPE' => 'x11'
+    'JOB' => 'dbus'
+    'PWD' => '/var/www/html/humhub/protected'
+    'XMODIFIERS' => '@im=ibus'
+    'GNOME_KEYRING_PID' => ''
+    'LANG' => 'en_US.UTF-8'
+    'GDM_LANG' => 'en_US'
+    'MANDATORY_PATH' => '/usr/share/gconf/ubuntu.mandatory.path'
+    'IM_CONFIG_PHASE' => '1'
+    'COMPIZ_CONFIG_PROFILE' => 'ubuntu'
+    'GDMSESSION' => 'ubuntu'
+    'SESSIONTYPE' => 'gnome-session'
+    'GTK2_MODULES' => 'overlay-scrollbar'
+    'XDG_SEAT' => 'seat0'
+    'HOME' => '/home/abhinay'
+    'SHLVL' => '1'
+    'LANGUAGE' => 'en_US'
+    'GNOME_DESKTOP_SESSION_ID' => 'this-is-deprecated'
+    'XDG_SESSION_DESKTOP' => 'ubuntu'
+    'LOGNAME' => 'abhinay'
+    'QT4_IM_MODULE' => 'xim'
+    'XDG_DATA_DIRS' => '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'
+    'DBUS_SESSION_BUS_ADDRESS' => 'unix:abstract=/tmp/dbus-1qTofFAN8V'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'INSTANCE' => ''
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'DISPLAY' => ':0'
+    'XDG_CURRENT_DESKTOP' => 'Unity'
+    'GTK_IM_MODULE' => 'ibus'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    'XAUTHORITY' => '/home/abhinay/.Xauthority'
+    '_' => '/usr/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1508193292.9944
+    'REQUEST_TIME' => 1508193292
+    'argv' => [
+        0 => 'yii'
+        1 => 'integrity/run'
+    ]
+    'argc' => 2
+]
+2017-10-16 19:59:40 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\widgets\ActiveField::DateTime() in /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Component.php:290
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php(20): yii\base\Component->__call('DateTime', Array)
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/h...')
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#5 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(71): yii\base\Controller->render('add', Array)
+#6 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#10 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#11 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#12 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#13 {main}
+2017-10-16 19:59:40 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][info][application] $_GET = [
+    'r' => 'session/session/add'
+    '_pjax' => '#layout-content'
+    '_' => '1508193321864'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub/index.php?r=session%2Fsession'
+    'HTTP_X_CSRF_TOKEN' => 'Yf9L8lRgX7WUgRC6TwTYfVfgFOPwlc4f_5mxSvo7aLFsCmjwOug370mTMwfnbQOWxdnbgsEysqTt61EF8-r99w=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#layout-content'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; PHPSESSID=oqi0ogdrnd02v8jndq28e449e5; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '36540'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd&_pjax=%23layout-content&_=1508193321864'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd&_pjax=%23layout-content&_=1508193321864'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508201980.874
+    'REQUEST_TIME' => 1508201980
+]
+2017-10-16 19:59:41 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\widgets\ActiveField::DateTime() in /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Component.php:290
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php(20): yii\base\Component->__call('DateTime', Array)
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/h...')
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#5 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(71): yii\base\Controller->render('add', Array)
+#6 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#10 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#11 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#12 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#13 {main}
+2017-10-16 19:59:41 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][info][application] $_GET = [
+    'r' => 'session/session/add'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub/index.php?r=session%2Fsession'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; PHPSESSID=oqi0ogdrnd02v8jndq28e449e5; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '36542'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508201981.412
+    'REQUEST_TIME' => 1508201981
+]
+2017-10-16 20:00:13 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\widgets\ActiveField::DateTime() in /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Component.php:290
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php(21): yii\base\Component->__call('DateTime', Array)
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/h...')
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#5 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(71): yii\base\Controller->render('add', Array)
+#6 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#10 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#11 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#12 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#13 {main}
+2017-10-16 20:00:13 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][info][application] $_GET = [
+    'r' => 'session/session/add'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; PHPSESSID=oqi0ogdrnd02v8jndq28e449e5; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '36548'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508202013.631
+    'REQUEST_TIME' => 1508202013
+]
+2017-10-16 20:07:23 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][error][ParseError] ParseError: syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting end of file in /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php:30
+Stack trace:
+#0 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#3 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(71): yii\base\Controller->render('add', Array)
+#4 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#10 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#11 {main}
+2017-10-16 20:07:23 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][info][application] $_GET = [
+    'r' => 'session/session/add'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; PHPSESSID=oqi0ogdrnd02v8jndq28e449e5; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '36734'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508202443.335
+    'REQUEST_TIME' => 1508202443
+]
+2017-10-16 20:07:35 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][error][Error] Error: Call to undefined method Yii::app() in /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php:23
+Stack trace:
+#0 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require()
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#4 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(71): yii\base\Controller->render('add', Array)
+#5 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#10 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#11 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#12 {main}
+2017-10-16 20:07:35 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][info][application] $_GET = [
+    'r' => 'session/session/add'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; PHPSESSID=oqi0ogdrnd02v8jndq28e449e5; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '36736'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508202455.274
+    'REQUEST_TIME' => 1508202455
+]
+2017-10-16 20:07:46 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][error][Error] Error: Call to undefined method Yii::app() in /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php:24
+Stack trace:
+#0 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require()
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#4 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(71): yii\base\Controller->render('add', Array)
+#5 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#10 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#11 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#12 {main}
+2017-10-16 20:07:46 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][info][application] $_GET = [
+    'r' => 'session/session/add'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; PHPSESSID=oqi0ogdrnd02v8jndq28e449e5; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '36740'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508202466.964
+    'REQUEST_TIME' => 1508202466
+]
+2017-10-16 20:26:26 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: form in /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php:24
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php(24): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/var/www/html/h...', 24, Array)
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/h...')
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#5 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(71): yii\base\Controller->render('add', Array)
+#6 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#10 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#11 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#12 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#13 {main}
+2017-10-16 20:26:26 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][info][application] $_GET = [
+    'r' => 'session/session/add'
+    '_pjax' => '#layout-content'
+    '_' => '1508202541375'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub/index.php?r=session%2Fsession'
+    'HTTP_X_CSRF_TOKEN' => 'jTjkU7K_Cpt-CvytEn1AESOLRoMDzgcLRqflNjpGnpSAzcdR3DdiwaMY3xC6FJv6sbKJ4jJpe7BU1QV5M5cL0g=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#layout-content'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; PHPSESSID=oqi0ogdrnd02v8jndq28e449e5; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '36876'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd&_pjax=%23layout-content&_=1508202541375'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd&_pjax=%23layout-content&_=1508202541375'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508203586.04
+    'REQUEST_TIME' => 1508203586
+]
+2017-10-16 20:26:26 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: form in /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php:24
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php(24): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/var/www/html/h...', 24, Array)
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/h...')
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#5 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(71): yii\base\Controller->render('add', Array)
+#6 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#10 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#11 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#12 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#13 {main}
+2017-10-16 20:26:26 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][info][application] $_GET = [
+    'r' => 'session/session/add'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub/index.php?r=session%2Fsession'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; PHPSESSID=oqi0ogdrnd02v8jndq28e449e5; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '36878'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508203586.598
+    'REQUEST_TIME' => 1508203586
+]
+2017-10-16 20:27:14 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: form in /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php:24
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php(24): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/var/www/html/h...', 24, Array)
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/h...')
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#5 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(71): yii\base\Controller->render('add', Array)
+#6 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#10 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#11 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#12 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#13 {main}
+2017-10-16 20:27:14 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][info][application] $_GET = [
+    'r' => 'session/session/add'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; PHPSESSID=oqi0ogdrnd02v8jndq28e449e5; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '36880'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508203634.266
+    'REQUEST_TIME' => 1508203634
+]
+2017-10-16 20:27:42 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: humhub\modules\session\models\Session::start_date in /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Component.php:147
+Stack trace:
+#0 /var/www/html/humhub/protected/vendor/yiisoft/yii2/db/BaseActiveRecord.php(285): yii\base\Component->__get('start_date')
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/helpers/BaseHtml.php(2108): yii\db\BaseActiveRecord->__get('start_date')
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2-jui/DatePicker.php(172): yii\helpers\BaseHtml::getAttributeValue(Object(humhub\modules\session\models\Session), 'start_date')
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2-jui/DatePicker.php(136): yii\jui\DatePicker->renderWidget()
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Widget.php(139): yii\jui\DatePicker->run()
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/widgets/ActiveField.php(725): yii\base\Widget::widget(Array)
+#6 /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php(24): yii\widgets\ActiveField->widget('yii\\jui\\DatePic...', Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/h...')
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#10 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#11 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(71): yii\base\Controller->render('add', Array)
+#12 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#13 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#15 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#16 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#17 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#18 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#19 {main}
+2017-10-16 20:27:42 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][info][application] $_GET = [
+    'r' => 'session/session/add'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; PHPSESSID=oqi0ogdrnd02v8jndq28e449e5; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '36882'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508203662.037
+    'REQUEST_TIME' => 1508203662
+]
+2017-10-16 20:28:28 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: humhub\modules\session\models\Session::showTimeFields() in /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Component.php:290
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php(26): yii\base\Component->__call('showTimeFields', Array)
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/h...')
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#5 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(71): yii\base\Controller->render('add', Array)
+#6 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#10 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#11 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#12 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#13 {main}
+2017-10-16 20:28:28 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][info][application] $_GET = [
+    'r' => 'session/session/add'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; PHPSESSID=oqi0ogdrnd02v8jndq28e449e5; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '36890'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508203708.086
+    'REQUEST_TIME' => 1508203708
+]
+2017-10-16 20:36:04 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: humhub\modules\session\models\Session::start_date in /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Component.php:147
+Stack trace:
+#0 /var/www/html/humhub/protected/vendor/yiisoft/yii2/db/BaseActiveRecord.php(285): yii\base\Component->__get('start_date')
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/helpers/BaseHtml.php(2108): yii\db\BaseActiveRecord->__get('start_date')
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2-jui/DatePicker.php(172): yii\helpers\BaseHtml::getAttributeValue(Object(humhub\modules\session\models\Session), 'start_date')
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2-jui/DatePicker.php(136): yii\jui\DatePicker->renderWidget()
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Widget.php(139): yii\jui\DatePicker->run()
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/widgets/ActiveField.php(725): yii\base\Widget::widget(Array)
+#6 /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php(25): yii\widgets\ActiveField->widget('yii\\jui\\DatePic...', Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/h...')
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#10 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#11 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(71): yii\base\Controller->render('add', Array)
+#12 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#13 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#15 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#16 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#17 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#18 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#19 {main}
+2017-10-16 20:36:04 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][info][application] $_GET = [
+    'r' => 'session/session/add'
+    '_pjax' => '#layout-content'
+    '_' => '1508203891936'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub/index.php?r=session%2Fsession'
+    'HTTP_X_CSRF_TOKEN' => '5Ykv2ih40Ti0zHaGgEgmMv3onfeyn30dxzBpQX_YeQfofAzYRvC5YmneVTsoIf3Zb9FSloM4AabVQokOdgnsQQ=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#layout-content'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; PHPSESSID=oqi0ogdrnd02v8jndq28e449e5; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '36952'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd&_pjax=%23layout-content&_=1508203891936'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd&_pjax=%23layout-content&_=1508203891936'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508204164.284
+    'REQUEST_TIME' => 1508204164
+]
+2017-10-16 20:36:04 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: humhub\modules\session\models\Session::start_date in /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Component.php:147
+Stack trace:
+#0 /var/www/html/humhub/protected/vendor/yiisoft/yii2/db/BaseActiveRecord.php(285): yii\base\Component->__get('start_date')
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/helpers/BaseHtml.php(2108): yii\db\BaseActiveRecord->__get('start_date')
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2-jui/DatePicker.php(172): yii\helpers\BaseHtml::getAttributeValue(Object(humhub\modules\session\models\Session), 'start_date')
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2-jui/DatePicker.php(136): yii\jui\DatePicker->renderWidget()
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Widget.php(139): yii\jui\DatePicker->run()
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/widgets/ActiveField.php(725): yii\base\Widget::widget(Array)
+#6 /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php(25): yii\widgets\ActiveField->widget('yii\\jui\\DatePic...', Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/h...')
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#10 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#11 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(71): yii\base\Controller->render('add', Array)
+#12 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#13 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#14 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#15 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#16 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#17 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#18 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#19 {main}
+2017-10-16 20:36:04 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][info][application] $_GET = [
+    'r' => 'session/session/add'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub/index.php?r=session%2Fsession'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; PHPSESSID=oqi0ogdrnd02v8jndq28e449e5; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '36954'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508204164.836
+    'REQUEST_TIME' => 1508204164
+]
+2017-10-16 20:36:20 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: humhub\modules\session\models\Session::showTimeFields() in /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Component.php:290
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php(27): yii\base\Component->__call('showTimeFields', Array)
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/h...')
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#5 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(71): yii\base\Controller->render('add', Array)
+#6 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#10 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#11 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#12 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#13 {main}
+2017-10-16 20:36:19 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][info][application] $_GET = [
+    'r' => 'session/session/add'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; PHPSESSID=oqi0ogdrnd02v8jndq28e449e5; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '36960'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508204179.975
+    'REQUEST_TIME' => 1508204179
+]
+2017-10-16 20:50:02 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][error][Error] Error: Class 'TimeZoneDropdownAddition' not found in /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php:48
+Stack trace:
+#0 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require()
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#4 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(71): yii\base\Controller->render('add', Array)
+#5 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#10 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#11 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#12 {main}
+2017-10-16 20:50:02 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][info][application] $_GET = [
+    'r' => 'session/session/add'
+    '_pjax' => '#layout-content'
+    '_' => '1508204560249'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub/index.php?r=session%2Fsession'
+    'HTTP_X_CSRF_TOKEN' => 'vHIxKlqIuo2GcckCVG0-B1sM65XCAP5KQccmSTQm9s-xhxIoNADS11tj6r_8BOXsyTUk9POngvFTtcYGPfdjiQ=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#layout-content'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; PHPSESSID=oqi0ogdrnd02v8jndq28e449e5; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '37074'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd&_pjax=%23layout-content&_=1508204560249'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd&_pjax=%23layout-content&_=1508204560249'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508205002.55
+    'REQUEST_TIME' => 1508205002
+]
+2017-10-16 20:50:02 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][error][Error] Error: Class 'TimeZoneDropdownAddition' not found in /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php:48
+Stack trace:
+#0 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require()
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#4 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(71): yii\base\Controller->render('add', Array)
+#5 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#10 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#11 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#12 {main}
+2017-10-16 20:50:02 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][info][application] $_GET = [
+    'r' => 'session/session/add'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub/index.php?r=session%2Fsession'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; PHPSESSID=oqi0ogdrnd02v8jndq28e449e5; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '37076'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508205002.812
+    'REQUEST_TIME' => 1508205002
+]
+2017-10-16 20:50:23 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: humhub\modules\session\models\Session::timeZone in /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Component.php:147
+Stack trace:
+#0 /var/www/html/humhub/protected/vendor/yiisoft/yii2/db/BaseActiveRecord.php(285): yii\base\Component->__get('timeZone')
+#1 /var/www/html/humhub/protected/humhub/widgets/TimeZoneDropdownAddition.php(55): yii\db\BaseActiveRecord->__get('timeZone')
+#2 /var/www/html/humhub/protected/humhub/widgets/TimeZoneDropdownAddition.php(46): humhub\widgets\TimeZoneDropdownAddition->getCurrentLabel()
+#3 /var/www/html/humhub/protected/humhub/components/Widget.php(58): humhub\widgets\TimeZoneDropdownAddition->run()
+#4 /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php(49): humhub\components\Widget::widget(Array)
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/h...')
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#9 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(71): yii\base\Controller->render('add', Array)
+#10 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#11 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#12 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#13 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#14 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#15 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#16 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#17 {main}
+2017-10-16 20:50:23 [127.0.0.1][1][oqi0ogdrnd02v8jndq28e449e5][info][application] $_GET = [
+    'r' => 'session/session/add'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; PHPSESSID=oqi0ogdrnd02v8jndq28e449e5; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '37084'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508205023.087
+    'REQUEST_TIME' => 1508205023
+]
+2017-10-16 22:11:46 [127.0.0.1][1][nurk09n6l1rn0r3rid8lvco2g1][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: humhub\modules\session\controllers\SessionController::renderModal() in /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Component.php:290
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(71): yii\base\Component->__call('renderModal', Array)
+#1 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#7 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#8 {main}
+2017-10-16 22:11:46 [127.0.0.1][1][nurk09n6l1rn0r3rid8lvco2g1][info][application] $_GET = [
+    'r' => 'session/session/add'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_calendar-upcoming-events-snippet=expanded; PHPSESSID=nurk09n6l1rn0r3rid8lvco2g1; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '37960'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508209906.206
+    'REQUEST_TIME' => 1508209906
+]
+2017-10-16 22:14:35 [127.0.0.1][1][nurk09n6l1rn0r3rid8lvco2g1][error][ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' in /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php:25
+Stack trace:
+#0 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#3 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(71): yii\base\Controller->render('add', Array)
+#4 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#10 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#11 {main}
+2017-10-16 22:14:35 [127.0.0.1][1][nurk09n6l1rn0r3rid8lvco2g1][info][application] $_GET = [
+    'r' => 'session/session/add'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_calendar-upcoming-events-snippet=expanded; PHPSESSID=nurk09n6l1rn0r3rid8lvco2g1; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '37980'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508210075.879
+    'REQUEST_TIME' => 1508210075
+]
+2017-10-16 22:16:12 [127.0.0.1][1][nurk09n6l1rn0r3rid8lvco2g1][error][ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' in /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php:25
+Stack trace:
+#0 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#3 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(71): yii\base\Controller->render('add', Array)
+#4 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#10 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#11 {main}
+2017-10-16 22:16:12 [127.0.0.1][1][nurk09n6l1rn0r3rid8lvco2g1][info][application] $_GET = [
+    'r' => 'session/session/add'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_calendar-upcoming-events-snippet=expanded; PHPSESSID=nurk09n6l1rn0r3rid8lvco2g1; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '37982'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508210172.849
+    'REQUEST_TIME' => 1508210172
+]
+2017-10-16 22:41:33 [127.0.0.1][1][nurk09n6l1rn0r3rid8lvco2g1][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: searchUrl in /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php:48
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php(48): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/var/www/html/h...', 48, Array)
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/h...')
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#5 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(71): yii\base\Controller->render('add', Array)
+#6 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#10 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#11 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#12 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#13 {main}
+2017-10-16 22:41:33 [127.0.0.1][1][nurk09n6l1rn0r3rid8lvco2g1][info][application] $_GET = [
+    'r' => 'session/session/add'
+    '_pjax' => '#layout-content'
+    '_' => '1508210179098'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub/index.php?r=session%2Fsession'
+    'HTTP_X_CSRF_TOKEN' => 'GQKq1kFkSfP1QSlB9wsTgjDdSK34teIeJpzPW1BQdEUU94nUL-whqShTCvxfYshpouSHzMkSnqU07i8UWYHhAw=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#layout-content'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_calendar-upcoming-events-snippet=expanded; PHPSESSID=nurk09n6l1rn0r3rid8lvco2g1; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '38186'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd&_pjax=%23layout-content&_=1508210179098'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd&_pjax=%23layout-content&_=1508210179098'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508211693.546
+    'REQUEST_TIME' => 1508211693
+]
+2017-10-16 22:41:34 [127.0.0.1][1][nurk09n6l1rn0r3rid8lvco2g1][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: searchUrl in /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php:48
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php(48): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/var/www/html/h...', 48, Array)
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/h...')
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#5 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(71): yii\base\Controller->render('add', Array)
+#6 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#10 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#11 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#12 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#13 {main}
+2017-10-16 22:41:33 [127.0.0.1][1][nurk09n6l1rn0r3rid8lvco2g1][info][application] $_GET = [
+    'r' => 'session/session/add'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub/index.php?r=session%2Fsession'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_calendar-upcoming-events-snippet=expanded; PHPSESSID=nurk09n6l1rn0r3rid8lvco2g1; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '38188'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508211693.953
+    'REQUEST_TIME' => 1508211693
+]
+2017-10-16 22:48:29 [127.0.0.1][1][nurk09n6l1rn0r3rid8lvco2g1][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: humhub\modules\session\models\Session::invite in /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Component.php:147
+Stack trace:
+#0 /var/www/html/humhub/protected/vendor/yiisoft/yii2/db/BaseActiveRecord.php(285): yii\base\Component->__get('invite')
+#1 /var/www/html/humhub/protected/humhub/widgets/BasePickerField.php(247): yii\db\BaseActiveRecord->__get('invite')
+#2 /var/www/html/humhub/protected/humhub/widgets/BasePickerField.php(208): humhub\widgets\BasePickerField->getSelectedOptions()
+#3 /var/www/html/humhub/protected/humhub/components/Widget.php(58): humhub\widgets\BasePickerField->run()
+#4 /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php(45): humhub\components\Widget::widget(Array)
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/h...')
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#9 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(71): yii\base\Controller->render('add', Array)
+#10 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#11 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#12 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#13 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#14 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#15 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#16 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#17 {main}
+2017-10-16 22:48:29 [127.0.0.1][1][nurk09n6l1rn0r3rid8lvco2g1][info][application] $_GET = [
+    'r' => 'session/session/add'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_calendar-upcoming-events-snippet=expanded; PHPSESSID=nurk09n6l1rn0r3rid8lvco2g1; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '38246'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508212109.09
+    'REQUEST_TIME' => 1508212109
+]
+2017-10-16 22:48:42 [127.0.0.1][1][nurk09n6l1rn0r3rid8lvco2g1][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: humhub\modules\session\models\Session:: in /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Component.php:147
+Stack trace:
+#0 /var/www/html/humhub/protected/vendor/yiisoft/yii2/db/BaseActiveRecord.php(285): yii\base\Component->__get('')
+#1 /var/www/html/humhub/protected/humhub/widgets/BasePickerField.php(247): yii\db\BaseActiveRecord->__get('')
+#2 /var/www/html/humhub/protected/humhub/widgets/BasePickerField.php(208): humhub\widgets\BasePickerField->getSelectedOptions()
+#3 /var/www/html/humhub/protected/humhub/components/Widget.php(58): humhub\widgets\BasePickerField->run()
+#4 /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php(45): humhub\components\Widget::widget(Array)
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/h...')
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#9 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(71): yii\base\Controller->render('add', Array)
+#10 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#11 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#12 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#13 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#14 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#15 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#16 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#17 {main}
+2017-10-16 22:48:42 [127.0.0.1][1][nurk09n6l1rn0r3rid8lvco2g1][info][application] $_GET = [
+    'r' => 'session/session/add'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_calendar-upcoming-events-snippet=expanded; PHPSESSID=nurk09n6l1rn0r3rid8lvco2g1; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '38252'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508212122.579
+    'REQUEST_TIME' => 1508212122
+]
+2017-10-16 23:07:45 [127.0.0.1][1][nurk09n6l1rn0r3rid8lvco2g1][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "gii". in /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php:532
+Stack trace:
+#0 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('gii', Array)
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#2 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php:114
+Stack trace:
+#0 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#1 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#2 {main}
+2017-10-16 23:07:45 [127.0.0.1][1][nurk09n6l1rn0r3rid8lvco2g1][info][application] $_GET = [
+    'r' => 'gii'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_calendar-upcoming-events-snippet=expanded; PHPSESSID=nurk09n6l1rn0r3rid8lvco2g1; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '38910'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=gii'
+    'REQUEST_URI' => '/humhub/index.php?r=gii'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508213265.556
+    'REQUEST_TIME' => 1508213265
+]
+2017-10-16 23:34:48 [127.0.0.1][1][nurk09n6l1rn0r3rid8lvco2g1][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: instructorModel in /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php:43
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php(43): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/var/www/html/h...', 43, Array)
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/h...')
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#5 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(73): yii\base\Controller->render('add', Array)
+#6 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#10 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#11 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#12 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#13 {main}
+2017-10-16 23:34:47 [127.0.0.1][1][nurk09n6l1rn0r3rid8lvco2g1][info][application] $_GET = [
+    'r' => 'session/session/add'
+    '_pjax' => '#layout-content'
+    '_' => '1508214461301'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub/index.php?r=session%2Fsession'
+    'HTTP_X_CSRF_TOKEN' => 'ZEF2qtsCIiOoo74HqgmW_nMbEH2xqSEkJTqVsaTwSZZptFWotYpKeXWxnboCYE0V4SLfHIAOXZ83SHX-rSHc0A=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#layout-content'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_calendar-upcoming-events-snippet=expanded; PHPSESSID=nurk09n6l1rn0r3rid8lvco2g1; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '39074'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd&_pjax=%23layout-content&_=1508214461301'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd&_pjax=%23layout-content&_=1508214461301'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508214887.98
+    'REQUEST_TIME' => 1508214887
+]
+2017-10-16 23:34:48 [127.0.0.1][1][nurk09n6l1rn0r3rid8lvco2g1][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: instructorModel in /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php:43
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php(43): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/var/www/html/h...', 43, Array)
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/h...')
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#5 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(73): yii\base\Controller->render('add', Array)
+#6 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#10 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#11 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#12 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#13 {main}
+2017-10-16 23:34:48 [127.0.0.1][1][nurk09n6l1rn0r3rid8lvco2g1][info][application] $_GET = [
+    'r' => 'session/session/add'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub/index.php?r=session%2Fsession'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_calendar-upcoming-events-snippet=expanded; PHPSESSID=nurk09n6l1rn0r3rid8lvco2g1; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '39076'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508214888.328
+    'REQUEST_TIME' => 1508214888
+]
+2017-10-16 23:36:30 [127.0.0.1][1][nurk09n6l1rn0r3rid8lvco2g1][error][Error] Error: Undefined constant 'humhub\modules\user\models\Instructor' in /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php:43
+Stack trace:
+#0 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require()
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#4 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(73): yii\base\Controller->render('add', Array)
+#5 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#10 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#11 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#12 {main}
+2017-10-16 23:36:30 [127.0.0.1][1][nurk09n6l1rn0r3rid8lvco2g1][info][application] $_GET = [
+    'r' => 'session/session/add'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_calendar-upcoming-events-snippet=expanded; PHPSESSID=nurk09n6l1rn0r3rid8lvco2g1; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '39078'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508214990.607
+    'REQUEST_TIME' => 1508214990
+]
+2017-10-16 23:36:51 [127.0.0.1][1][nurk09n6l1rn0r3rid8lvco2g1][error][Error] Error: Call to a member function isAttributeRequired() on string in /var/www/html/humhub/protected/vendor/yiisoft/yii2/widgets/ActiveField.php:859
+Stack trace:
+#0 /var/www/html/humhub/protected/vendor/yiisoft/yii2/widgets/ActiveField.php(610): yii\widgets\ActiveField->addAriaAttributes(Array)
+#1 /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php(43): yii\widgets\ActiveField->dropDownList(Array)
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/h...')
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#6 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(73): yii\base\Controller->render('add', Array)
+#7 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#11 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#12 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#13 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#14 {main}
+2017-10-16 23:36:51 [127.0.0.1][1][nurk09n6l1rn0r3rid8lvco2g1][info][application] $_GET = [
+    'r' => 'session/session/add'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_calendar-upcoming-events-snippet=expanded; PHPSESSID=nurk09n6l1rn0r3rid8lvco2g1; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '39082'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508215011.394
+    'REQUEST_TIME' => 1508215011
+]
+2017-10-16 23:53:51 [127.0.0.1][1][nurk09n6l1rn0r3rid8lvco2g1][error][Error] Error: Class 'CHtml' not found in /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php:43
+Stack trace:
+#0 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require()
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#4 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(73): yii\base\Controller->render('add', Array)
+#5 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#10 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#11 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#12 {main}
+2017-10-16 23:53:51 [127.0.0.1][1][nurk09n6l1rn0r3rid8lvco2g1][info][application] $_GET = [
+    'r' => 'session/session/add'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_calendar-upcoming-events-snippet=expanded; PHPSESSID=nurk09n6l1rn0r3rid8lvco2g1; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '39620'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508216031.869
+    'REQUEST_TIME' => 1508216031
+]
+2017-10-17 00:01:43 [127.0.0.1][1][nurk09n6l1rn0r3rid8lvco2g1][error][Error] Error: Call to undefined method humhub\compat\CHtml::listData() in /var/www/html/humhub/protected/humhub/modules/session/views/session/add.php:44
+Stack trace:
+#0 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require()
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/var/www/html/h...', Array, Object(humhub\modules\session\controllers\SessionController))
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(381): yii\base\View->render('add', Array, Object(humhub\modules\session\controllers\SessionController))
+#4 /var/www/html/humhub/protected/humhub/modules/session/controllers/SessionController.php(73): yii\base\Controller->render('add', Array)
+#5 [internal function]: humhub\modules\session\controllers\SessionController->actionAdd()
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('add', Array)
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('session/session...', Array)
+#10 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#11 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#12 {main}
+2017-10-17 00:01:43 [127.0.0.1][1][nurk09n6l1rn0r3rid8lvco2g1][info][application] $_GET = [
+    'r' => 'session/session/add'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_calendar-upcoming-events-snippet=expanded; PHPSESSID=nurk09n6l1rn0r3rid8lvco2g1; _csrf=40fb5432cae6b53ac951a73d95e5aac78dbb29bf397f359d0d9d956ccfa4ad6ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0D%F5%23%02n%88hZ%DD%12%23%BD%A8i%DB%EB%929%CFa1%A7%7C%BB%12r%E0O%09%D1%95F%22%3B%7D; _identity=984fccecd8be3184a5bf4e0295be7347439e8af9f9f3d4a05588fcf090e18b16a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A50%3A%22%5B1%2C%2261c9b999-aee4-45bb-8f48-a103944fc9fd%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '40044'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=session%2Fsession%2Fadd'
+    'REQUEST_URI' => '/humhub/index.php?r=session%2Fsession%2Fadd'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1508216503.061
+    'REQUEST_TIME' => 1508216503
+]

@@ -5,6 +5,7 @@ namespace humhub\modules\session\controllers;
 use Yii;
 use humhub\components\Controller;
 use humhub\modules\session\models\Session;
+use humhub\modules\user\models\Instructor;
 use humhub\modules\user\models\forms\Registration;
 use humhub\modules\admin\permissions\ManageSpaces;
 use humhub\modules\admin\permissions\ManageSettings;
@@ -67,8 +68,9 @@ class SessionController extends Controller
     public function actionAdd()
     {
         $model =  new Session;
+        $instructorModel = new Instructor;
         // if ($model->load (Yii::$app->request->post()) && $model->validate()){
-             return $this->render('add',['model'=>$model]);
+             return $this->render('add', array('model' => $model, 'instructorModel' => $instructorModel));
         // }else {
         //     return $this->render('create', ['model'=>$model]);
         // }
