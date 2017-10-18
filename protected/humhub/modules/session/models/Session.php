@@ -31,6 +31,7 @@ class Session extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            ['session_id', 'integer'],
             [['start_day', 'end_day'], 'safe'],
             [['start_time'], 'string', 'max' => 50],
             [['end_time', 'instructor_name'], 'string', 'max' => 45]
