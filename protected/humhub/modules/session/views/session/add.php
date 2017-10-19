@@ -1,5 +1,6 @@
 <?php
 
+use yii\helpers\Url;
 use humhub\libs\Html;
 use yii\helpers\ArrayHelper;
 use \humhub\compat\CHtml;
@@ -7,19 +8,21 @@ use yii\jui\DatePicker;
 use yii\widgets\ActiveForm;
 use humhub\widgets\TimePicker;
 use humhub\modules\user\models\Instructor;
-humhub\assets\TabbedFormAsset::register($this);
+
+use humhub\widgets\ModalButton;
+use humhub\widgets\ModalDialog;
+
+$animation = $model->hasErrors() ? 'shake' : 'fadeIn';
+
 ?>
-
-<div class="container">
-        <div class="col-md-12 layout-content-container panel panel-default">
-        <div class="panel-body">
-        	<div class="clearfix">
-        		<?= Html::backButton(['index'], ['label' => Yii::t('AdminModule.base', 'Back to overview'), 'class' => 'pull-right']); ?>
-        		<h4 class="pull-left"><?= Yii::t('AdminModule.views_user_index', '<strong>Create</strong> New Session'); ?></h4>
-    		</div>
-    		<br>
+<?php ModalDialog::begin(['header' => Yii::t('SpaceModule.views_create_create', '<strong>Create</strong> New Session'), 'size' => 'small']) ?>
         <?php $form = ActiveForm::begin();?>
-
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-12">
+                <?= $form->field($model, 'session_name')->textInput()->label('Session Name') ?>
+              </div>
+            </div>
             <div class="row">
               <div class="col-md-6">
                 <?= $form->field($model, 'start_day')->widget(DatePicker::className(), ['dateFormat' => 'yyyy-MM-dd', 'clientOptions' => [], 'options' => ['class' => 'form-control']])->label('Start Day') ?>
@@ -45,13 +48,17 @@ humhub\assets\TabbedFormAsset::register($this);
                 ['prompt'=>'Select Instructor'])->label('Instructor');?>
               </div>
             </div>
-              <?= \humhub\modules\user\widgets\UserPickerField::widget([])?>
             </br>
             <div class="form-group">
-              <?= CHtml::submitButton(Yii::t('SessionModule.views_session_add', 'Save'), ['class' => 'btn btn-primary', 'data-ui-loader' => ""]); ?>
+              <!-- <?= CHtml::submitButton(Yii::t('SessionModule.views_session_add', 'Next'), ['class' => 'btn btn-primary', 'data-ui-loader' => ""]); ?> -->
+
             </div>
 
-        <?php ActiveForm::end(); ?>    		
-        </div>
-        </div>
-</div>
+            <div class="modal-footer">
+              <?= ModalButton::submitModal(Url::to(['/session/session/add']), Yii::t('SessionModule.views_session_add', 'Next')) ?>
+              <?php /** ModalButton::submitModal(Url::to(['/space/create/create', 'skip' => 1]), Yii::t('SpaceModule.views_create_create', 'Skip'))
+                ->setType('default')->icon('fa-forward', true)->cssClass('tt')->options(['title' => Yii::t('SpaceModule.views_create_create', 'Skip other steps')]) */?>
+            </div>
+          </div>
+        <?php ActiveForm::end(); ?>
+<?php ModalDialog::end(); ?>

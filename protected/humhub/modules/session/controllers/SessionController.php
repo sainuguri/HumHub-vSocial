@@ -5,6 +5,7 @@ namespace humhub\modules\session\controllers;
 use Yii;
 use humhub\components\Controller;
 use humhub\modules\session\models\Session;
+use humhub\modules\session\models\SessionMembership;
 use humhub\modules\user\models\Instructor;
 use humhub\modules\user\models\forms\Registration;
 use humhub\modules\admin\permissions\ManageSpaces;
@@ -73,10 +74,49 @@ class SessionController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->validate() && $model->save())
         {
             $this->view->saved();
-            return $this->actionIndex();
+            $membership = new SessionMembership();
+            $membership->session_id = $model->id;
+            $membership->user_id = Yii::$app->user->id;
+            $membership->status = SessionMembership::STATUS_MEMBER;
+            //$membership->group_id = self::USERGROUP_ADMIN;
+            $membership->save();
+            //return $this->actionIndex();
+            return $this->actionInvite($model);//redirect(array('/session/session/invite'));
         } else
         {
-            return $this->render('add', array('model' => $model, 'instructorModel' => $instructorModel));
+            return $this->renderAjax('add', ['model' => $model, 'instructorModel' => $instructorModel]);
+            //return $this->render('add', array('model' => $model, 'instructorModel' => $instructorModel));
         }
     }
+
+    /**
+     * Invite user
+     */
+    public function actionInvite($session = null)
+    {
+        $session = ($session == null) ? Session::findOne(['id' => Yii::$app->request->get('session_id', "")]) : $session;
+        $model = new \humhub\modules\session\models\forms\InviteForm();
+        $model->session = $session;
+
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            // Invite existing members
+            foreach ($model->getInvites() as $user) {
+                $session->inviteMember($user->id, Yii::$app->user->id);
+            }
+            
+            //return $this->htmlRedirect($session->getUrl());
+            return $this->actionIndex();
+        }
+
+        return $this->renderAjax('invite', [
+                    'model' => $model,
+                    'session' => $session
+        ]);
+    }
+
+
+    // public function actionInvite()
+    // {
+    //     return $this->render('invite');
+    // }
 }

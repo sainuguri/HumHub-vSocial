@@ -13,7 +13,7 @@ use humhub\modules\admin\widgets\SpaceGridView;
         <div class="panel-heading"><?= Yii::t('AdminModule.views_space_index', '<strong>Sessions</strong>'); ?></div>
             <div class="table-responsive">
                 <div class="pull-right">
-                    <?= Html::a('<i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;' . Yii::t('AdminModule.views_user_index', 'Create Session'), ['/session/session/add'], ['class' => 'btn btn-success', 'data-ui-loader'=>'']); ?>
+                    <?= Html::a('<i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;' . Yii::t('AdminModule.views_user_index', 'Create Session'), ['/session/session/add'], ['class' => 'btn btn-success', 'data-target' => '#globalModal']); ?>
                 </div>
                 <?php
                     echo SpaceGridView::widget([
@@ -21,18 +21,19 @@ use humhub\modules\admin\widgets\SpaceGridView;
                         'filterModel' => $searchModel,
                         'columns' => [
                             [
-                                'attribute' => 'session_id',
+                                'attribute' => 'id',
                                 'options' => ['width' => '40px'],
                                 'format' => 'raw',
                                 'value' => function($data) {
-                                    return $data->session_id;
+                                    return $data->id;
                                 },
                             ],
+                            'session_name',
+                            'instructor_name',
                             'start_day',
                             'end_day',
                             'start_time',
                             'end_time',
-                            'instructor_name',
                             // [
                             //     'attribute' => 'visibility',
                             //     'filter' => \yii\helpers\Html::activeDropDownList($searchModel, 'visibility', array_merge(['' => ''], $visibilities)),

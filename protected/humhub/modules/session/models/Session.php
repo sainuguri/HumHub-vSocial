@@ -8,12 +8,14 @@ use yii\data\ActiveDataProvider;
 /**
  * This is the model class for table "session".
  *
- * @property integer $session_id
+ * @property integer $id
+ * @property string $session_name
+ * @property string $instructor_name
  * @property string $start_day
  * @property string $end_day
  * @property string $start_time
  * @property string $end_time
- * @property string $instructor_name
+
  */
 class Session extends \yii\db\ActiveRecord
 {
@@ -31,9 +33,9 @@ class Session extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            ['session_id', 'integer'],
+            ['id', 'integer'],
             [['start_day', 'end_day'], 'safe'],
-            [['start_time'], 'string', 'max' => 50],
+            [['start_time','session_name'], 'string', 'max' => 50],
             [['end_time', 'instructor_name'], 'string', 'max' => 45]
         ];
     }
@@ -44,7 +46,8 @@ class Session extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'session_id' => 'Session ID',
+            'id' => 'Session ID',
+            'session_name' => 'Session Name',
             'start_day' => 'Start Day',
             'end_day' => 'End Day',
             'start_time' => 'Start Time',
@@ -52,6 +55,49 @@ class Session extends \yii\db\ActiveRecord
             'instructor_name' => 'Instructor Name',
         ];
     }
+
+    /**
+     * @inheritdoc
+     */
+    public function behaviors()
+    {
+        return array(
+            //\humhub\components\behaviors\GUID::className(),
+            //\humhub\modules\content\components\behaviors\SettingsBehavior::className(),
+            //\humhub\modules\space\behaviors\SpaceModelModules::className(),
+            \humhub\modules\session\behaviors\SessionModelMembership::className(),
+            //\humhub\modules\user\behaviors\Followable::className(),
+        );
+    }
+
+    /**
+     * @inheritdoc
+     */
+    // public function afterSave($insert, $changedAttributes)
+    // {
+    //     parent::afterSave($insert, $changedAttributes);
+
+    //     //Yii::$app->search->update($this);
+
+    //     $user = \humhub\modules\user\models\User::findOne(['id' => $this->created_by]);
+
+    //     if ($insert) {
+    //         // Auto add creator as admin
+    //         $membership = new SessionMembership();
+    //         $membership->session_id = $this->session_id;
+    //         $membership->user_id = $user->id;
+    //         $membership->status = SessionMembership::STATUS_MEMBER;
+    //         //$membership->group_id = self::USERGROUP_ADMIN;
+    //         $membership->save();
+
+    //         // $activity = new \humhub\modules\space\activities\Created;
+    //         // $activity->source = $this;
+    //         // $activity->originator = $user;
+    //         // $activity->create();
+    //     }
+
+    //     //Yii::$app->cache->delete('userSpaces_' . $user->id);
+    // }
 
     public function search($params)
     {
@@ -64,7 +110,8 @@ class Session extends \yii\db\ActiveRecord
 
         $dataProvider->setSort([
             'attributes' => [
-                'session_id',
+                'id',
+                'session_name',
                 'start_day',
                 'end_day',
                 'start_time',
@@ -79,7 +126,8 @@ class Session extends \yii\db\ActiveRecord
             $query->where('0=1');
             return $dataProvider;
         }
-        $query->andFilterWhere(['session_id' => $this->session_id]);
+        $query->andFilterWhere(['id' => $this->id]);
+        $query->andFilterWhere(['session_name' => $this->session_name]);
         $query->andFilterWhere(['start_day' => $this->start_day]);
         $query->andFilterWhere(['end_day' => $this->end_day]);
         $query->andFilterWhere(['start_time' => $this->start_time]);
