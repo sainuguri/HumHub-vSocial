@@ -105,7 +105,7 @@ class SessionController extends Controller
             }
             
             //return $this->htmlRedirect($session->getUrl());
-            return $this->actionIndex();
+            return $this->redirect(['index']);
         }
 
         return $this->renderAjax('invite', [
