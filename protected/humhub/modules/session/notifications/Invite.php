@@ -60,7 +60,7 @@ class Invite extends BaseNotification
     {
         return Yii::t('SessionModule.notification', '{displayName} invited you to the session {sessionName}', array(
                     '{displayName}' => Html::tag('strong', Html::encode($this->originator->displayName)),
-                    '{sessionName}' => Html::tag('strong', Html::encode($this->getSession()->session_name))
+                    '{sessionName}' => Html::tag('strong', Html::encode($this->session['session_name']))
         ));
     }
 
