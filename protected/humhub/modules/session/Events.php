@@ -23,14 +23,17 @@ class Events
      */
     public static function onTopMenuInit($event)
     {
-        $event->sender->addItem(array(
-            'label' => Yii::t('SessionModule.base', 'Session Tracking'),
-            'id' => 'session',
-            'icon' => '<i class="fa fa-clock-o"></i>',
-            'url' => Url::toRoute('/session/session'),
-            'sortOrder' => 100,
-            'isActive' => (Yii::$app->controller->module && Yii::$app->controller->module->id == 'session'),
-        ));
+        if (!Yii::$app->user->isAdmin())
+        {
+            $event->sender->addItem(array(
+                'label' => Yii::t('SessionModule.base', 'Session Tracking'),
+                'id' => 'session',
+                'icon' => '<i class="fa fa-clock-o"></i>',
+                'url' => Url::toRoute('/session/session'),
+                'sortOrder' => 100,
+                'isActive' => (Yii::$app->controller->module && Yii::$app->controller->module->id == 'session'),
+            ));
+        }
     }
 
 }
