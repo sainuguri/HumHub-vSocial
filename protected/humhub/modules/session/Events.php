@@ -23,8 +23,6 @@ class Events
      */
     public static function onTopMenuInit($event)
     {
-
-        // Is Module enabled on this workspace?
         $event->sender->addItem(array(
             'label' => Yii::t('SessionModule.base', 'Session Tracking'),
             'id' => 'session',
