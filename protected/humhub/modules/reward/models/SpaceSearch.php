@@ -37,7 +37,14 @@ class SpaceSearch extends Space
      */
     public function search($params)
     {
-        $query = Space::find();
+        if (!Yii::$app->user->isAdmin())
+        {
+            $query = Space::find()->where(['id' => Membership::find()->select(['space_id'])->where(['user_id' => Yii::$app->user->id])]);
+        }
+        else
+        {
+            $query = Space::find();
+        }
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
