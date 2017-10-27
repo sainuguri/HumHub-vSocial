@@ -11660,3 +11660,109 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1508216503.061
     'REQUEST_TIME' => 1508216503
 ]
+2017-10-27 00:08:10 [127.0.0.1][5][0nlj8onpprr9j8m69785028h02][error][Error] Error: Class 'humhub\modules\reward\models\Membership' not found in /var/www/html/humhub/protected/humhub/modules/reward/models/SpaceSearch.php:42
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/modules/reward/controllers/RewardController.php(56): humhub\modules\reward\models\SpaceSearch->search(Array)
+#1 [internal function]: humhub\modules\reward\controllers\RewardController->actionIndex()
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('reward/reward', Array)
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#7 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#8 {main}
+2017-10-27 00:08:10 [127.0.0.1][5][0nlj8onpprr9j8m69785028h02][info][application] $_GET = [
+    'r' => 'reward/reward'
+    '_pjax' => '#layout-content'
+    '_' => '1509078813351'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html, */*; q=0.01'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub/index.php?r=dashboard%2Fdashboard'
+    'HTTP_X_CSRF_TOKEN' => 'vNZrJcogpqc9gXFV1-UqnpsBHmrbtE-ayvzcWBCKzjqxvWx_PMSB5hrDTHhAIvFbktoO7TPvS-CfOd15vVDxJQ=='
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_X_PJAX' => 'true'
+    'HTTP_X_PJAX_CONTAINER' => '#layout-content'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_space-members-panel=expanded; PHPSESSID=0nlj8onpprr9j8m69785028h02; _csrf=5665fd8ab021206a60c5114689b4e92f070fdc2bec85640293373a1688e9b64ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0Dk%07Z%F6%E4%27A%27B%3D-%97%C7%DB%C5%09%DB%10%87%E8%5B%04zU%C5%01%21%AD%DA%3F%1F%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '37578'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=reward%2Freward&_pjax=%23layout-content&_=1509078813351'
+    'REQUEST_URI' => '/humhub/index.php?r=reward%2Freward&_pjax=%23layout-content&_=1509078813351'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1509080890.099
+    'REQUEST_TIME' => 1509080890
+]
+2017-10-27 00:08:10 [127.0.0.1][5][0nlj8onpprr9j8m69785028h02][error][Error] Error: Class 'humhub\modules\reward\models\Membership' not found in /var/www/html/humhub/protected/humhub/modules/reward/models/SpaceSearch.php:42
+Stack trace:
+#0 /var/www/html/humhub/protected/humhub/modules/reward/controllers/RewardController.php(56): humhub\modules\reward\models\SpaceSearch->search(Array)
+#1 [internal function]: humhub\modules\reward\controllers\RewardController->actionIndex()
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('reward/reward', Array)
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#7 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#8 {main}
+2017-10-27 00:08:10 [127.0.0.1][5][0nlj8onpprr9j8m69785028h02][info][application] $_GET = [
+    'r' => 'reward/reward'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub/index.php?r=dashboard%2Fdashboard'
+    'HTTP_COOKIE' => 'pm_getting-started-panel=expanded; pm_space-members-panel=expanded; PHPSESSID=0nlj8onpprr9j8m69785028h02; _csrf=5665fd8ab021206a60c5114689b4e92f070fdc2bec85640293373a1688e9b64ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%0Dk%07Z%F6%E4%27A%27B%3D-%97%C7%DB%C5%09%DB%10%87%E8%5B%04zU%C5%01%21%AD%DA%3F%1F%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '37580'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=reward%2Freward'
+    'REQUEST_URI' => '/humhub/index.php?r=reward%2Freward'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1509080890.607
+    'REQUEST_TIME' => 1509080890
+]

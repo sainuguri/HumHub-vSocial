@@ -7,6 +7,7 @@ use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use humhub\modules\space\models\Space;
+use humhub\modules\space\models\Membership;
 
 class SpaceSearch extends Space
 {
