@@ -9,9 +9,7 @@ use yii\helpers\Html;
 use humhub\modules\space\models\Space;
 use humhub\modules\admin\widgets\SpaceGridView;
 ?>
-<div class="container">
-        <div class="col-md-9 layout-content-container panel panel-default">
-            <div class="table-responsive">
+
                 <?php
                     echo SpaceGridView::widget([
                         'dataProvider' => $dataProvider,
@@ -46,6 +44,3 @@ use humhub\modules\admin\widgets\SpaceGridView;
                         ],
                     ]);
                 ?>
-            </div>
-        </div> 
-</div>

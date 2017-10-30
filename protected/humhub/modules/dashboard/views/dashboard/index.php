@@ -17,7 +17,7 @@
         <div class="col-md-4 layout-sidebar-container">
             <?php
             echo \humhub\modules\dashboard\widgets\Sidebar::widget([
-                'widgets' => [
+                'widgets' => [  
                     [
                         \humhub\modules\activity\widgets\Stream::className(),
                         ['streamAction' => '/dashboard/dashboard/stream'],
