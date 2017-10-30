@@ -20,6 +20,8 @@ use humhub\modules\content\components\ContentContainerActiveRecord;
  * @property string $end_day
  * @property string $start_time
  * @property string $end_time
+ * @property string $url
+ * @property string $hf_url
 
  */
 class Session extends ContentContainerActiveRecord
@@ -43,7 +45,7 @@ class Session extends ContentContainerActiveRecord
             [['start_day', 'end_day'], 'safe'],
             [['start_time','session_name'], 'string', 'max' => 50],
             [['end_time', 'instructor_name'], 'string', 'max' => 45],
-            [['url'], 'unique', 'skipOnEmpty' => 'true'],
+            [['url', 'hf_url'], 'unique', 'skipOnEmpty' => 'true'],
             [['url'], UrlValidator::className()],
             [['end_day'], 'validateEndDay'],
             [['end_time'], 'validateEndTime'],
@@ -68,6 +70,7 @@ class Session extends ContentContainerActiveRecord
             'start_time' => 'Start Time',
             'end_time' => 'End Time',
             'instructor_name' => 'Instructor Name',
+            'hf_url' => 'HighFidelity URL'
         ];
     }
 

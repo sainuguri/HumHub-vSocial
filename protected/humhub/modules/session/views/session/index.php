@@ -36,6 +36,7 @@ use humhub\modules\admin\widgets\SpaceGridView;
                             'end_day',
                             'start_time',
                             'end_time',
+                            'hf_url',
                             [
                                 'header' => Yii::t('AdminModule.views_user_index', 'Actions'),
                                 'class' => 'yii\grid\ActionColumn',
