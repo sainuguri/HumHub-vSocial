@@ -10,7 +10,9 @@ namespace humhub\modules\content\components;
 
 use humhub\components\Controller;
 use humhub\modules\space\behaviors\SpaceController;
+use humhub\modules\session\behaviors\InfoController;
 use humhub\modules\space\models\Space;
+use humhub\modules\session\models\Session;
 use humhub\modules\space\widgets\Image;
 use humhub\modules\user\behaviors\ProfileController;
 use humhub\modules\user\models\User;
@@ -60,6 +62,7 @@ class ContentContainerController extends Controller
         $request = Yii::$app->request;
         $spaceGuid = $request->get('sguid');
         $userGuid = $request->get('uguid');
+        $sessionGuid = $request->get('sessionguid');
 
         if ($spaceGuid !== null) {
 
@@ -88,7 +91,22 @@ class ContentContainerController extends Controller
 
             $this->subLayout = "@humhub/modules/user/views/profile/_layout";
 
-        } else {
+        } elseif($sessionGuid !== null) {
+
+            $this->contentContainer = Session::findOne(['guid' => $sessionGuid]);
+            if ($this->contentContainer == null) {
+                throw new HttpException(404, Yii::t('base', 'Session not found!'));
+            }
+
+            $this->attachBehavior('InfoControllerBehavior', [
+                'class' => InfoController::className(),
+                'session' => $this->contentContainer,
+            ]);
+
+            $this->subLayout = "@humhub/modules/session/views/info/_layout";
+        }
+
+        else {
             throw new HttpException(500, Yii::t('base', 'Could not determine content container!'));
         }
 

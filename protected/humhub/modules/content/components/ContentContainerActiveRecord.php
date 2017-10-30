@@ -48,6 +48,9 @@ abstract class ContentContainerActiveRecord extends ActiveRecord
         if ($this instanceof \humhub\modules\space\models\Space) {
             return new ProfileImage($this->guid, 'default_space');
         }
+        elseif ($this instanceof \humhub\modules\session\models\Session) {
+            return new ProfileImage($this->guid, 'default_session');
+        }
         return new ProfileImage($this->guid);
     }
 

@@ -1,0 +1,1 @@
+<?php echo \humhub\modules\post\widgets\Form::widget(['contentContainer' => $session]); ?>

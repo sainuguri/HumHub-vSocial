@@ -3,7 +3,10 @@
 namespace humhub\modules\session\models;
 
 use Yii;
+use yii\helpers\Url;
 use yii\data\ActiveDataProvider;
+use humhub\modules\session\components\UrlValidator;
+use humhub\modules\content\components\ContentContainerActiveRecord;
 
 /**
  * This is the model class for table "session".
@@ -17,7 +20,7 @@ use yii\data\ActiveDataProvider;
  * @property string $end_time
 
  */
-class Session extends \yii\db\ActiveRecord
+class Session extends ContentContainerActiveRecord
 {
     /**
      * @inheritdoc
@@ -32,12 +35,19 @@ class Session extends \yii\db\ActiveRecord
      */
     public function rules()
     {
-        return [
+        $rules = [
             ['id', 'integer'],
             [['start_day', 'end_day'], 'safe'],
             [['start_time','session_name'], 'string', 'max' => 50],
-            [['end_time', 'instructor_name'], 'string', 'max' => 45]
+            [['end_time', 'instructor_name'], 'string', 'max' => 45],
+            [['url'], 'unique', 'skipOnEmpty' => 'true'],
+            [['url'], UrlValidator::className()],
         ];
+        if (Yii::$app->getModule('session')->useUniqueSessionNames) {
+            $rules[] = [['session_name'], 'unique', 'targetClass' => self::className()];
+        }
+
+        return $rules;
     }
 
     /**
@@ -62,8 +72,8 @@ class Session extends \yii\db\ActiveRecord
     public function behaviors()
     {
         return array(
-            //\humhub\components\behaviors\GUID::className(),
-            //\humhub\modules\content\components\behaviors\SettingsBehavior::className(),
+            \humhub\components\behaviors\GUID::className(),
+            \humhub\modules\content\components\behaviors\SettingsBehavior::className(),
             //\humhub\modules\space\behaviors\SpaceModelModules::className(),
             \humhub\modules\session\behaviors\SessionModelMembership::className(),
             //\humhub\modules\user\behaviors\Followable::className(),
@@ -135,6 +145,26 @@ class Session extends \yii\db\ActiveRecord
         $query->andFilterWhere(['like', 'instructor_name', $this->instructor_name]);
 
         return $dataProvider;
+    }
+
+    public function getSessionMembers()
+    {
+        $query = $this->hasMany(SessionMembership::className(), ['session_id' => 'id']);
+        return $query;
+    }
+
+    public function createUrl($route = null, $params = array(), $scheme = false)
+    {
+        if ($route == null) {
+            $route = '/session/info';
+        }
+
+        array_unshift($params, $route);
+        if (!isset($params['sessionguid'])) {
+            $params['sessionguid'] = $this->guid;
+        }
+
+        return Url::toRoute($params, $scheme);
     }
 
 }

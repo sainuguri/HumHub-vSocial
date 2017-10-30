@@ -115,8 +115,8 @@ class SessionController extends Controller
     }
 
 
-    // public function actionInvite()
+    // public function actionHome()
     // {
-    //     return $this->render('invite');
+    //     return $this->render('home');
     // }
 }
