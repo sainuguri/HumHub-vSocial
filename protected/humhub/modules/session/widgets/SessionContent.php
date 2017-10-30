@@ -4,6 +4,8 @@ namespace humhub\modules\session\widgets;
 
 use Yii;
 use humhub\components\Widget;
+use humhub\modules\user\models\User;
+use humhub\modules\session\models\SessionMembership;
 use humhub\modules\content\components\ContentContainerActiveRecord;
 
 class SessionContent extends Widget
@@ -20,7 +22,9 @@ class SessionContent extends Widget
 
     public function run()
     {
-        $searchModel = new \humhub\modules\session\models\Session();
+        // $query = User::find()->where([]);
+        // $query = \humhub\modules\session\models\SessionMembership::getSessionMembersQuery($this->session);
+        $searchModel = new \humhub\modules\session\models\SessionSearch();
         $dataProvider =  $searchModel->search(Yii::$app->request->queryParams);
         // return $this->content;
         return $this->render('sessionContent', [

@@ -3,7 +3,9 @@
 namespace humhub\modules\session\models;
 
 use Yii;
+use DateTime;
 use yii\helpers\Url;
+use humhub\libs\DbDateValidator;
 use yii\data\ActiveDataProvider;
 use humhub\modules\session\components\UrlValidator;
 use humhub\modules\content\components\ContentContainerActiveRecord;
@@ -37,11 +39,14 @@ class Session extends ContentContainerActiveRecord
     {
         $rules = [
             ['id', 'integer'],
+            [['session_name', 'start_day', 'end_day'], 'required'],
             [['start_day', 'end_day'], 'safe'],
             [['start_time','session_name'], 'string', 'max' => 50],
             [['end_time', 'instructor_name'], 'string', 'max' => 45],
             [['url'], 'unique', 'skipOnEmpty' => 'true'],
             [['url'], UrlValidator::className()],
+            [['end_day'], 'validateEndDay'],
+            [['end_time'], 'validateEndTime'],
         ];
         if (Yii::$app->getModule('session')->useUniqueSessionNames) {
             $rules[] = [['session_name'], 'unique', 'targetClass' => self::className()];
@@ -109,44 +114,6 @@ class Session extends ContentContainerActiveRecord
     //     //Yii::$app->cache->delete('userSpaces_' . $user->id);
     // }
 
-    public function search($params)
-    {
-        $query = Session::find();
-
-        $dataProvider = new ActiveDataProvider([
-            'query' => $query,
-            'pagination' => ['pageSize' => 50],
-        ]);
-
-        $dataProvider->setSort([
-            'attributes' => [
-                'id',
-                'session_name',
-                'start_day',
-                'end_day',
-                'start_time',
-                'end_time',
-                'instructor_name',
-            ]
-        ]);
-
-        $this->load($params);
-
-        if (!$this->validate()) {
-            $query->where('0=1');
-            return $dataProvider;
-        }
-        $query->andFilterWhere(['id' => $this->id]);
-        $query->andFilterWhere(['session_name' => $this->session_name]);
-        $query->andFilterWhere(['start_day' => $this->start_day]);
-        $query->andFilterWhere(['end_day' => $this->end_day]);
-        $query->andFilterWhere(['start_time' => $this->start_time]);
-        $query->andFilterWhere(['end_time' => $this->end_time]);
-        $query->andFilterWhere(['like', 'instructor_name', $this->instructor_name]);
-
-        return $dataProvider;
-    }
-
     public function getSessionMembers()
     {
         $query = $this->hasMany(SessionMembership::className(), ['session_id' => 'id']);
@@ -165,6 +132,20 @@ class Session extends ContentContainerActiveRecord
         }
 
         return Url::toRoute($params, $scheme);
+    }
+
+    public function validateEndDay($attribute, $params)
+    {
+        if (new DateTime($this->start_day) > new DateTime($this->end_day)) {
+            $this->addError($attribute, Yii::t('CalendarModule.base', "End day must be after start day!"));
+        }
+    }
+
+    public function validateEndTime($attribute, $params)
+    {
+        if (new DateTime($this->start_time) >= new DateTime($this->end_time)) {
+            $this->addError($attribute, Yii::t('CalendarModule.base', "End time must be after start time!"));
+        }
     }
 
 }

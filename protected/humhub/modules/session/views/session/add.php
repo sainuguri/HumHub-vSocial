@@ -1,5 +1,6 @@
 <?php
 
+use Yii;
 use yii\helpers\Url;
 use humhub\libs\Html;
 use yii\helpers\ArrayHelper;
@@ -43,9 +44,7 @@ $animation = $model->hasErrors() ? 'shake' : 'fadeIn';
 
             <div class="row">
               <div class="col-md-12">
-                <?= $form->field($model,'instructor_name')->dropdownList(
-                  ArrayHelper::map(Instructor::find()->all(),'instructor_name','instructor_name'),
-                ['prompt'=>'Select Instructor'])->label('Instructor');?>
+                <?= $form->field($model,'instructor_name')->textInput(['readOnly' => true, 'value' => Yii::$app->user->getIdentity()->displayName])->label('Instructor');?>
               </div>
             </div>
             </br>
