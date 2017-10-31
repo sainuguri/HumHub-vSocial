@@ -22,8 +22,6 @@ class SessionContent extends Widget
 
     public function run()
     {
-        // $query = User::find()->where([]);
-        // $query = \humhub\modules\session\models\SessionMembership::getSessionMembersQuery($this->session);
         $searchModel = new \humhub\modules\session\models\SessionSearch();
         $dataProvider =  $searchModel->search(Yii::$app->request->queryParams);
         // return $this->content;

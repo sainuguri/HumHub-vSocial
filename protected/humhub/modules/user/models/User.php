@@ -37,6 +37,7 @@ use humhub\modules\content\models\Content;
  * @property integer $contentcontainer_id
  * @property integer $roleID
  * @property Profile $profile
+ * @property SessionMembership[] $sessionMemberships
  * @property Group $name
  */
 class User extends ContentContainerActiveRecord implements \yii\web\IdentityInterface, \humhub\modules\search\interfaces\Searchable

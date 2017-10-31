@@ -6,9 +6,14 @@ use yii\web\HttpException;
 
 class Games extends \yii\base\Widget
 {
+	public $contentContainer;
+
     /**
-     * Runs the activity widget
+     * Path to Stream Action to use
+     *
+     * @var string
      */
+    public $streamAction = '';
     public function run()
     {
         return $this->render('games');

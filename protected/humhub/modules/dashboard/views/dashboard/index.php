@@ -19,6 +19,11 @@
             echo \humhub\modules\dashboard\widgets\Sidebar::widget([
                 'widgets' => [  
                     [
+                        \humhub\modules\dashboard\widgets\Games::className(),
+                        ['streamAction' => '/dashboard/dashboard/stream'],
+                        ['sortOrder' => 150]
+                    ],
+                    [
                         \humhub\modules\activity\widgets\Stream::className(),
                         ['streamAction' => '/dashboard/dashboard/stream'],
                         ['sortOrder' => 150]

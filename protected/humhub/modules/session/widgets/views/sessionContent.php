@@ -13,7 +13,7 @@ use humhub\modules\admin\widgets\SpaceGridView;
                 <?php
                     echo SpaceGridView::widget([
                         'dataProvider' => $dataProvider,
-                        'filterModel' => $searchModel,
+                        // 'filterModel' => $searchModel,
                         'columns' => [
                             [
                                 'attribute' => 'id',
