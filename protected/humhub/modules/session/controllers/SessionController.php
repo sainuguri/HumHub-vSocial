@@ -78,8 +78,8 @@ class SessionController extends Controller
             $membership->session_id = $model->id;
             $membership->user_id = Yii::$app->user->id;
             $membership->status = SessionMembership::STATUS_MEMBER;
-            //$membership->group_id = self::USERGROUP_ADMIN;
             $membership->save();
+
             //return $this->actionIndex();
             return $this->actionInvite($model);//redirect(array('/session/session/invite'));
         } else

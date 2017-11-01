@@ -7,6 +7,7 @@ use yii\base\Behavior;
 use humhub\modules\user\models\User;
 use humhub\modules\space\models\Space;
 use humhub\modules\space\models\Membership;
+use humhub\modules\session\models\Tokens;
 use humhub\modules\session\models\Session;
 use humhub\modules\session\models\SessionMembership;
 use humhub\modules\user\models\Invite;
@@ -323,10 +324,16 @@ class SessionModelMembership extends Behavior
             ]);
         }
 
+        $tokens = new Tokens();
+        $tokens->user_id = $userId;
+        $tokens->tokens = 0;
+        $tokens->session_id = $this->owner->id;
+
         // Update or set originator 
         $membership->originator_user_id = (string)$originatorId;
 
         if ($membership->save()) {
+            $tokens->save();
             $this->sendInviteNotification($userId, $originatorId);
         } else {
             throw new \yii\base\Exception("Could not save membership!" . print_r($membership->getErrors(), 1));
