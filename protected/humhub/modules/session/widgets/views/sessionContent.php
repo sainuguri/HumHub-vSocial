@@ -22,7 +22,7 @@ use humhub\modules\admin\widgets\SpaceGridView;
         'dataProvider' => $dataProvider,
         // 'filterModel' => $searchModel,
         'columns' => [
-            'user_id',
+            'user.username',
             'tokens',
         ],
     ]);

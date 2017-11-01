@@ -3,6 +3,7 @@
 namespace humhub\modules\session\models;
 
 use Yii;
+use humhub\modules\user\models\User;
 
 /**
  * This is the model class for table "tokens".
@@ -13,6 +14,7 @@ use Yii;
  * @property integer $session_id
  *
  * @property Session $session
+ * @property User $user
  */
 class Tokens extends \yii\db\ActiveRecord
 {
@@ -33,6 +35,7 @@ class Tokens extends \yii\db\ActiveRecord
             [['user_id', 'session_id'], 'required'],
             [['user_id', 'tokens', 'session_id'], 'integer'],
             [['session_id'], 'exist', 'skipOnError' => true, 'targetClass' => Session::className(), 'targetAttribute' => ['session_id' => 'id']],
+            [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],
         ];
     }
 
@@ -55,5 +58,13 @@ class Tokens extends \yii\db\ActiveRecord
     public function getSession()
     {
         return $this->hasOne(Session::className(), ['id' => 'session_id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getUser()
+    {
+        return $this->hasOne(User::className(), ['id' => 'user_id']);
     }
 }
