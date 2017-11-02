@@ -21,29 +21,29 @@ use humhub\modules\admin\widgets\SpaceGridView;
         'columns' => [
             'user.username',
             [
-            		'attribute' => 'tokens',
-                    'options' => ['style' => 'width:100px;'],
-                    'format' => 'raw',
-                    'value' => function($data) {
-                        return Html::textInput('tokens', $data->tokens, ['id' => 'tokenId','class' => 'form-control', 'readOnly' => true]);
-                    },
+            	'attribute' => 'tokens',
+                'options' => ['style' => 'width:100px;'],
+                'format' => 'raw',
+                'value' => function($data) {
+                    return Html::textInput('tokens', $data->tokens, ['id' => 'tokenId','class' => 'form-control', 'readOnly' => true]);
+                },
             ],
             [
-                    'header' => Yii::t('AdminModule.views_user_index', 'Actions'),
-                    'class' => 'yii\grid\ActionColumn',
-                    'options' => ['style' => 'width:80px; min-width:80px;'],
-                    'buttons' => [
-                        'view' => function($url, $model) {
-                            return Html::button('<i class="fa fa-plus"></i>',['id' => 'add', 'class' => 'btn btn-success btn-sm tt']);
-                        },
-                        'update' => function($model) {
-                            return;
-                        },
-                        'delete' => function($url, $model) {
-                            return Html::button('<i class="fa fa-minus"></i>', ['id' => 'subtract', 'class' => 'btn btn-danger btn-sm tt']);
-                        }
-                    ],
-            ],
+                'header' => Yii::t('AdminModule.views_user_index', 'Actions'),
+                'class' => 'yii\grid\ActionColumn',
+                'options' => ['style' => 'width:80px; min-width:80px;'],
+                'buttons' => [
+                    'view' => function($url, $model) {
+                        return Html::button('<i class="fa fa-plus"></i>',['id' => 'add', 'class' => 'btn btn-success btn-sm tt']);
+                    },
+                    'update' => function() {
+                    	return;
+                    },
+                    'delete' => function($url, $model) {
+                        return Html::button('<i class="fa fa-minus"></i>', ['id' => 'subtract', 'class' => 'btn btn-danger btn-sm tt']);
+                    }
+                ],
+            ]
         ],
     ]);
 ?>
