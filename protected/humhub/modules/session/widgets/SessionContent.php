@@ -24,18 +24,25 @@ class SessionContent extends Widget
 
     public function run()
     {
-        $tokensModel = new Tokens();
-        $query = \humhub\modules\session\models\Tokens::find()->joinWith('user');
+        $query = \humhub\modules\session\models\Tokens::find()->joinWith('user')->where(['session_id' => $this->contentContainer->id]);
         // $query = \humhub\modules\session\models\SessionMembership::getSessionMembersQuery($this->contentContainer);
         $searchModel = new \humhub\modules\session\models\SessionSearch();
         // $dataProvider =  $searchModel->search(Yii::$app->request->queryParams);
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
             ]);
+
+        $dataProvider->setSort([
+            'attributes' => [
+                'user.username',
+                'tokens'
+            ]
+        ]);
+
+
         // return $this->content;
         return $this->render('sessionContent', [
                 'dataProvider' => $dataProvider,
-                // 'searchModel' => $searchModel
             ]);
     }
 }
