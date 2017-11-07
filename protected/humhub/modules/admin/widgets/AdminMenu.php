@@ -69,6 +69,16 @@ class AdminMenu extends \humhub\widgets\BaseMenu
         ]);
 
         $this->addItem([
+            'label' => Yii::t('AdminModule.widgets_AdminMenuWidget', 'Network Data'),
+            'url' => Url::toRoute('/admin/network'),
+            'icon' => '<i class="fa fa-sitemap"></i>',
+            'sortOrder' => 10000,
+            'newItemCount' => 0,
+            'isActive' => (Yii::$app->controller->module && Yii::$app->controller->module->id == 'admin' && Yii::$app->controller->id == 'network')
+            // 'isVisible' => Yii::$app->user->can(new \humhub\modules\admin\permissions\SeeAdminInformation())
+        ]);
+
+        $this->addItem([
             'label' => Yii::t('AdminModule.widgets_AdminMenuWidget', 'Settings'),
             'url' => Url::toRoute('/admin/setting'),
             'icon' => '<i class="fa fa-gears"></i>',

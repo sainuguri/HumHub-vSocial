@@ -57,7 +57,7 @@ class InfoController extends \humhub\modules\content\components\ContentContainer
         // if ($defaultPageUrl != null) {
         //     return $this->redirect($defaultPageUrl);
         // }
-
+        
         return $this->actionHome();
     }
 
