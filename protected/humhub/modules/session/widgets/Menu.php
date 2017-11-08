@@ -37,11 +37,21 @@ class Menu extends \humhub\widgets\BaseMenu
         ));
 
         $this->addItem(array(
+            'label' => Yii::t('SessionModule.widgets_SessionMenuWidget', 'Session Info'),
+            'group' => 'modules',
+            'url' => $this->session->createUrl('/session/info'),
+            'icon' => '<i class="fa fa-bars"></i>',
+            'sortOrder' => 100,
+            'isActive' => (Yii::$app->controller->id == "info" && (Yii::$app->controller->action->id == "index" || Yii::$app->controller->action->id == 'home') && Yii::$app->controller->module->id == "session"),
+        ));
+
+        $this->addItem(array(
             'label' => Yii::t('SessionModule.widgets_SessionMenuWidget', 'EEG Data'),
             'group' => 'modules',
             'url' => $this->session->createUrl('/session/eeg'),
             'icon' => '<i class="fa fa-line-chart"></i>',
             'sortOrder' => 100,
+            'isActive' => (Yii::$app->controller->id == "eeg" && (Yii::$app->controller->action->id == "index" || Yii::$app->controller->action->id == 'home') && Yii::$app->controller->module->id == "session")
         ));
 
         parent::init();

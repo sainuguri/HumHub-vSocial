@@ -53,8 +53,8 @@ class SessionController extends Controller
         // if (Yii::$app->user->can(new ManageSpaces())) {
             // $searchModel = new \humhub\modules\admin\models\SpaceSearch();
             $searchModel = new \humhub\modules\session\models\SessionSearch();
-            $dataProvider = $searchModel->search(Yii::$app->request->queryParams);  
-
+            $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+            
             return $this->render('index', [
                 'dataProvider' => $dataProvider,
                 'searchModel' => $searchModel

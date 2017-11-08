@@ -1,23 +1,13 @@
 <?php
 
-/**
- * @link https://www.humhub.org/
- * @copyright Copyright (c) 2017 HumHub GmbH & Co. KG
- * @license https://www.humhub.com/licences
- */
-
 namespace humhub\modules\session\controllers;
 
 use Yii;
+use yii\data\ActiveDataProvider;
 use humhub\modules\admin\components\Controller;
+use humhub\modules\stream\actions\ContentContainerStream;
 
-
-/**
- * SpaceController provides global space administration.
- *
- * @since 0.5
- */
-class EegController extends Controller
+class EegController extends \humhub\modules\content\components\ContentContainerController
 {
 
     /**
@@ -30,15 +20,22 @@ class EegController extends Controller
      */
     public function init()
     {
-        // $this->subLayout = '@humhub/modules/session/views/info/_layout';
         $this->appendPageTitle(Yii::t('AdminModule.base', 'EEG Data'));
-
         return parent::init();
     }
 
     public function actionIndex()
     {
+        // $session = $this->contentContainer;
+        $this->subLayout = '@humhub/modules/session/views/eeg/index';
+
+        $members = \humhub\modules\session\models\SessionMembership::getSessionMembersQuery($this->session)->all();
         return $this->render('index');
+    }
+
+    public function actionView()
+    {
+        return $this->renderAjax('view');
     }
 
 }

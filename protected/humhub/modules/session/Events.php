@@ -23,8 +23,8 @@ class Events
      */
     public static function onTopMenuInit($event)
     {
-        //if (!Yii::$app->user->isAdmin())
-        //{
+        if (!Yii::$app->user->isAdmin())
+        {
             $event->sender->addItem(array(
                 'label' => Yii::t('SessionModule.base', 'Session Tracking'),
                 'id' => 'session',
@@ -33,7 +33,7 @@ class Events
                 'sortOrder' => 100,
                 'isActive' => (Yii::$app->controller->module && Yii::$app->controller->module->id == 'session'),
             ));
-       // }
+       }
     }
 
 }
