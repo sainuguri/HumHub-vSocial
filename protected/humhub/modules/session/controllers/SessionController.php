@@ -74,6 +74,7 @@ class SessionController extends Controller
         if ($model->load(Yii::$app->request->post()) && $model->validate() && $model->save())
         {
             $this->view->saved();
+
             $membership = new SessionMembership();
             $membership->session_id = $model->id;
             $membership->user_id = Yii::$app->user->id;

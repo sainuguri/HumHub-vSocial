@@ -67,7 +67,7 @@ class SessionSearch extends Session
             $query->where('0=1');
             return $dataProvider;
         }
-        $query->andFilterWhere(['id' => $this->id]);
+        $query->andFilterWhere(['id' => $this->id]);    
         $query->andFilterWhere(['session_name' => $this->session_name]);
         $query->andFilterWhere(['start_day' => $this->start_day]);
         $query->andFilterWhere(['end_day' => $this->end_day]);

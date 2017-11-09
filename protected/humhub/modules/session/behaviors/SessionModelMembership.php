@@ -331,11 +331,16 @@ class SessionModelMembership extends Behavior
         $tokens->tokens = 0;
         $tokens->session_id = $this->owner->id;
 
+        $reward = new \humhub\modules\reward\models\Reward();
+        $reward->user_id = $userId;
+        $reward->session_id = $this->owner->id;
+        
         // Update or set originator 
         $membership->originator_user_id = (string)$originatorId;
 
         if ($membership->save()) {
             $tokens->save();
+            $reward->save();
             $this->sendInviteNotification($userId, $originatorId);
         } else {
             throw new \yii\base\Exception("Could not save membership!" . print_r($membership->getErrors(), 1));
