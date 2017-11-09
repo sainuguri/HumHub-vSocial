@@ -48759,3 +48759,189 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1510210685.05
     'REQUEST_TIME' => 1510210685
 ]
+2017-11-09 13:39:57 [127.0.0.1][-][6prlrci7civdap8af200bpshp2][error][Error] Error: Class 'humhub\modules\reward\models\Session' not found in /var/www/html/humhub/protected/humhub/modules/reward/models/Reward.php:41
+Stack trace:
+#0 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Model.php(443): humhub\modules\reward\models\Reward->rules()
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Model.php(411): yii\base\Model->createValidators()
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Model.php(187): yii\base\Model->getValidators()
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Model.php(751): yii\base\Model->scenarios()
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2-gii/generators/crud/default/views/_form.php(11): yii\base\Model->safeAttributes()
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/h...')
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2-gii/Generator.php(317): yii\base\View->renderFile('/var/www/html/h...', Array, Object(yii\gii\generators\crud\Generator))
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2-gii/generators/crud/Generator.php(182): yii\gii\Generator->render('views/_form.php')
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2-gii/controllers/DefaultController.php(50): yii\gii\generators\crud\Generator->generate()
+#10 [internal function]: yii\gii\controllers\DefaultController->actionView('crud')
+#11 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#12 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#13 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('view', Array)
+#14 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('gii/default/vie...', Array)
+#15 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#16 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#17 {main}
+2017-11-09 13:39:57 [127.0.0.1][-][6prlrci7civdap8af200bpshp2][info][application] $_GET = [
+    'r' => 'gii/default/view'
+    'id' => 'crud'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub/index.php?r=gii%2Fdefault%2Fview&id=crud'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '665'
+    'HTTP_COOKIE' => 'PHPSESSID=6prlrci7civdap8af200bpshp2; _csrf=b86c5722e9a196f024978c28c9805a2c7dd5ccdccec6a5d6f89681aee8fe0e44a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%94%DB9%19%98%13%AB%7B%CCQ%CA%CE+K%C0%07K%AE%24%DFM%E1%8C%C0%25%0FZJ%5E%A1%C8%0F%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '59870'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=gii%2Fdefault%2Fview&id=crud'
+    'REQUEST_URI' => '/humhub/index.php?r=gii%2Fdefault%2Fview&id=crud'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1510256397.37
+    'REQUEST_TIME' => 1510256397
+]
+2017-11-09 13:40:27 [127.0.0.1][-][6prlrci7civdap8af200bpshp2][error][Error] Error: Class 'humhub\modules\reward\models\Session' not found in /var/www/html/humhub/protected/humhub/modules/reward/models/Reward.php:41
+Stack trace:
+#0 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Model.php(443): humhub\modules\reward\models\Reward->rules()
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Model.php(411): yii\base\Model->createValidators()
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Model.php(187): yii\base\Model->getValidators()
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Model.php(751): yii\base\Model->scenarios()
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2-gii/generators/crud/default/views/_form.php(11): yii\base\Model->safeAttributes()
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/h...')
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2-gii/Generator.php(317): yii\base\View->renderFile('/var/www/html/h...', Array, Object(yii\gii\generators\crud\Generator))
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2-gii/generators/crud/Generator.php(182): yii\gii\Generator->render('views/_form.php')
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2-gii/controllers/DefaultController.php(50): yii\gii\generators\crud\Generator->generate()
+#10 [internal function]: yii\gii\controllers\DefaultController->actionView('crud')
+#11 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#12 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#13 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('view', Array)
+#14 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('gii/default/vie...', Array)
+#15 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#16 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#17 {main}
+2017-11-09 13:40:27 [127.0.0.1][-][6prlrci7civdap8af200bpshp2][info][application] $_GET = [
+    'r' => 'gii/default/view'
+    'id' => 'crud'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub/index.php?r=gii%2Fdefault%2Fview&id=crud'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '665'
+    'HTTP_COOKIE' => 'PHPSESSID=6prlrci7civdap8af200bpshp2; _csrf=b86c5722e9a196f024978c28c9805a2c7dd5ccdccec6a5d6f89681aee8fe0e44a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%94%DB9%19%98%13%AB%7B%CCQ%CA%CE+K%C0%07K%AE%24%DFM%E1%8C%C0%25%0FZJ%5E%A1%C8%0F%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '59874'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=gii%2Fdefault%2Fview&id=crud'
+    'REQUEST_URI' => '/humhub/index.php?r=gii%2Fdefault%2Fview&id=crud'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1510256427.245
+    'REQUEST_TIME' => 1510256427
+]
+2017-11-09 13:42:03 [127.0.0.1][-][6prlrci7civdap8af200bpshp2][error][Error] Error: Class 'humhub\modules\reward\models\User' not found in /var/www/html/humhub/protected/humhub/modules/reward/models/Reward.php:43
+Stack trace:
+#0 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Model.php(443): humhub\modules\reward\models\Reward->rules()
+#1 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Model.php(411): yii\base\Model->createValidators()
+#2 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Model.php(187): yii\base\Model->getValidators()
+#3 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Model.php(751): yii\base\Model->scenarios()
+#4 /var/www/html/humhub/protected/vendor/yiisoft/yii2-gii/generators/crud/default/views/_form.php(11): yii\base\Model->safeAttributes()
+#5 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(330): require('/var/www/html/h...')
+#6 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/var/www/html/h...', Array)
+#7 /var/www/html/humhub/protected/vendor/yiisoft/yii2-gii/Generator.php(317): yii\base\View->renderFile('/var/www/html/h...', Array, Object(yii\gii\generators\crud\Generator))
+#8 /var/www/html/humhub/protected/vendor/yiisoft/yii2-gii/generators/crud/Generator.php(182): yii\gii\Generator->render('views/_form.php')
+#9 /var/www/html/humhub/protected/vendor/yiisoft/yii2-gii/controllers/DefaultController.php(50): yii\gii\generators\crud\Generator->generate()
+#10 [internal function]: yii\gii\controllers\DefaultController->actionView('crud')
+#11 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#12 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\InlineAction->runWithParams(Array)
+#13 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('view', Array)
+#14 /var/www/html/humhub/protected/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('gii/default/vie...', Array)
+#15 /var/www/html/humhub/protected/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(humhub\components\Request))
+#16 /var/www/html/humhub/index.php(25): yii\base\Application->run()
+#17 {main}
+2017-11-09 13:42:03 [127.0.0.1][-][6prlrci7civdap8af200bpshp2][info][application] $_GET = [
+    'r' => 'gii/default/view'
+    'id' => 'crud'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://localhost/humhub/index.php?r=gii%2Fdefault%2Fview&id=crud'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'CONTENT_LENGTH' => '637'
+    'HTTP_COOKIE' => 'PHPSESSID=6prlrci7civdap8af200bpshp2; _csrf=b86c5722e9a196f024978c28c9805a2c7dd5ccdccec6a5d6f89681aee8fe0e44a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22%94%DB9%19%98%13%AB%7B%CCQ%CA%CE+K%C0%07K%AE%24%DFM%E1%8C%C0%25%0FZJ%5E%A1%C8%0F%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/humhub/index.php'
+    'REMOTE_PORT' => '59880'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=gii%2Fdefault%2Fview&id=crud'
+    'REQUEST_URI' => '/humhub/index.php?r=gii%2Fdefault%2Fview&id=crud'
+    'SCRIPT_NAME' => '/humhub/index.php'
+    'PHP_SELF' => '/humhub/index.php'
+    'REQUEST_TIME_FLOAT' => 1510256523.418
+    'REQUEST_TIME' => 1510256523
+]

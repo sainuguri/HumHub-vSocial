@@ -65,6 +65,7 @@ class ContentContainerController extends Controller
         $userGuid = $request->get('uguid');
         $sessionGuid = $request->get('sessionguid');
         $tokenid = $request->get('tokenid');
+        $rewardGuid = $request->get('rewardguid');
 
         if ($spaceGuid !== null) {
 
@@ -106,6 +107,7 @@ class ContentContainerController extends Controller
             ]);
 
             $this->subLayout = "@humhub/modules/session/views/info/_layout";
+
         } elseif($tokenid !== null) {
 
             $this->contentContainer = Tokens::findOne(['id' => $tokenid]);
@@ -117,6 +119,20 @@ class ContentContainerController extends Controller
                 'class' => InfoController::className(),
                 'session' => $this->contentContainer,
             ]);
+
+            $this->subLayout = "@humhub/modules/session/views/info/_layout";
+
+        } elseif($rewardGuid !== null) {
+
+            $this->contentContainer = Tokens::findOne(['id' => $rewardGuid]);
+            if ($this->contentContainer == null) {
+                throw new HttpException(404, Yii::t('base', 'Reward not found!'));
+            }
+
+            // $this->attachBehavior('InfoControllerBehavior', [
+            //     'class' => InfoController::className(),
+            //     'session' => $this->contentContainer,
+            // ]);
 
             $this->subLayout = "@humhub/modules/session/views/info/_layout";
         }
