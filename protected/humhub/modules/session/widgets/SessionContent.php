@@ -35,6 +35,8 @@ class SessionContent extends Widget
         $dataProvider->setSort([
             'attributes' => [
                 'user.username',
+                'pass',
+                'strike',
                 'tokens'
             ]
         ]);
@@ -44,5 +46,18 @@ class SessionContent extends Widget
         return $this->render('sessionContent', [
                 'dataProvider' => $dataProvider,
             ]);
+    }
+
+    public function actionUpdate($userID, $tokens)
+    {
+        var_dump($userID);
+        $tokenModel = new Tokens;
+        $tokenModel->session_id = 11;
+        $tokenModel->user_id = 7;
+        $tokenModel->tokens = 3;
+
+        $tokenModel->save();
+        // echo 'qwerty';
+        return $userID;
     }
 }

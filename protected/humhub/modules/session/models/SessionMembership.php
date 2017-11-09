@@ -166,20 +166,20 @@ class SessionMembership extends \yii\db\ActiveRecord
         return $query;
     }
 
-    public static function getSessionMembersQuery(Session $session, $membersOnly = true, $withNotifications = null)
+    public static function getSessionMembersQuery(Session $session)//, $membersOnly = true, $withNotifications = null)
     {
         $query = User::find()->active();
         $query->join('LEFT JOIN', 'session_membership', 'session_membership.user_id=user.id');
 
-        if ($membersOnly) {
-            $query->andWhere(['session_membership.status' => self::STATUS_MEMBER]);
-        }
+        // if ($membersOnly) {
+        //     $query->andWhere(['session_membership.status' => self::STATUS_MEMBER]);
+        // }
 
-        if ($withNotifications === true) {
-            $query->andWhere(['session_membership.send_notifications' => 1]);
-        } else if ($withNotifications === false) {
-            $query->andWhere(['session_membership.send_notifications' => 0]);
-        }
+        // if ($withNotifications === true) {
+        //     $query->andWhere(['session_membership.send_notifications' => 1]);
+        // } else if ($withNotifications === false) {
+        //     $query->andWhere(['session_membership.send_notifications' => 0]);
+        // }
 
         $query->andWhere(['session_id' => $session->id])->defaultOrder();
         return $query;

@@ -15,13 +15,18 @@ use humhub\widgets\ModalDialog;
 
 
 ?>
-<script src="http://bl.ocks.org/ndarville/raw/7075823/d3.min.js?v=3.2.8"> </script>
-<link rel="stylesheet" type="text/css" href="protected/humhub/modules/session/views/eeg/multiline.css">
-<script src="http://d3js.org/d3.v3.js" charset="utf-8"> </script>
-<script src="protected/humhub/modules/session/views/eeg/multiline.js" charset="utf-8"></script>
+
+
+
+
+
 <?php ModalDialog::begin(['header' => Yii::t('SessionModule.views_session_eeg', '<strong>EEG</strong> Data'), 'size' => 'large']) ?>
 
-
+<div class="panel">
+  <script src="http://d3js.org/d3.v3.js" charset="utf-8"> </script>
+<script src="http://bl.ocks.org/ndarville/raw/7075823/d3.min.js?v=3.2.8"> </script>
+<script src="protected/humhub/modules/session/views/eeg/multiline.js" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="protected/humhub/modules/session/views/eeg/multiline.css">
       <div class="chart-wrapper" id="chart-line1"></div>
         <script type="text/javascript">
             d3.csv('protected/humhub/modules/session/views/eeg/Data.csv', function(error, data) {
@@ -44,4 +49,5 @@ use humhub\widgets\ModalDialog;
 
         });
       </script>
+</div>
 <?php ModalDialog::end(); ?>

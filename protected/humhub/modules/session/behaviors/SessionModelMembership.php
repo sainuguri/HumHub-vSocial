@@ -319,13 +319,15 @@ class SessionModelMembership extends Behavior
             $membership = new SessionMembership([
                 'session_id' => $this->owner->id,
                 'user_id' => $userId,
-                'status' => SessionMembership::STATUS_INVITED,
+                'status' => SessionMembership::STATUS_MEMBER,
                 //'group_id' => Space::USERGROUP_MEMBER
             ]);
         }
 
         $tokens = new Tokens();
         $tokens->user_id = $userId;
+        $tokens->pass = 0;
+        $tokens->strike = 0;
         $tokens->tokens = 0;
         $tokens->session_id = $this->owner->id;
 

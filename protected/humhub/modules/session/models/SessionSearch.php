@@ -42,7 +42,7 @@ class SessionSearch extends Session
      */
     public function search($params)
     {
-        $query = Session::find();
+        $query = Session::find()->where(['instructor_name'=>Yii::$app->user->getIdentity()->displayname]);
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,

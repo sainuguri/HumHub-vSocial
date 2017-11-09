@@ -12,6 +12,7 @@ use humhub\components\Controller;
 use humhub\modules\space\behaviors\SpaceController;
 use humhub\modules\session\behaviors\InfoController;
 use humhub\modules\space\models\Space;
+use humhub\modules\session\models\Tokens;
 use humhub\modules\session\models\Session;
 use humhub\modules\space\widgets\Image;
 use humhub\modules\user\behaviors\ProfileController;
@@ -63,6 +64,7 @@ class ContentContainerController extends Controller
         $spaceGuid = $request->get('sguid');
         $userGuid = $request->get('uguid');
         $sessionGuid = $request->get('sessionguid');
+        $tokenid = $request->get('tokenid');
 
         if ($spaceGuid !== null) {
 
@@ -94,6 +96,19 @@ class ContentContainerController extends Controller
         } elseif($sessionGuid !== null) {
 
             $this->contentContainer = Session::findOne(['guid' => $sessionGuid]);
+            if ($this->contentContainer == null) {
+                throw new HttpException(404, Yii::t('base', 'Session not found!'));
+            }
+
+            $this->attachBehavior('InfoControllerBehavior', [
+                'class' => InfoController::className(),
+                'session' => $this->contentContainer,
+            ]);
+
+            $this->subLayout = "@humhub/modules/session/views/info/_layout";
+        } elseif($tokenid !== null) {
+
+            $this->contentContainer = Tokens::findOne(['id' => $tokenid]);
             if ($this->contentContainer == null) {
                 throw new HttpException(404, Yii::t('base', 'Session not found!'));
             }

@@ -3,6 +3,7 @@
 namespace humhub\modules\session\controllers;
 
 use Yii;
+use humhub\modules\session\models\Tokens;
 use humhub\modules\session\models\Session;
 use humhub\modules\user\models\User;
 use humhub\modules\user\widgets\UserListBox;
@@ -47,6 +48,25 @@ class InfoController extends \humhub\modules\content\components\ContentContainer
      */
     public function actionIndex()
     {
+
+        if(isset($_POST["tokenID"]) && isset($_POST["pass"]) && isset($_POST["strike"]) && isset($_POST["tokens"])){
+            $tokenID = $_POST["tokenID"];
+            $pass = $_POST["pass"];
+            $strike = $_POST["strike"];
+            $tokens = $_POST["tokens"];
+
+            $tokenModel = Tokens::findOne(['id' => $tokenID]);
+            $tokenModel->pass = $pass;
+            $tokenModel->strike = $strike;
+            $tokenModel->tokens = $tokens;
+            $tokenModel->save();
+            // $message = $sessionContent->actionUpdate($userID, $tokens);
+
+            // echo 'Hello World!';
+
+            // return $message;
+
+        }
         $session = $this->getSession();
 
         // if (Yii::$app->request->get('tour') || Yii::$app->request->get('contentId')) {
@@ -73,6 +93,11 @@ class InfoController extends \humhub\modules\content\components\ContentContainer
         return $this->render('home', [
                     'session' => $session
         ]);
+    }
+
+    public function actionUpdate()
+    {
+        return $this->actionHome();
     }
    
 }
