@@ -13,37 +13,6 @@ use yii\helpers\Html;
                  src="<?php echo $session->getProfileBannerImage()->getUrl(); ?>"
                  width="100%" style="width: 100%;">
 
-            <!-- check if the current user is the profile owner and can change the images -->
-            <?php if ($session->isAdmin()) { ?>
-                <form class="fileupload" id="bannerfileupload" action="" method="POST" enctype="multipart/form-data"
-                      style="position: absolute; top: 0; left: 0; opacity: 0; width: 100%; height: 100%;">
-                    <input type="file" name="bannerfiles[]">
-                </form>
-
-                <?php
-                // set standard padding for banner progressbar
-                $padding = '90px 350px';
-
-                // if the default banner image is displaying
-                if (!$session->getProfileBannerImage()->hasImage()) {
-                    // change padding to the lower image height
-                    $padding = '50px 350px';
-                }
-                ?>
-
-                <div class="image-upload-loader" id="banner-image-upload-loader"
-                     style="padding: <?php echo $padding ?>;">
-                    <div class="progress image-upload-progess-bar" id="banner-image-upload-bar">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="00"
-                             aria-valuemin="0"
-                             aria-valuemax="100" style="width: 0%;">
-                        </div>
-                    </div>
-                </div>
-
-            <?php } ?>
-
-            <!-- show user name and title -->
             <div class="img-profile-data">
                 <h1 class="session"><?php echo Html::encode($session->session_name); ?></h1>
 

@@ -6,6 +6,7 @@ use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use humhub\modules\reward\models\Reward;
+use humhub\modules\session\models\Tokens;
 
 /**
  * RewardSearch represents the model behind the search form about `humhub\modules\reward\models\Reward`.
@@ -41,7 +42,10 @@ class RewardSearch extends Reward
      */
     public function search($params)
     {
+        // $query->join('LEFT JOIN', 'session_membership', 'session_membership.user_id=user.id');
         $query = Reward::find();
+        $query->join('LEFT JOIN', 'tokens', 'tokens.id=reward.token_id');
+
 
         // add conditions that should always apply here
 

@@ -96,7 +96,7 @@ class SessionMembership extends \yii\db\ActiveRecord
         if ($sessions === false) {
 
             $orderSetting = Yii::$app->getModule('session')->settings->get('sessionOrder');
-            $orderBy = 'name ASC';
+            $orderBy = 'session_name ASC';
             if ($orderSetting != 0) {
                 $orderBy = 'last_visit DESC';
             }

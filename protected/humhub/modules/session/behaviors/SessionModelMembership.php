@@ -342,6 +342,7 @@ class SessionModelMembership extends Behavior
 
         if ($membership->save()) {
             $tokens->save();
+            $reward->token_id = Tokens::find()->select(['id'])->where(['user_id' => $userId, 'session_id' => $this->owner->id])->One()->id;
             $reward->save();
             $this->sendInviteNotification($userId, $originatorId);
         } else {

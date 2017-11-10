@@ -459,6 +459,11 @@ class User extends ContentContainerActiveRecord implements \yii\web\IdentityInte
         return $name;
     }
 
+    public function getRoleName()
+    {
+        return $this->profile->role_name;
+    }
+
     /**
      * Checks if this user is the current logged in user.
      * @inheritdoc

@@ -59,7 +59,11 @@ use humhub\modules\admin\widgets\SpaceGridView;
                                 'options' => ['style' => 'width:12%;'],
                                 'format' => 'raw',
                                 'value' => function($data) {
-                                    return Html::label(Yii::$app->user->getIdentity()->displayName, ['id' => 'rewarded_by'.$data->id, 'class' => 'form-control']);
+                                    if ($data->rewarded_date == null){
+                                        return Html::label('NA', ['id' => 'rewarded_by'.$data->id, 'class' => 'form-control']);
+                                    }else {
+                                        return Html::label(Yii::$app->user->getIdentity()->displayName, ['id' => 'rewarded_by'.$data->id, 'class' => 'form-control']);
+                                    }
                                 },
                             ],
                             [

@@ -24,7 +24,15 @@ class SessionContent extends Widget
 
     public function run()
     {
-        $query = \humhub\modules\session\models\Tokens::find()->joinWith('user')->where(['session_id' => $this->contentContainer->id]);
+
+        $user = User::findOne(['id' => Yii::$app->user->id]);
+        $role = $user->getRoleName();
+        print_r($role);
+        if ($role == 'Student'){
+            $query = Tokens::find()->where(['user_id' => Yii::$app->user->id, 'session_id' => $this->contentContainer->id]);
+        }else {
+            $query = Tokens::find()->where(['session_id' => $this->contentContainer->id]);
+        }
         // $query = \humhub\modules\session\models\SessionMembership::getSessionMembersQuery($this->contentContainer);
         $searchModel = new \humhub\modules\session\models\SessionSearch();
         // $dataProvider =  $searchModel->search(Yii::$app->request->queryParams);
