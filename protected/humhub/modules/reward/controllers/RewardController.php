@@ -3,75 +3,47 @@
 namespace humhub\modules\reward\controllers;
 
 use Yii;
-use humhub\components\Controller;
+use humhub\modules\reward\models\Reward;
 use humhub\modules\reward\models\RewardSearch;
-use humhub\modules\admin\permissions\ManageSpaces;
-use humhub\modules\admin\permissions\ManageSettings;
+use yii\web\Controller;
+use yii\web\NotFoundHttpException;
+use yii\filters\VerbFilter;
 
+/**
+ * RewardController implements the CRUD actions for Reward model.
+ */
 class RewardController extends Controller
 {
-    public function init()
-    {
-        $this->appendPageTitle(\Yii::t('RewardModule.base', 'Reward'));
-        return parent::init();
-    }
 
     /**
-     * @inheritdoc
+     * Lists all Reward models.
+     * @return mixed
      */
-    public function behaviors()
-    {
-        return [
-            'acl' => [
-                'class' => \humhub\components\behaviors\AccessControl::className(),
-                'guestAllowedActions' => [
-                    'index',
-                    'stream'
-                ]
-            ]
-        ];
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function actions()
-    {
-        return [
-            'stream' => [
-                'class' => \humhub\modules\reward\components\actions\RewardStream::className()
-            ]
-        ];
-    }
-
-    /**
-     * Dashboard Index
-     *
-     * Show recent wall entries for this user
-     */
-    // public function actionIndex()
-    // {
-    //     // if (Yii::$app->user->can(new ManageSpaces())) {
-    //         // $searchModel = new \humhub\modules\admin\models\SpaceSearch();
-    //         $searchModel = new \humhub\modules\reward\models\SpaceSearch();
-    //         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
-    //         return $this->render('index', [
-    //             'dataProvider' => $dataProvider,
-    //             'searchModel' => $searchModel
-    //         ]);
-    //     // } else if (Yii::$app->user->can(new ManageSettings())) {
-    //     //     $this->redirect([
-    //     //         'settings'
-    //     //     ]);
-    //     // }
-    // }
-
-
     public function actionIndex()
     {
         $searchModel = new RewardSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        if(isset($_POST["rewardID"]) && isset($_POST["description"])){
+
+            $rewardID = $_POST["rewardID"];
+            $description = $_POST["description"];
+            // $rewarded_date = $_POST["rewarded_date"];
+            // $rewarded_by = $_POST["rewarded_by"];
+
+            $tokenModel = Reward::findOne(['id' => $rewardID]);
+            $tokenModel->description = $description;
+            print_r(date("Y-m-d"));
+            $tokenModel->rewarded_date = date("Y-m-d");
+            $tokenModel->rewarded_by = Yii::$app->user->id;
+            $tokenModel->save();
+
+            return $this->render('index', [
+                'searchModel' => $searchModel,
+                'dataProvider' => $dataProvider,
+            ]);
+
+        }
 
         return $this->render('index', [
             'searchModel' => $searchModel,
@@ -79,4 +51,54 @@ class RewardController extends Controller
         ]);
     }
 
+    /**
+     * Displays a single Reward model.
+     * @param integer $id
+     * @return mixed
+     */
+    public function actionView($id)
+    {
+        return $this->render('view', [
+            'model' => $this->findModel($id),
+        ]);
+    }
+
+    /**
+     * Creates a new Reward model.
+     * If creation is successful, the browser will be redirected to the 'view' page.
+     * @return mixed
+     */
+    public function actionCreate()
+    {
+        $model = new Reward();
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id]);
+        } else {
+            return $this->render('create', [
+                'model' => $model,
+            ]);
+        }
+    }
+
+    /**
+     * Updates an existing Reward model.
+     * If update is successful, the browser will be redirected to the 'view' page.
+     * @param integer $id
+     * @return mixed
+     */
+    public function actionEdit($id)
+    {
+        // $model = $this->findModel($id);
+
+        // if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        //     return $this->redirect(['view', 'id' => $model->id]);
+        // } else {
+        //     return $this->render('update', [
+        //         'model' => $model,
+        //     ]);
+        // }
+
+        return $this->render('edit');
+    }
 }

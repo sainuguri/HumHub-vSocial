@@ -46,7 +46,7 @@ class SessionSearch extends Session
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
-            'pagination' => ['pageSize' => 50],
+            'pagination' => ['pageSize' => 10]
         ]);
 
         $dataProvider->setSort([

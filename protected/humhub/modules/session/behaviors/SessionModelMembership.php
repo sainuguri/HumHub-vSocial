@@ -7,6 +7,7 @@ use yii\base\Behavior;
 use humhub\modules\user\models\User;
 use humhub\modules\space\models\Space;
 use humhub\modules\space\models\Membership;
+use humhub\modules\reward\models\Reward;
 use humhub\modules\session\models\Tokens;
 use humhub\modules\session\models\Session;
 use humhub\modules\session\models\SessionMembership;
@@ -331,10 +332,11 @@ class SessionModelMembership extends Behavior
         $tokens->tokens = 0;
         $tokens->session_id = $this->owner->id;
 
-        $reward = new \humhub\modules\reward\models\Reward();
+        $reward = new Reward();
         $reward->user_id = $userId;
         $reward->session_id = $this->owner->id;
-        
+
+
         // Update or set originator 
         $membership->originator_user_id = (string)$originatorId;
 

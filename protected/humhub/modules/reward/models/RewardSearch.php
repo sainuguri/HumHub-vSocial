@@ -42,20 +42,30 @@ class RewardSearch extends Reward
     public function search($params)
     {
         $query = Reward::find();
-        $query->join('LEFT JOIN', 'user', 'user.id=reward.user_id');
-        $query->join('LEFT JOIN', 'session', 'session.id=reward.session_id');
 
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination' => ['pageSize' => 10]
         ]);
+
+        $this->load($params);
+
+        if (!$this->validate()) {
+            // uncomment the following line if you do not want to return any records when validation fails
+            // $query->where('0=1');
+            return $dataProvider;
+        }
 
         $dataProvider->setSort([
             'attributes' => [
                 'id',
                 'user.username',
                 'session.session_name',
+                'token.pass',
+                'token.strike',
+                'token.tokens',
                 'description',
                 'rewarded_date',
                 'rewarded_by'
@@ -63,29 +73,18 @@ class RewardSearch extends Reward
         ]);
 
 
-        $this->load($params);
-
-        if (!$this->validate()) {
-            // comment the following line if you want to return any records when validation fails
-            $query->where('0=1');
-            return $dataProvider;
-        }
 
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
             'user_id' => $this->user_id,
-            'session_id' => $this->session_id,
             'rewarded_date' => $this->rewarded_date,
+            'session_id' => $this->session_id,
             'rewarded_by' => $this->rewarded_by,
         ]);
 
-        // $query->andFilterWhere(['like', 'id', $this->id])
-        //     ->andFilterWhere(['like', 'user.username', $this->getAttribute('user.username')])
-        //     ->andFilterWhere(['like', 'session.session_name', $this->getAttribute('session.session_name')])
-        //     ->andFilterWhere(['like', 'description', $this->description])
-        //     ->andFilterWhere(['like', 'rewarded_date', $this->rewarded_date])
-        //     ->andFilterWhere(['rewarded_by', 'id', $this->rewarded_by]);
+        // $query->andFilterWhere(['like', 'guid', $this->guid])
+        //     ->andFilterWhere(['like', 'description', $this->description]);
 
         return $dataProvider;
     }

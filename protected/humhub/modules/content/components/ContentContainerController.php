@@ -12,6 +12,7 @@ use humhub\components\Controller;
 use humhub\modules\space\behaviors\SpaceController;
 use humhub\modules\session\behaviors\InfoController;
 use humhub\modules\space\models\Space;
+use humhub\modules\reward\models\Reward;
 use humhub\modules\session\models\Tokens;
 use humhub\modules\session\models\Session;
 use humhub\modules\space\widgets\Image;
@@ -124,7 +125,7 @@ class ContentContainerController extends Controller
 
         } elseif($rewardGuid !== null) {
 
-            $this->contentContainer = Tokens::findOne(['id' => $rewardGuid]);
+            $this->contentContainer = Reward::findOne(['id' => $rewardGuid]);
             if ($this->contentContainer == null) {
                 throw new HttpException(404, Yii::t('base', 'Reward not found!'));
             }
@@ -134,7 +135,7 @@ class ContentContainerController extends Controller
             //     'session' => $this->contentContainer,
             // ]);
 
-            $this->subLayout = "@humhub/modules/session/views/info/_layout";
+            // $this->subLayout = "@humhub/modules/session/views/info/_layout";
         }
 
         else {
