@@ -21,7 +21,6 @@ extract($_POST);
 extract($_GET);
     echo SpaceGridView::widget([
         'dataProvider' => $dataProvider,
-        // 'filterModel' => $searchModel,
         'columns' => [
             'user.username',
             [

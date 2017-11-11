@@ -27,15 +27,14 @@ class SessionContent extends Widget
 
         $user = User::findOne(['id' => Yii::$app->user->id]);
         $role = $user->getRoleName();
-        print_r($role);
+
         if ($role == 'Student'){
             $query = Tokens::find()->where(['user_id' => Yii::$app->user->id, 'session_id' => $this->contentContainer->id]);
         }else {
             $query = Tokens::find()->where(['session_id' => $this->contentContainer->id]);
         }
-        // $query = \humhub\modules\session\models\SessionMembership::getSessionMembersQuery($this->contentContainer);
+
         $searchModel = new \humhub\modules\session\models\SessionSearch();
-        // $dataProvider =  $searchModel->search(Yii::$app->request->queryParams);
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
             ]);
@@ -49,8 +48,12 @@ class SessionContent extends Widget
             ]
         ]);
 
-
-        // return $this->content;
+        if ($role == 'Student')
+        {
+            return $this->render('studentSessionContent', [
+                'dataProvider' => $dataProvider,
+            ]);
+        }
         return $this->render('sessionContent', [
                 'dataProvider' => $dataProvider,
             ]);
