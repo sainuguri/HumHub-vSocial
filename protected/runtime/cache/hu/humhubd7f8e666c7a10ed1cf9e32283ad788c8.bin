@@ -4,7 +4,7 @@ a:2:{i:0;s:1394:"
                             <!-- Show user image -->
                 <img class="media-object img-rounded pull-left" data-src="holder.js/32x32" alt="32x32"
                      style="width: 32px; height: 32px;"
-                     src="/humhub/uploads/profile_image/61c9b999-aee4-45bb-8f48-a103944fc9fd.jpg?m=1510338544">
+                     src="/humhub/uploads/profile_image/61c9b999-aee4-45bb-8f48-a103944fc9fd.jpg?m=1510441610">
             
             <!-- Show space image, if you are outside from a space -->
                                                 <div class="img-space pull-left space-profile-acronym-1 space-acronym" style=" background-color: #6fdbe8; width: 20px; height: 20px; font-size: 8.8px; padding: 3.6px 0; border-radius: 2px;">WS</div><img class="img-space pull-left space-profile-image-1 img-rounded profile-user-photo hidden" src="/humhub/static/img/default_space.jpg" alt="Welcome Space" style=" width: 20px; height: 20px">                

@@ -3,6 +3,7 @@
 namespace humhub\modules\reward\controllers;
 
 use Yii;
+use humhub\modules\user\models\User;
 use humhub\modules\reward\models\Reward;
 use humhub\modules\reward\models\RewardSearch;
 use yii\web\Controller;
@@ -43,6 +44,16 @@ class RewardController extends Controller
                 'dataProvider' => $dataProvider,
             ]);
 
+        }
+        $user = User::findOne(['id' => Yii::$app->user->id]);
+        $role = $user->getRoleName();
+
+        if ($role == 'Student')
+        {
+            return $this->render('studentView', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
         }
 
         return $this->render('index', [

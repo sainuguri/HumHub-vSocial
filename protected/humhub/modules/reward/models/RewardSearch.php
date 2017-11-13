@@ -5,6 +5,7 @@ namespace humhub\modules\reward\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
+use humhub\modules\user\models\User;
 use humhub\modules\reward\models\Reward;
 use humhub\modules\session\models\Tokens;
 
@@ -43,8 +44,19 @@ class RewardSearch extends Reward
     public function search($params)
     {
         // $query->join('LEFT JOIN', 'session_membership', 'session_membership.user_id=user.id');
-        $query = Reward::find();
-        $query->join('LEFT JOIN', 'tokens', 'tokens.id=reward.token_id');
+
+        $user = User::findOne(['id' => Yii::$app->user->id]);
+        $role = $user->getRoleName();
+
+        if ($role == 'Student')
+        {
+            $query = Reward::find();
+            $query->join('LEFT JOIN', 'tokens', 'tokens.id=reward.token_id')->where(['reward.user_id' => Yii::$app->user->id]);    
+        }
+        else {
+            $query = Reward::find();
+            $query->join('LEFT JOIN', 'tokens', 'tokens.id=reward.token_id');
+        }
 
 
         // add conditions that should always apply here
