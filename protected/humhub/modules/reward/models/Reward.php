@@ -18,7 +18,6 @@ use humhub\modules\content\components\ContentContainerActiveRecord;
  * @property string $rewarded_date
  * @property integer $session_id
  * @property integer $rewarded_by
- * @property string $rewardcol
  * @property integer $contentcontainer_id
  * @property string $url
  * @property integer $token_id
@@ -46,7 +45,7 @@ class Reward extends ContentContainerActiveRecord
             [['user_id', 'session_id'], 'required'],
             [['user_id', 'session_id', 'rewarded_by', 'contentcontainer_id', 'token_id'], 'integer'],
             [['rewarded_date'], 'safe'],
-            [['guid', 'description', 'rewardcol', 'url'], 'string', 'max' => 45],
+            [['guid', 'description', 'url'], 'string', 'max' => 45],
             [['session_id'], 'exist', 'skipOnError' => true, 'targetClass' => Session::className(), 'targetAttribute' => ['session_id' => 'id']],
             [['token_id'], 'exist', 'skipOnError' => true, 'targetClass' => Tokens::className(), 'targetAttribute' => ['token_id' => 'id']],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['user_id' => 'id']],

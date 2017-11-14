@@ -1,0 +1,21 @@
+a:2:{i:0;s:1341:"
+    <li class="activity-entry" data-stream-entry data-action-component="activity.ActivityStreamEntry" data-content-key="22">
+        <div class="media">
+                            <!-- Show user image -->
+                <img class="media-object img-rounded pull-left" data-src="holder.js/32x32" alt="32x32"
+                     style="width: 32px; height: 32px;"
+                     src="/humhub/static/img/default_user.jpg">
+            
+            <!-- Show space image, if you are outside from a space -->
+                                                <div class="img-space pull-left space-profile-acronym-3 space-acronym" style=" background-color: #d1d1d1; width: 20px; height: 20px; font-size: 8.8px; padding: 3.6px 0; border-radius: 2px;">VL</div><img class="img-space pull-left space-profile-image-3 img-rounded profile-user-photo hidden" src="/humhub/static/img/default_space.jpg" alt="Viman Lab" style=" width: 20px; height: 20px">                
+            
+            <div class="media-body text-break">
+
+                <!-- Show content -->
+                <strong>Prasad Calyam</strong> created the new space <strong>Viman Lab</strong><br/>
+
+                <!-- show time -->
+                <span class="time"><span title="Oct 5, 2017 - 2:28 PM">Oct 5, 2017</span></span>            </div>
+        </div>
+    </li>
+";i:1;N;}

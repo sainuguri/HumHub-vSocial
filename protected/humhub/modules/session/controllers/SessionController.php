@@ -100,9 +100,18 @@ class SessionController extends Controller
         $model->session = $session;
 
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            $statusInvite = false;
             // Invite existing members
             foreach ($model->getInvites() as $user) {
                 $session->inviteMember($user->id, Yii::$app->user->id);
+                $statusInvite = $session->getMembership($user->id)->status;
+            }
+
+            switch ($statusInvite) {
+                case SessionMembership::STATUS_MEMBER:
+                    return \humhub\widgets\ModalClose::widget(['success' => Yii::t('SpaceModule.views_space_statusInvite', 'User has become a member.')]);
+                default:
+                    return \humhub\widgets\ModalClose::widget(['warn' => Yii::t('SpaceModule.views_space_statusInvite', 'User has not been invited.')]);
             }
             
             //return $this->htmlRedirect($session->getUrl());
