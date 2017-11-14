@@ -47,6 +47,8 @@ class Session extends ContentContainerActiveRecord
             [['end_time', 'instructor_name'], 'string', 'max' => 45],
             [['url', 'hf_url'], 'unique', 'skipOnEmpty' => 'true'],
             [['url'], UrlValidator::className()],
+            [['start_day'], 'validateStartDay'],
+            [['start_time'], 'validateStartTime'],
             [['end_day'], 'validateEndDay'],
             [['end_time'], 'validateEndTime'],
         ];
@@ -82,9 +84,7 @@ class Session extends ContentContainerActiveRecord
         return array(
             \humhub\components\behaviors\GUID::className(),
             \humhub\modules\content\components\behaviors\SettingsBehavior::className(),
-            //\humhub\modules\space\behaviors\SpaceModelModules::className(),
             \humhub\modules\session\behaviors\SessionModelMembership::className(),
-            //\humhub\modules\user\behaviors\Followable::className(),
         );
     }
 
@@ -135,6 +135,20 @@ class Session extends ContentContainerActiveRecord
         }
 
         return Url::toRoute($params, $scheme);
+    }
+
+    public function validateStartDay($attribute, $params)
+    {
+        if (new DateTime($this->start_day) < new DateTime(date('Y-m-d'))) {
+            $this->addError($attribute, Yii::t('CalendarModule.base', "Start day must not be before today!"));
+        }
+    }
+
+    public function validateStartTime($attribute, $params)
+    {
+        if (new DateTime($this->start_time) < new DateTime(date('h:m:s'))) {
+            $this->addError($attribute, Yii::t('CalendarModule.base', "Start time must not be before current time!"));
+        }
     }
 
     public function validateEndDay($attribute, $params)

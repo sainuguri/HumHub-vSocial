@@ -4,6 +4,7 @@
  * @var bool $showProfilePostForm
  */
 
+use DateTime;
 use yii\helpers\Url;
 use yii\helpers\Html;
 use humhub\modules\space\models\Space;
