@@ -48,16 +48,16 @@ class SessionSearch extends Session
         $user = User::findOne(['id' => Yii::$app->user->id]);
         $role = $user->getRoleName();
 
-        if ($role == 'Teacher')
-        {
+//        if ($role == 'Teacher')
+  //      {
             $query = Session::find()->where(['instructor_name'=>Yii::$app->user->getIdentity()->displayname]);
-        }
+    //    }
 
-        if ($role == 'Student') 
-        {
-            $memberships = SessionMembership::find()->select(['session_id'])->where(['user_id' => Yii::$app->user->id]);
-            $query = Session::find()->where(['id'=> $memberships]);
-        }
+//        if ($role == 'Student') 
+  //      {
+    //        $memberships = SessionMembership::find()->select(['session_id'])->where(['user_id' => Yii::$app->user->id]);
+//          $query = Session::find()->where(['id'=> $memberships]);
+      //  }
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
