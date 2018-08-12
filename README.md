@@ -70,6 +70,8 @@ Once done with the installation, you should be able to login with the username a
 - Session Tracking: Allows the instructor to create a session, invite students and allows the instructor to set the rewards of each student and to monitor the EEG-converted-to-emotions levels of each student during the session.
 
 
-# Thank you and in case of any issues, comments or suggestions, please contact Sai Nuguri at saisn.67@gmail.com or Dr. Prasad Calyam at calyamp@missouri.edu.
+# We are working on "Automating" this process using Docker containers.
+
+Thank you for coming to this project and in case of any issues, comments or suggestions, please contact Sai Nuguri at saisn.67@gmail.com or Dr. Prasad Calyam at calyamp@missouri.edu.
 
 
