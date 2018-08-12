@@ -104,34 +104,6 @@ CREATE TABLE `queue` (
   KEY `started_at` (`started_at`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-CREATE TABLE `reward` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `guid` varchar(45) DEFAULT NULL,
-  `description` varchar(45) DEFAULT NULL,
-  `user_id` int(11) NOT NULL,
-  `rewarded_date` date DEFAULT NULL,
-  `session_id` int(11) NOT NULL,
-  `rewarded_by` int(11) DEFAULT NULL,
-  `rewardcol` varchar(45) DEFAULT NULL,
-  `contentcontainer_id` int(11) DEFAULT NULL,
-  `url` varchar(45) DEFAULT NULL,
-  `token_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_reward_1_idx` (`session_id`),
-  KEY `fk_reward_user_id_idx` (`user_id`),
-  KEY `fk_reward_token_id_idx` (`token_id`),
-  CONSTRAINT `fk_reward_session_id` FOREIGN KEY (`session_id`) REFERENCES `session` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_reward_token_id` FOREIGN KEY (`token_id`) REFERENCES `tokens` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_reward_user_id` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
-
-CREATE TABLE `roles` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `role_id` varchar(8) NOT NULL,
-  `role_name` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
-
 CREATE TABLE `session` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `guid` varchar(45) DEFAULT NULL,
@@ -177,6 +149,36 @@ CREATE TABLE `tokens` (
 
 
 ALTER TABLE user ADD COLUMN role_name varchar(20) after contentcontainer_id;
+
+
+
+CREATE TABLE `reward` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `guid` varchar(45) DEFAULT NULL,
+  `description` varchar(45) DEFAULT NULL,
+  `user_id` int(11) NOT NULL,
+  `rewarded_date` date DEFAULT NULL,
+  `session_id` int(11) NOT NULL,
+  `rewarded_by` int(11) DEFAULT NULL,
+  `rewardcol` varchar(45) DEFAULT NULL,
+  `contentcontainer_id` int(11) DEFAULT NULL,
+  `url` varchar(45) DEFAULT NULL,
+  `token_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_reward_1_idx` (`session_id`),
+  KEY `fk_reward_user_id_idx` (`user_id`),
+  KEY `fk_reward_token_id_idx` (`token_id`),
+  CONSTRAINT `fk_reward_session_id` FOREIGN KEY (`session_id`) REFERENCES `session` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_reward_token_id` FOREIGN KEY (`token_id`) REFERENCES `tokens` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_reward_user_id` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+
+CREATE TABLE `roles` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `role_id` varchar(8) NOT NULL,
+  `role_name` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 update user set role_name="Instructor" where id=1;
 
