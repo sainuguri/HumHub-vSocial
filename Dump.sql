@@ -589,7 +589,7 @@ UNLOCK TABLES;
 
 --
 -- Table structure for table `custom_pages_template_container_content_definition`
-                                                                                                                                                                                                                                                             592,2         23%
+                                                                                                                                                                                                                                                            
 DROP TABLE IF EXISTS `custom_pages_template_container_content_definition`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -659,7 +659,7 @@ CREATE TABLE `custom_pages_template_container_content_template` (
   CONSTRAINT `fk-tmpl-container-tmpl` FOREIGN KEY (`template_id`) REFERENCES `custom_pages_template` (`id`) ON DELETE CASCADE,
   CONSTRAINT `fk-tmpl-container-tmpl-definition` FOREIGN KEY (`definition_id`) REFERENCES `custom_pages_template_container_content_definition` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-                                                                                                                                                                                                                                                             663,2         26%
+                                                                                                                                                                                                                                                          
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -726,7 +726,7 @@ UNLOCK TABLES;
 --
 -- Table structure for table `custom_pages_template_image_content`
 --
-                                                                                                                                                                                                                                                             729,2         29%
+                                                                                                                                                                                                                                                             
 --
 
 DROP TABLE IF EXISTS `custom_pages_template_image_content`;
@@ -796,7 +796,7 @@ CREATE TABLE `custom_pages_template_owner_content` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
-                                                                                                                                                                                                                                                             797,2         32%
+                                                                                                                                                                                                                                                             
 --
 -- Dumping data for table `custom_pages_template_owner_content`
 --
@@ -857,7 +857,7 @@ UNLOCK TABLES;
 
 --
 -- Table structure for table `file`
-                                                                                                                                                                                                                                                             858,2         35%
+                                                                                                                                                                                                                                                             
 --
 
 DROP TABLE IF EXISTS `file`;
@@ -927,7 +927,7 @@ UNLOCK TABLES;
 
 --
 -- Table structure for table `group_permission`
-                                                                                                                                                                                                                                                             927,2         38%
+                                                                                                                                                                                                                                                             
 DROP TABLE IF EXISTS `group_permission`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -997,7 +997,7 @@ CREATE TABLE `instructor` (
   `instructor_name` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
-                                                                                                                                                                                                                                                             998,2         41%
+                                                                                                                                                                                                                                                             
 --
 -- Dumping data for table `instructor`
 --
@@ -1067,7 +1067,7 @@ LOCK TABLES `live` WRITE;
 UNLOCK TABLES;
 
 --
-                                                                                                                                                                                                                                                             1069,2        44%
+                                                                                                                                                                                                                                                             
 --
 -- Table structure for table `log`
 --
