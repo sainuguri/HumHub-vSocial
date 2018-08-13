@@ -58,7 +58,7 @@ sudo systemctl restart apache2
 username: saisn.67
 password: 123456
 
-# Go to the web browser and open "your-ip-address/humhub" and login with the above details (you can create or update username/password). Our customization which mainly includes: 
+# Go to the web browser and open "your-ip-address/humhub" and login with the above details (you can create or update username/password). Our customization, on to of HumHub social portal's features, includes: 
 - Rewards page: To keep track of the progress of each student during a session
 - Session Tracking: Allows the instructor to create a session, invite students and allows the instructor to set the rewards of each student and to monitor the EEG-converted-to-emotions levels of each student during the session.
 
