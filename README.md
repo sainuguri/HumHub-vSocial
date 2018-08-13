@@ -38,34 +38,27 @@ Follow the following steps to install OnTimeSocial, a HumHub-based Social Portal
     exit;
 # It is important to remember the 'humhub' user's password as it is later used to setup the portal on the User Interface
 
-4. Now, this project works first by installing the original version of HumHub and then installing our customization.
+4. Git Clone our customized web portal
+    cd /var/www/html/
+    sudo git clone https://github.com/sainuguri/HumHub-vSocial.git
+    sudo mv HumHub-vSocial humhub
+    cd humhub
+    mysql -u root -p humhub<Dump.sql
 
+5. Restart Apache2
 sudo systemctl restart apache2
-sudo systemctl enable apache2
-cd /var/www/html
-sudo wget http://liquidtelecom.dl.sourceforge.net/project/humhub/humhub-1.1.0.tar.gz 
-sudo tar -zxvf humhub-1.1.0.tar.gz
-sudo mv humhub-1.1.0 humhub
-sudo chmod -R 777 humhub
 
-# Now, open your web browser and connect to "your-ip-address/humhub" and follow the steps on the browser. Don't forget, 
+# Configured settings:  
 # Hostname: localhost
 # MySQL username: humhub
 # MySQL password: 123456
 # Database: humhub
 
-Once done with the installation, you should be able to login with the username and password you created during the steps.
+# Login details:
+username: saisn.67
+password: 123456
 
-# Now, to add our customization
-
-5. cd /var/www/html/
-  sudo mv humhub original
-  sudo git clone https://github.com/sainuguri/HumHub-vSocial.git
-  sudo mv HumHub-vSocial humhub
-  cd humhub
-  mysql -u root -p humhub<Dump20180812.sql
-  
-# Go back to the web browser and refresh the page. You should be able to see our customization which mainly includes: 
+# Go to the web browser and open "your-ip-address/humhub" and login with the above details (you can create or update username/password). Our customization which mainly includes: 
 - Rewards page: To keep track of the progress of each student during a session
 - Session Tracking: Allows the instructor to create a session, invite students and allows the instructor to set the rewards of each student and to monitor the EEG-converted-to-emotions levels of each student during the session.
 
