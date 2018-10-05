@@ -16,6 +16,32 @@ More information:
 - [Documentation & Class Reference](http://docs.humhub.org)
 - [Licence](http://www.humhub.org/licences)
 
+# Writing and Visualizing Simulated Data on DynamoDB
+Follow the following steps to simulate EEG data for 1 user, write it into a dynamodb table called "myDB" and visualize it on the web server
+Assumption: You already have an AWS account created and you have your access key ID and access secret stored securely on your system
+
+1. wget https://s3.amazonaws.com/how-to-use-controller/visualApp.tar.gz
+2. tar -xvzf visualApp.tar.gz
+3. Download apache maven by first running a "sudo apt-get update" command and then "sudo apt-get install maven" command
+4. Make sure your Java_home is set to jdk. If not, download from "https://s3.amazonaws.com/how-to-use-controller/jdk-8u181-linux-x64.tar.gz", unzip and save in /usr/lib/jvm and export java_home to the address of jdk and add the same address to PATH.
+
+Run the following 2 sets of commands on 2 separate terminals
+a. cd visualApp
+    MAVEN_OPTS="-Daws.accessKeyId=your_access_key -Daws.secretKey=your_secret_key" mvn
+compile -PdbWriter exec:java
+
+b. cd visualApp
+    MAVEN_OPTS="-Daws.accessKeyId=your_access_key -Daws.secretKey=your_secret_key" mvn
+compile -Pwebserver exec:java
+
+Open your browser and go to "ipaddress:8080" to view the visualization of simulated EEG data for 1 user. 
+
+To change the number of users:
+a) Open visualApp/src/main/java/org/example/basicApp/ddb/DynamoDBWriter.java
+b) Line 70, change numUsers=1 to 5, 10, etc.
+
+---------------------------------------------------------------------------------------------
+
 # OnTimeSocial
 
 Follow the following steps to install OnTimeSocial, a HumHub-based Social Portal designed for providing assistance to remote instructors in creating, managing and tracking VR sessions. The portal was designed with the usecase of vSocial, a VR Learning environment for children with Autism.
@@ -38,12 +64,23 @@ Follow the following steps to install OnTimeSocial, a HumHub-based Social Portal
     exit;
 # It is important to remember the 'humhub' user's password as it is later used to setup the portal on the User Interface
 
+
 4. Git Clone our customized web portal
     cd /var/www/html/
     sudo git clone https://github.com/sainuguri/HumHub-vSocial.git
     sudo mv HumHub-vSocial humhub
     cd humhub
     mysql -u root -p humhub<Dump.sql
+
+# To make sure you can view the visualization, Edit the file  “™\humhub\modules\session\views\eeg\index.php”, Replace the div “container” with the following scripts:
+
+“
+<div>
+           	<object type=”text/html” data=”http://ip-address-of-your-instance:8080” width=”1600px” height=”1200px” style=”overflow:auto;border:5px ridge blue”></object>
+</div>
+”
+
+# Then run “sudo systemctl restart apache2”
 
 5. Restart Apache2
 sudo systemctl restart apache2
