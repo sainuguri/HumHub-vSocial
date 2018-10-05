@@ -38,6 +38,7 @@ Open your browser and go to "ipaddress:8080" to view the visualization of simula
 
 To change the number of users:
 a) Open visualApp/src/main/java/org/example/basicApp/ddb/DynamoDBWriter.java
+
 b) Line 70, change numUsers=1 to 5, 10, etc.
 
 ---------------------------------------------------------------------------------------------
@@ -74,11 +75,10 @@ Follow the following steps to install OnTimeSocial, a HumHub-based Social Portal
 
 # To make sure you can view the visualization, Edit the file  “™\humhub\modules\session\views\eeg\index.php”, Replace the div “container” with the following scripts:
 
-“
-<div>
-           	<object type=”text/html” data=”http://ip-address-of-your-instance:8080” width=”1600px” height=”1200px” style=”overflow:auto;border:5px ridge blue”></object>
-</div>
-”
+< div >
+           	< object type=”text/html” data=”http://ip-address-of-your-instance:8080” width=”1600px” height=”1200px” style=”overflow:auto;border:5px ridge blue” >< / object >
+< / div >
+
 
 # Then run “sudo systemctl restart apache2”
 
